@@ -1,0 +1,2001 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>  
+  <script>
+  window.dataLayer ??= []
+  window.dataLayer.push({...{"userType":"Visiteur"}, ...{}})
+</script>
+
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5X2XWVN');
+  </script>
+  
+
+    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/68710138f4c8a27b23d5f6072/a646fcf66cc48bd7456e668c6.js");</script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"NRJS-38b3246be65dc7909c6","applicationID":"685099615","transactionName":"IlYPR0QNVQgDS00WUQ5JEhxFClYT","queueTime":0,"applicationTime":143,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true},ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={xpid:"Vg8EUVNWDhAGXFRSDggBV1E=",licenseKey:"NRJS-38b3246be65dc7909c6",applicationID:"685099615"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(27),s={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,i.indexOf("dev")!==-1&&(s.dev=!0),i.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&o.on("internal-error",function(t){r(t.stack)}),s.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{p?p-=1:i(s||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:c.now();o("err",[t,n])}var o=t("handle"),a=t(28),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError";if(!c.disabled){var p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(10),t(9),"addEventListener"in window&&t(6),c.xhrWrappable&&t(11),d=!0)}s.on("fn-start",function(t,e,n){d&&(p+=1)}),s.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){o("ierr",[t,c.now(),!0])})}},{}],3:[function(t,e,n){var r=t("loader");r.disabled||(r.features.ins=!0)},{}],4:[function(t,e,n){function r(){var t=new PerformanceObserver(function(t,e){var n=t.getEntries();s(v,[n])});try{t.observe({entryTypes:["resource"]})}catch(e){}}function i(t){if(s(v,[window.performance.getEntriesByType(w)]),window.performance["c"+l])try{window.performance[h](m,i,!1)}catch(t){}else try{window.performance[h]("webkit"+m,i,!1)}catch(t){}}function o(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var a=t("ee"),s=t("handle"),c=t(10),f=t(9),u=t(5),d=t(19),l="learResourceTimings",p="addEventListener",h="removeEventListener",m="resourcetimingbufferfull",v="bstResource",w="resource",g="-start",y="-end",x="fn"+g,b="fn"+y,E="bstTimer",R="pushState",S=t("loader");if(!S.disabled){S.features.stn=!0,t(8),"addEventListener"in window&&t(6);var O=NREUM.o.EV;a.on(x,function(t,e){var n=t[0];n instanceof O&&(this.bstStart=S.now())}),a.on(b,function(t,e){var n=t[0];n instanceof O&&s("bst",[n,e,this.bstStart,S.now()])}),c.on(x,function(t,e,n){this.bstStart=S.now(),this.bstType=n}),c.on(b,function(t,e){s(E,[e,this.bstStart,S.now(),this.bstType])}),f.on(x,function(){this.bstStart=S.now()}),f.on(b,function(t,e){s(E,[e,this.bstStart,S.now(),"requestAnimationFrame"])}),a.on(R+g,function(t){this.time=S.now(),this.startPath=location.pathname+location.hash}),a.on(R+y,function(t){s("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),u()?(s(v,[window.performance.getEntriesByType("resource")]),r()):p in window.performance&&(window.performance["c"+l]?window.performance[p](m,i,d(!1)):window.performance[p]("webkit"+m,i,d(!1))),document[p]("scroll",o,d(!1)),document[p]("keypress",o,d(!1)),document[p]("click",o,d(!1))}}},{}],5:[function(t,e,n){e.exports=function(){return"PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){s.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1];if(null!==n&&("function"==typeof n||"object"==typeof n)){var r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return i.emit(n+"start",[t,a],s),s.then(function(t){return i.emit(n+"end",[null,t],s),t},function(t){throw i.emit(n+"end",[t],s),t})})}var i=t("ee").get("fetch"),o=t(28),a=t(27);e.exports=i;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(s,"fetch",c),i.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(c+"done",[null,e],n)}else i.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],10:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(c+u,r),o.on(s+u,i)},{}],11:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function o(t){x.push(t),m&&(E?E.then(a):w?w(a):(R=-R,S.data=R))}function a(){for(var t=0;t<x.length;t++)r([],x[t]);x.length&&(x=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=t(19),p=NREUM.o,h=p.XHR,m=p.MO,v=p.PR,w=p.SI,g="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],x=[];e.exports=u;var b=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(g,i,l(!1))}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(h,b),b.prototype=h.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),m){var E=v&&v.resolve();if(!w&&!v){var R=1,S=document.createTextNode(R);new m(a).observe(S,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===g||a()})},{}],12:[function(t,e,n){function r(t){if(!s(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),v=Date.now(),w={spanId:h,traceId:m,timestamp:v};return(t.sameOrigin||c(t)&&l())&&(w.traceContextParentHeader=i(h,m),w.traceContextStateHeader=o(h,v,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&c(t)&&d())&&(w.newrelicHeader=a(h,m,v,n,r,f)),w}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",s=1,c="",f="";return i+"@nr="+o+"-"+s+"-"+n+"-"+r+"-"+t+"-"+a+"-"+c+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(s.d.tk=o),btoa(JSON.stringify(s))}function s(t){return f()&&c(t)}function c(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(24),h=t(14);e.exports={generateTracePayload:r,shouldGenerateTrace:s}},{}],13:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);return e.protocol&&"data"===e.protocol?void g("Ajax/DataUrl/Excluded"):void(e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,s("xhr",[e,n,this.startTime,this.endTime,"xhr"],this)))}}function i(t,e){var n=c(e),r=t.params;r.hostname=n.hostname,r.port=n.port,r.protocol=n.protocol,r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=n,t.sameOrigin=n.sameOrigin}function o(t,e){t.params.status=e.status;var n=v(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable&&!a.disabled){var s=t("handle"),c=t(14),f=t(12).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(20),m=t(18),v=t(15),w=t(19),g=t(21).recordSupportability,y=NREUM.o.REQ,x=window.XMLHttpRequest;a.features.xhr=!0,t(11),t(7),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,e.params=this.params||{},e.metrics=this.metrics||{},t.addEventListener("load",function(n){o(e,t)},w(!1)),h&&(h>34||h<10)||t.addEventListener("progress",function(t){e.lastSize=t.loaded},w(!1))}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<l;s++)e.addEventListener(d[s],this.listener,w(!1))}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("xhr-resolved",function(){this.endTime=a.now()}),u.on("addEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof x&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)}),u.on("fetch-start",function(t,e){this.params={},this.metrics={},this.startTime=a.now(),this.dt=e,t.length>=1&&(this.target=t[0]),t.length>=2&&(this.opts=t[1]);var n,r=this.opts||{},o=this.target;if("string"==typeof o?n=o:"object"==typeof o&&o instanceof y?n=o.url:window.URL&&"object"==typeof o&&o instanceof URL&&(n=o.href),i(this,n),"data"!==this.params.protocol){var s=(""+(o&&o instanceof y&&o.method||r.method||"GET")).toUpperCase();this.params.method=s,this.txSize=m(r.body)||0}}),u.on("fetch-done",function(t,e){if(this.endTime=a.now(),this.params||(this.params={}),"data"===this.params.protocol)return void g("Ajax/DataUrl/Excluded");this.params.status=e?e.status:0;var n;"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);var r={txSize:this.txSize,rxSize:n,duration:a.now()-this.startTime};s("xhr",[this.params,r,this.startTime,this.endTime,"fetch"],this)})}},{}],14:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];if(0===(t||"").indexOf("data:"))return{protocol:"data"};var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||s),"/"===i.pathname&&(r[t]=i),i}},{}],15:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(18);e.exports=r},{}],16:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return u.recordSupportability("API/"+e+"/called"),o(t+e,[f.now()].concat(s(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(27),s=t(28),c=t("ee").get("tracer"),f=t("loader"),u=t(21),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var l=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",h=p+"ixn-";a(l,function(t,e){d[e]=i(p,e,!0,"api")}),d.addPageAction=i(p,"addPageAction",!0),d.setCurrentRouteName=i(p,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(h+"tracer",[f.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(h,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),u.recordSupportability("API/noticeError/called"),o("err",[t,f.now(),!1,e])}},{}],17:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],20:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],21:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[s,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",s="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:s},recordSupportability:r,recordCustom:i}},{}],22:[function(t,e,n){function r(){return s.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,s=t(29);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],23:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;var i=[r],o=a({});o&&i.push(o),p("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function s(t){if(t instanceof w&&!y){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=h.now()?n.fid=h.now()-e:e>h.offset&&e<=Date.now()?(e-=h.offset,n.fid=h.now()-e):e=h.now(),y=!0,p("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=h.now(),p("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,d,l,p=t("handle"),h=t("loader"),m=t(26),v=t(19),w=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(g){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(g){}l=new PerformanceObserver(o);try{l.observe({type:"layout-shift",buffered:!0})}catch(g){}}if("addEventListener"in document){var y=!1,x=["click","keydown","mousedown","pointerdown","touchstart"];x.forEach(function(t){document.addEventListener(t,s,v(!1))})}m(c)}},{}],24:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<o.length;s++)i=o[s],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(t)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],25:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],26:[function(t,e,n){function r(t){function e(){t(s&&document[s]?document[s]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(19);e.exports=r;var o,a,s;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",s="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",s="webkitVisibilityState")},{}],27:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],28:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],29:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var s=e(i),c=m(n),f=c.length,u=0;u<f;u++)c[u].apply(s,r);var l=d[y[n]];return l&&l.push([x,n,r,s]),s}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function v(t){return l[t]=l[t]||i(n)}function w(t,e){p.aborted||u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:s,aborted:!1};return x}function o(t){return f(t,c,a)}function a(){return new r}function s(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var c="nr@context",f=t("gos"),u=t(27),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!O++){var t=S.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();s("mark",["onload",n+S.offset],null,"api"),s("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=p+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){s("mark",["domContent",a()+S.offset],null,"api")}var a=t(22),s=t("handle"),c=t(27),f=t("ee"),u=t(25),d=t(17),l=t(19),p=d.getConfiguration("ssl")===!1?"http":"https",h=window,m=h.document,v="addEventListener",w="attachEvent",g=h.XMLHttpRequest,y=g&&g.prototype,x=!1;NREUM.o={ST:setTimeout,SI:h.setImmediate,CT:clearTimeout,XHR:g,REQ:h.Request,EV:h.Event,PR:h.Promise,MO:h.MutationObserver};var b=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},R=g&&y&&y[v]&&!/CriOS/.test(navigator.userAgent),S=e.exports={offset:a.getLastTimestamp(),now:a,origin:b,features:{},xhrWrappable:R,userAgent:u,disabled:x};if(!x){t(16),t(23),m[v]?(m[v]("DOMContentLoaded",o,l(!1)),h[v]("load",r,l(!1))):(m[w]("onreadystatechange",i),h[w]("onload",r)),s("mark",["firstbyte",a.getLastTimestamp()],null,"api");var O=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,c],u],t)}s(n+"start",[o,a,c],u,f);try{return l=e.apply(a,o)}catch(h){throw s(n+"err",[o,a,h],u,f),h}finally{s(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var s,c,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)c=e[f],s=t[c],a(s)||(t[c]=n(s,u?c+r:r,i,c,o))}function s(n,r,o,a){if(!h||e){var s=h;h=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}h=s}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function s(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function c(t,e,n){var r=t[e];t[e]=s(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(28),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=s,e.exports.wrapInPlace=c,e.exports.argsToArray=f},{}]},{},["loader",2,13,4,3]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<meta name='description' content="Commandez en ligne chez Le Métropolitain à Bordeaux. Disponible en Click &amp; Collect ou livraison. Consommer local, c&#39;est facile !">
+  <meta name="author" content="MVMS">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyDVF-jEN0AAJz0QnIky8gJC1ncxVOtb-eE&libraries=places,drawing"></script>
+
+  <meta property="og:description" content="Commandez en ligne chez Le Métropolitain à Bordeaux. Disponible en Click &amp; Collect ou livraison. Consommer local, c&#39;est facile !">
+	<meta property="og:image" content="https://www.mavillemonshopping.fr/assets/home-7f876fd0a9020640371fca58b2830a6b3be770ac3058c99c24e3d67c555168bf.jpg">
+	<meta property="og:title" content="Commander chez Le Métropolitain à Bordeaux - Ma Ville Mon Shopping">
+  <meta property="og:type" content="Espace boutique">
+  <meta name="robots" content="index, follow">
+
+  <title>
+		Commander chez Le Métropolitain à Bordeaux - Ma Ville Mon Shopping
+	</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>		
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  <script>
+//<![CDATA[
+window.gon={};gon.default_product_image="/assets/default_box_product-186c7ccf260e90b54acf8584c63247a0084a6779ebc340b844385ba98b866531.svg";gon.default_shop_image="/assets/default_box_shop-608123dacbc23e2b7d19c393b02f66ff5ef94abc2457ff6680d8cb4c28e459bb.svg";gon.datalayer_event="mvms_view_item_list";gon.datalayer_item_list_name="Le Métropolitain Bordeaux";// Generated by CoffeeScript 1.7.1
+gon._timers = {};
+
+gon.watch = function(name, possibleOptions, possibleCallback, possibleErrorCallback) {
+  var callback, errorCallback, key, options, performAjax, timer, value, _base, _ref;
+  if (typeof $ === "undefined" || $ === null) {
+    return;
+  }
+  if (typeof possibleOptions === 'object') {
+    options = {};
+    _ref = gon.watchedVariables[name];
+    for (key in _ref) {
+      value = _ref[key];
+      options[key] = value;
+    }
+    for (key in possibleOptions) {
+      value = possibleOptions[key];
+      options[key] = value;
+    }
+    callback = possibleCallback;
+    errorCallback = possibleErrorCallback;
+  } else {
+    options = gon.watchedVariables[name];
+    callback = possibleOptions;
+    errorCallback = possibleCallback;
+  }
+  performAjax = function() {
+    var xhr;
+    xhr = $.ajax({
+      type: options.type || 'GET',
+      url: options.url,
+      data: {
+        _method: options.method,
+        gon_return_variable: true,
+        gon_watched_variable: name
+      }
+    });
+    if (errorCallback) {
+      return xhr.done(callback).fail(errorCallback);
+    } else {
+      return xhr.done(callback);
+    }
+  };
+  if (options.interval) {
+    timer = setInterval(performAjax, options.interval);
+    if ((_base = gon._timers)[name] == null) {
+      _base[name] = [];
+    }
+    return gon._timers[name].push({
+      timer: timer,
+      fn: callback
+    });
+  } else {
+    return performAjax();
+  }
+};
+
+gon.unwatch = function(name, fn) {
+  var _i, index, _len, _ref, timer;
+  _ref = gon._timers[name];
+  for (index = _i = 0, _len = _ref.length; _i < _len; index = ++_i) {
+    timer = _ref[index];
+    if (!(timer.fn === fn)) {
+      continue;
+    }
+    clearInterval(timer.timer);
+    gon._timers[name].splice(index, 1);
+    return;
+  }
+};
+
+gon.unwatchAll = function() {
+  var _i, _len, _ref, timer, timers, variable;
+  _ref = gon._timers;
+  for (variable in _ref) {
+    timers = _ref[variable];
+    for (_i = 0, _len = timers.length; _i < _len; _i++) {
+      timer = timers[_i];
+      clearInterval(timer.timer);
+    }
+  }
+  return gon._timers = {};
+};
+window.gon.watchedVariables={"product_import":{"url":"/fr/pro/saint-michel-de-montaigne/shops/chateau-des-illarets/produits/imports","method":"GET","name":"product_import"},"products":{"url":"/fr/creer-ma-boutique/creation-produits","method":"GET","name":"products"}};
+//]]>
+</script>
+  <link rel="stylesheet" media="all" href="style.css" />
+  <script src="/assets/shop-eef3c1678e2b0bcd92acf04af15c31d3f580874cdac418c73bfc1892379910f9.js"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="4A8pl2tgwpy2cOjVTJ7G/vxlGSTfZQlxAfCfC6gN0PyATlqm4K6NDIY4800XASel/0YfixKzsW8n/bT9/OrN8A==" />
+
+  <!-- lightgallery -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.3.2/css/lightgallery.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.3.2/js/lightgallery.js"></script>
+
+  <!-- slick-carousel -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <!-- typeahead -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-typeahead/2.11.0/jquery.typeahead.min.css" integrity="sha512-7zxVEuWHAdIkT2LGR5zvHH7YagzJwzAurFyRb1lTaLLhzoPfcx3qubMGz+KffqPCj2nmfIEW+rNFi++c9jIkxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/1.3.1/typeahead.bundle.min.js" integrity="sha512-lEb9Vp/rkl9g2E/LdHIMFTqz21+LA79f84gqP75fbimHqVTu6483JG1AwJlWLLQ8ezTehty78fObKupq3HSHPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+  <body>
+      <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5X2XWVN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+      <div id= "cart-overlay" class="cart-overlay"></div>
+      
+<header class="sticky-top bg-white">
+  <div class="announcement-navbar d-flex justify-content-center px-3 py-2 text-center">
+  <p class="m-0">
+    Profitez de la livraison offerte dès 50 € d&#39;achat 
+        <a class="font-12" href="#footer-legal-notice-free_service_offer">(voir conditions)</a>
+  </p>
+</div>
+
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-white m-0 p-0 border-0">
+    <div class="container-fluid p-0">
+      <section class="col-3 d-lg-none order-1">
+        <button type="button" class="navbar-toggler px-1 border-0 rounded-0 bg-transparent text-center d-inline-block" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <i class="icons8 icons8-menu font-24 grey-dark"></i>
+        </button>
+      </section>
+
+      <section class="col-6 col-lg-auto order-2 d-flex justify-content-center flex-lg-shrink-1">
+        <a class="d-flex" style="height: 100%;" href="/fr">
+          <img class="w-100" style="object-fit: contain; height: 100%" data-cy="img-logo" src="/assets/logo_pantone_baseline-55d2071a97d27e6f2450866c59faa02059802aa5876cab9b8c3df5614f7745f9.svg" />
+</a>      </section>
+
+      <section class="col order-4 ms-0 me-0 me-lg-auto order-lg-3 p-0 search d-lg-flex" style="z-index: 1; min-width: 250px;">
+        <hr class="hr d-block d-lg-none">
+        <div class="d-flex align-items-center flex-fill mx-3 mx-lg-4" style="height: 100%;">
+  <button name="button" type="button" id="search-exit" class="btn btn-search-exit d-lg-none">
+    <i class="icons8 icons8-expand-arrow d-flex font-24"></i>
+</button>
+  <div id="search-bar" data-localisation-slug="" class="align-self-center w-100"> 
+    <form action="https://www.mavillemonshopping.fr/fr/recherche" accept-charset="UTF-8" method="get">
+        <input type="hidden" name="perimeter" id="perimeter" value="all" />
+      <div id="search-bar-part" class="row m-0">
+          <div class='hidden' id='empty-autosuggest' data-image-url="/assets/error_heroku-c0811c0885a270d1655678d2a34d3219868ca1ea5ef0a70ae84fa6f7d2b6d728.svg"></div>
+          <div id="multiple-datasets" class="navbar-search twitter-typeahead p-0" data-cy="div-autosuggest">
+              <label for="q" class="icon-search d-flex d-lg-none">
+                <i class="icons8 icons8-search font-24"></i>
+              </label>
+              <input type="search" name="q" id="q" class="form-control filter typeahead" autocomplete="off" placeholder="Recherchez produits, boutiques..." data-cy="input-search" />
+              <button type="button" data-cy="btn-search-delete" class="btn delete-search hidden"> 
+                  <i class="icons8 icons8-delete blue-placeholder font-24"></i>
+              </button>
+              <button type="submit" data-disable-with="<i class='icons8 icons8-spinner font-24' aria-hidden='true'></i>" data-cy="btn-search" class="btn btn-search d-none d-lg-block">
+                  <i class="icons8 icons8-search icon-orange font-24"></i>
+              </button>
+          </div>
+      </div>
+</form>  </div>
+
+
+    <a class="btn btn-search-filters ms-3 d-block d-lg-none" data-bs-toggle="offcanvas" href="#offcanvasShopCategorires" role="button" aria-controls="offcanvasShopCategorires">
+      <i class="icons8 icons8-slider d-flex font-36 orange"></i>
+    </a>
+</div>
+      </section>
+
+      <section class="col-3 col-lg-auto order-3 d-flex justify-content-end px-2">
+        <div class="d-none d-lg-flex px-2">
+          
+        </div>
+        <div class="dropdown dropdown-help d-none d-lg-block px-2">
+  <button class="btn p-0 d-flex align-items-center" style="height: 100%" type="button" id="dropdown-nav-help" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <div class="d-flex align-items-center">
+      <i class="icons8 icons8-help fs-2"></i>
+      <div class="d-none d-lg-flex align-items-center flex-column ms-1">
+        <div class='d-flex align-items-center align-self-start line-20 w-100'>
+          <p class="m-0 blue-navy font-14 fw-bold line-20 text-start flex-fill">Aide</p><i class="icons8 icons8-sort-down grey-typo ml-2"></i>
+        </div>
+        <p class="text-start m-0 grey-typo font-12 line-18 align-self-start">Une question ?</p>
+      </div>
+    </div>
+  </button>
+  <div class="dropdown-menu dropdown-menu-end p-0 border-0" aria-labelledby="dropdown-nav-help">
+    <div class="background-green-munsell w-100 d-flex" style="height: 48px; border-radius: 8px 8px 0 0;">
+      <div class="fw-bold font-20 m-auto white" style="line-height: 24px;">Besoin d’aide ?</div>
+    </div>
+    <div class="p-3">
+      <div class="d-flex">
+        <i class="icons8 icons8-help me-2 font-20 d-flex"></i>
+        <div class="mb-4">
+          <div class="fw-normal font-14 line-17 blue-navy mb-1">Foire Aux Questions</div>
+          <div class="fw-light font-12 line-15 grey-hanoi">Trouvez des réponses rapidement en visitant notre <a class='link grey-hanoi' href='https://faq.mavillemonshopping.fr/hc/fr'>Foire aux Questions</a></div>
+        </div>
+      </div>
+      <div class="p-2 background-yellow-light" style="border-radius: 4px;">
+  <div class="d-flex">
+    <div class="me-3 d-flex" style="min-width: 42px;">
+      <img width="42" height="42" class="my-auto" src="/assets/header/green_number-9eb0255fbb106a35a71aa11d788a50096f10cb1965b5a0dc550160707067b46c.png" />
+    </div>
+    <div>
+      <div class="d-flex align-items-center mb-1">
+        <div class="me-3 fw-bold font-14 line-17 blue-navy">
+          0 800 800 181
+        </div>
+        <div class="py-1 px-3 background-yellow-amber font-12 brown-medium-dark" style="border-radius: 20px;">
+          Gratuit*
+        </div>
+      </div>
+      <div class="font-12 line-15 grey-hanoi">
+        Notre service client vous assiste du lundi au vendredi de 10h à 18h hors jours fériés (*appels et service non-surtaxés)
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+          <div class="dropdown dropdown-menu-nav ml-2 position-relative d-none d-lg-flex px-2" data-cy="dropdown-account">
+    <button class="btn p-0 d-flex align-items-center" style="height: 100%" type="button" id="dropdown-nav-account" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      <div class="d-flex align-items-center">
+        <i class="icons8 icons8-male-user fs-2"></i>
+        <div class="d-none d-lg-flex align-items-center flex-column ms-1 ml-1">
+          <div class='d-flex align-items-center align-self-start d-flex line-20 w-100'>
+            <p class="m-0 blue-navy font-14 bold line-20 text-start flex-fill">Client ou Vendeur</p><i class="icons8 icons8-sort-down grey-typo ml-2"></i>
+          </div>
+          <p class="text-start m-0 grey-typo font-12 line-18 align-self-start">Se connecter ou s&#39;inscrire</p>
+        </div>
+      </div>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end m-0" aria-labelledby="dropdown-nav-account">
+      <li><a data-bs-toggle="modal" data-bs-target="#sign-in" class="blue-navy semi-bold border-b-blue-back d-flex px-3 py-1" style="cursor:pointer;">Se connecter</a></li>
+      <li class="pt-1" ><a class="grey-typo d-flex px-3 py-1" data-cy="link-signup-customer" href="/fr/users/sign_up">S&#39;inscrire</a></li>
+      <li><a class="grey-typo d-flex px-3 py-1" data-cy="link-signup-shop" href="/fr/creer-ma-boutique">Créer ma boutique</a></li>
+    </ul>
+  </div>
+
+  <a href="#" data-bs-toggle="modal" data-bs-target="#sign-in" data-cy="link-signin" class="d-flex d-lg-none align-items-center">
+    <i class="icons8 icons8-male-user fs-2 grey-dark"></i>
+  </a>
+
+        <div id="my-cart" class="cart-nav-container position-relative d-flex align-items-center px-2">
+  <a id="cart-link" data-cy="btn-cart" href="/fr/cart">
+    <div class="d-flex display-flex-end align-items-center">
+      <div class="grey-dark">
+        <i class="icons8 icons8-shopping-bag fs-2"></i>
+      </div>
+      <div class="ml-1 ms-1 d-none d-lg-block">
+        <div class="font-14 bold blue-navy line-20">
+          Panier
+        </div>
+        <div id="cart-price" class="font-12 grey-typo line-18">
+          0,00 €
+        </div>
+      </div>
+    </div>
+</a>
+  <div id="cart-content" class="cart-nav-content">
+    
+  </div>
+</div>
+      </section>
+
+    </div>
+  </nav>
+  <hr class="hr d-none d-lg-block">
+
+    <div class="nav-global">
+      <div class="container-xxl g-0" data-simplebar data-simplebar-theme="mvms">
+        <ul class="nav flex-nowrap justify-content-xxl-center">
+            <li class="nav-item">
+                <a class="nav-link pink-paradise" href="/fr/tag/fete-des-peres/produits">Fête des Pères</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link blue-navy" href="/fr/categorie/alimentation/produits">Alimentation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link blue-navy" href="/fr/categorie/vin-et-spiritueux/produits">Vin et spiritueux</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link blue-navy" href="/fr/categorie/fleurs-et-plantes/produits">Fleurs et plantes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link blue-navy" href="/fr/categorie/loisirs-sport-et-culture/produits">Loisirs, sport et culture</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link blue-navy" href="/fr/categorie/maison-et-bricolage/produits">Maison et bricolage</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link blue-navy" href="/fr/categorie/mode/produits">Mode</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link blue-navy" href="/fr/categorie/beaute-et-sante/produits">Beauté et santé</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link blue-navy" href="/fr/categorie/services/produits">Services</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+</header>
+
+<div id="offcanvasNavbar" class="offcanvas offcanvas-start offcanvas-sidebar offcanvas-menu border-0" tabindex="-1">
+  <div class="offcanvas-header p-3 border-bottom" style="height: 80px;">
+    <img height="50px" src="/assets/logo_pantone_baseline-55d2071a97d27e6f2450866c59faa02059802aa5876cab9b8c3df5614f7745f9.svg" />
+    <a href="#" role="button" class="close font-22 blue-navy" data-bs-dismiss="offcanvas" aria-label="Close">
+      <i class="icons8 icons8-delete"></i>
+    </a>
+  </div>
+
+  <div class="offcanvas-body flex-column p-0 px-4">  
+    <button name="button" type="submit" class="btn btn-primary sign-in p-0 w-100 mt-4" data-bs-dismiss="offcanvas" data-bs-toggle="modal" data-bs-target="#sign-in">Se connecter</button>
+
+
+    <section class="position-relative mb-4 pt-4">
+      <ul class="offcanvas-links list-unstyled m-0">
+          <li><a class="d-flex align-items-center" href="/fr/users/sign_up">Créer mon compte client</a></li>
+
+          <li><a class="d-flex align-items-center" href="/fr/devenir-cityzen">Devenir Cityzen</a></li>
+          <li><a class="d-flex align-items-center" href="/fr/devenir-commercant">Ajouter ma boutique</a></li>
+
+        <li><a href="https://faq.mavillemonshopping.fr/hc/fr" class="d-flex align-items-center">F.A.Q</a></li>
+      </ul>
+    </section>
+
+
+    <section class="position-relative mb-4 pt-4"><div class="p-2 background-yellow-light" style="border-radius: 4px;">
+  <div class="d-flex">
+    <div class="me-3 d-flex" style="min-width: 42px;">
+      <img width="42" height="42" class="my-auto" src="/assets/header/green_number-9eb0255fbb106a35a71aa11d788a50096f10cb1965b5a0dc550160707067b46c.png" />
+    </div>
+    <div>
+      <div class="d-flex align-items-center mb-1">
+        <div class="me-3 fw-bold font-14 line-17 blue-navy">
+          0 800 800 181
+        </div>
+        <div class="py-1 px-3 background-yellow-amber font-12 brown-medium-dark" style="border-radius: 20px;">
+          Gratuit*
+        </div>
+      </div>
+      <div class="font-12 line-15 grey-hanoi">
+        Notre service client vous assiste du lundi au vendredi de 10h à 18h hors jours fériés (*appels et service non-surtaxés)
+      </div>
+    </div>
+  </div>
+</div></section>
+  </div>
+</div> 
+      <main>
+<div class="container-xxl my-xxl-3 p-0 px-md-2 px-xxl-0">
+  
+  <div class="d-none d-sm-block my-3 font-12">
+  <ol class="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        
+            <a class="breadcrumb-link" itemprop="item" href="/fr">
+              <span itemprop="name">Accueil</span>
+</a>
+          <span class="breadcrumb-separator">></span>
+        <meta itemprop="position" content="1">
+      </li>
+      <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        
+            <a class="breadcrumb-link" itemprop="item" href="/fr/bordeaux">
+              <span itemprop="name">Bordeaux</span>
+</a>
+          <span class="breadcrumb-separator">></span>
+        <meta itemprop="position" content="2">
+      </li>
+      <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        
+          <span itemprop="name" class="breadcrumb-page fw-bold">
+            Le métropolitain
+          </span>
+
+        <meta itemprop="position" content="3">
+      </li>
+  </ol>
+</div>
+
+  <div class="banner position-relative" style="background-image: url(https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/563530/file/wide-6e95241b65be79435660721078b0c74d.webp);">
+    <div class="link-share position-absolute end-0 d-flex align-items-center mt-4 me-3">
+      <div class="d-none d-lg-block me-2">
+        <i class="icons8 icons8-share icon orange"></i>
+      </div>
+    
+      <div class="dropdown">
+        <a id="dropdown-social-share" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+          <div class="d-none d-lg-block blue-navy text-decoration-underline">
+            Partager
+          </div>
+          <div class="d-lg-none d-flex justify-content-center align-items-center rounded-circle bg-white" style="width: 33px; height: 33px;">
+            <i class="icons8 icons8-share icon orange"></i>
+          </div>
+</a>
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-social-share" aria-labelledby="dropdown-social-share">
+  <li>
+    <a target="_blank" class="dropdown-item background-blue-hover" href="http://www.facebook.com/sharer.php?u=https://www.mavillemonshopping.fr/fr/bordeaux/boutiques/le-metropolitain">
+      <div class="d-flex align-items-center">
+        <div class="me-2 blue-facebook">
+          <i class="icons8 icons8-facebook icon"></i>
+        </div>
+        <div class="blue-navy">
+          Partager sur Facebook
+        </div>
+      </div>
+</a>  </li>
+  <li>
+    <a target="_blank" class="dropdown-item background-blue-hover" href="http://twitter.com/share?url=https://www.mavillemonshopping.fr/fr/bordeaux/boutiques/le-metropolitain">
+      <div class="d-flex align-items-center">
+        <div class="me-2 blue-twitter">
+          <i class="icons8 icons8-twitter icon"></i>
+        </div>
+        <div class="blue-navy">
+          Partager sur Twitter
+        </div>
+      </div>
+</a>  </li>
+  <li>
+    <a target="_blank" class="dropdown-item background-blue-hover" href="https://linkedin.com/shareArticle?mini=true&amp;url=https://www.mavillemonshopping.fr/fr/bordeaux/boutiques/le-metropolitain">
+      <div class="d-flex align-items-center">
+        <div class="me-2 blue-linkedin">
+          <i class="icons8 icons8-linkedin icon"></i>
+        </div>
+        <div class="blue-navy">
+          Partager sur LinkedIn
+        </div>
+      </div>
+</a>  </li>
+  <li>
+    <a class="dropdown-item background-blue-hover" href="mailto:?body=Voici%20le%20lien%20vers%20le%20produit%20que%20j%27ai%20trouv%C3%A9%20https%3A%2F%2Fwww.mavillemonshopping.fr%2Ffr%2Fbordeaux%2Fboutiques%2Fle-metropolitain&amp;subject=J%27ai%20trouv%C3%A9%20ce%20produit%20qui%20devrait%20te%20plaire%20sur%20Ma%20Ville%20Mon%20Shopping">
+      <div class="d-flex align-items-center">
+        <div class="me-2 blue-navy">
+          <i class="icons8 icons8-mail icon"></i>
+        </div>
+        <div class="blue-navy">
+          Partager par Mail
+        </div>
+      </div>
+</a>  </li>
+</ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-xxl my-xxl-3 px-xxl-0" itemscope itemtype="https://schema.org/LocalBusiness">
+  <div class="ms-0 ms-md-5 text-center text-md-start">
+    <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/563529/file/thumb-21ba99343a1d482d2f601c1f24459d7f.webp"></source><img alt="Le Métropolitain" width="160" height="160" class="img-profil rounded-circle" itemprop="image" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/563529/file/0dbf525782b704ab714c799161f805a1.jpeg" /></picture>
+  </div>
+
+  <div class="row mb-5">
+    <div class="col-12 col-md-5 px-3 px-xxl-5 main-information">
+      <h1 class="mb-1 mb-md-2 text-center text-md-start font-32" itemprop="name">
+       Le Métropolitain
+      </h1>
+
+      <h5 class="mb-3 mb-md-2 text-center text-md-start grey-hanoi">
+        &quot;Ici, on ne sert pas! On reçoit!&quot; 
+      </h5>
+
+      <div class="d-flex align-items-center mb-2">
+        <i class="icons8 icons8-marker icon orange"></i>
+        <div class="mx-2">
+          Bordeaux
+        </div>
+          <div>&bull;</div>
+          <a data-bs-toggle="modal" data-bs-target="#see-more-modal" class="mx-2 blue-navy text-decoration-underline" href="#">Voir plus</a>
+      </div>
+
+      <div class="d-flex align-items-center mb-2">
+        <a class="mx-2 blue-navy text-decoration-underline" href="/fr/bordeaux/boutiques/le-metropolitain/avis?display_modal_new=true">Partager votre avis</a>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-7 px-3 px-xxl-5">
+      <h5 class="d-flex align-items-center mb-3 grey-hanoi">
+          <i class="icons8 icons8-shop icon"></i>
+          <div class="mx-2">
+            Click &amp; Collect
+          </div>
+          <i class="icons8 icons8-in-transit icon"></i>
+          <div class="mx-2">
+            Livraison
+          </div>
+        <div>&bull;</div>
+        <div class="mx-2">
+          €
+        </div>
+      </h5>
+
+        <div class="container-description">
+          <p id="description" class="mb-2 grey-hanoi collapse" aria-expanded="false" itemprop="description">
+            Découverte de vins, bières et Champagnes avec des ateliers de dégustations &amp; soirées à thèmes dans un concept original à Bordeaux.
+          </p>
+          <a id="description-button" role="button" href="#description"
+            class="font-12 blue-navy text-decoration-underline collapsed"
+            data-bs-toggle="collapse" aria-expanded="false" aria-controls="description">
+          </a>
+        </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-2 px-4">
+      <aside class="navbar-expand-lg">
+  <div id="offcanvasShopCategorires" class="offcanvas offcanvas-end offcanvas-sidebar border-0" tabindex="-1">
+    <div class="offcanvas-header p-3 background-blue" style="height: 56px;">
+      <div class="ms-4 font-24 blue-navy">
+        Filtrer
+      </div>
+
+      <a href="#" role="button" class="font-22 blue-navy" data-bs-dismiss="offcanvas" aria-label="Close">
+        <i class="icons8 icons8-delete"></i>
+      </a>
+    </div>
+
+    <div class="offcanvas-body flex-column pt-4 px-5 px-lg-0">
+      <h2 class="font-14 fw-bold blue-navy uppercase">
+        Catégories
+      </h2>
+
+      <hr class="orange-line mt-2 mb-3" style="width: 40px;">
+      
+      <div class="pb-2">
+          <div id="shop-filter-all-categories">
+            <span class="font-14 light line-17 blue-navy cursor-pointer">
+              Toutes les catégories
+              <span class="grey-typo"> (20)</span>
+            </span>
+          </div>
+      </div>
+
+        <div>
+          <div class="mb-1 mt-2">
+            <span class="bold line-17 font-14 text-capitalize">Restauration</span>
+          </div>
+            <div class="pb-2">
+              <a href="/fr/bordeaux/boutiques/le-metropolitain?categories=restauration%2Fcuisine-francaise">
+                <span class="font-14 light line-17 blue-navy">
+                  Cuisine française
+                  <span class="grey-typo"> (10)</span>
+                </span>
+</a>            </div>
+        </div>
+        <div>
+          <div class="mb-1 mt-2">
+            <span class="bold line-17 font-14 text-capitalize">Vin</span>
+          </div>
+            <div class="pb-2">
+              <a href="/fr/bordeaux/boutiques/le-metropolitain?categories=vin-et-spiritueux%2Fvin%2Fbordeaux">
+                <span class="font-14 light line-17 blue-navy">
+                  Bordeaux
+                  <span class="grey-typo"> (2)</span>
+                </span>
+</a>            </div>
+            <div class="pb-2">
+              <a href="/fr/bordeaux/boutiques/le-metropolitain?categories=vin-et-spiritueux%2Fvin%2Fvallee-de-la-loire">
+                <span class="font-14 light line-17 blue-navy">
+                  Vallée de la Loire
+                  <span class="grey-typo"> (1)</span>
+                </span>
+</a>            </div>
+        </div>
+        <div>
+          <div class="mb-1 mt-2">
+            <span class="bold line-17 font-14 text-capitalize">Cours, ateliers et activités</span>
+          </div>
+            <div class="pb-2">
+              <a href="/fr/bordeaux/boutiques/le-metropolitain?categories=services%2Fcours-ateliers-et-activites%2Fateliers-creatifs-et-do-it-yourself">
+                <span class="font-14 light line-17 blue-navy">
+                  Ateliers créatifs et Do-It-Yourself
+                  <span class="grey-typo"> (1)</span>
+                </span>
+</a>            </div>
+        </div>
+        <div>
+          <div class="mb-1 mt-2">
+            <span class="bold line-17 font-14 text-capitalize">Bière</span>
+          </div>
+            <div class="pb-2">
+              <a href="/fr/bordeaux/boutiques/le-metropolitain?categories=vin-et-spiritueux%2Fbiere%2Fbiere-sans-alcool">
+                <span class="font-14 light line-17 blue-navy">
+                  Bière sans alcool
+                  <span class="grey-typo"> (1)</span>
+                </span>
+</a>            </div>
+            <div class="pb-2">
+              <a href="/fr/bordeaux/boutiques/le-metropolitain?categories=vin-et-spiritueux%2Fbiere%2Fbiere-brune-et-ambree">
+                <span class="font-14 light line-17 blue-navy">
+                  Bière brune et ambrée
+                  <span class="grey-typo"> (1)</span>
+                </span>
+</a>            </div>
+            <div class="pb-2">
+              <a href="/fr/bordeaux/boutiques/le-metropolitain?categories=vin-et-spiritueux%2Fbiere%2Fbiere-aromatisee">
+                <span class="font-14 light line-17 blue-navy">
+                  Bière arômatisée
+                  <span class="grey-typo"> (1)</span>
+                </span>
+</a>            </div>
+        </div>
+        <div>
+          <div class="mb-1 mt-2">
+            <span class="bold line-17 font-14 text-capitalize">Champagne</span>
+          </div>
+            <div class="pb-2">
+              <a href="/fr/bordeaux/boutiques/le-metropolitain?categories=vin-et-spiritueux%2Fchampagne%2Fchampagne-brut">
+                <span class="font-14 light line-17 blue-navy">
+                  Champagne brut
+                  <span class="grey-typo"> (1)</span>
+                </span>
+</a>            </div>
+        </div>
+        <div>
+          <div class="mb-1 mt-2">
+            <span class="bold line-17 font-14 text-capitalize">Boisson</span>
+          </div>
+            <div class="pb-2">
+              <a href="/fr/bordeaux/boutiques/le-metropolitain?categories=alimentation%2Fboisson%2Fsoda">
+                <span class="font-14 light line-17 blue-navy">
+                  Soda
+                  <span class="grey-typo"> (1)</span>
+                </span>
+</a>            </div>
+        </div>
+        <div>
+          <div class="mb-1 mt-2">
+            <span class="bold line-17 font-14 text-capitalize">Explicit</span>
+          </div>
+            <div class="pb-2">
+              <a href="/fr/bordeaux/boutiques/le-metropolitain?categories=explicit%2Fcbd-thc-0-2">
+                <span class="font-14 light line-17 blue-navy">
+                  CBD (THC &lt;0,2%)
+                  <span class="grey-typo"> (1)</span>
+                </span>
+</a>            </div>
+        </div>
+
+      <div class="d-lg-none mt-4"><div class="p-4 background-yellow" style="border-radius: 10px;">
+  <h4 class="text-center bold uppercase">
+    Modes de livraison
+  </h4>
+  <hr class="orange-line my-3 mx-auto" style="width: 88px;">
+
+  <div class="row mb-3">
+    <div class="col-sm-1 col-1 p-0">
+      <i class="icons8 icons8-bicycle orange"></i>
+    </div>
+    <div class="col-sm-11 col-11 p-0 pl-1">
+      <span class="semi-bold font-12">
+        Livraison de proximité par le facteur
+      </span>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-sm-1 col-1 p-0">
+      <i class="icons8 icons8-in-transit orange"></i>
+    </div>
+    <div class="col-sm-11 col-11 p-0 pl-1">
+      <span class="semi-bold font-12">
+        Livraison Colissimo partout en France
+      </span>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-sm-1 col-1 p-0">
+      <i class="icons8 icons8-shop orange"></i>
+    </div>
+    <div class="col-sm-11 col-11 p-0 pl-1">
+      <span class="semi-bold font-12">
+        Click &amp; Collect : retrait en boutique
+      </span>
+    </div>
+  </div>
+
+  <hr class="orange-line my-4 mx-auto" style="width: 88px;">
+
+  <div class="row">
+    <div class="col-sm-1 col-1 p-0">
+      <i class="icons8 icons8-phone orange"></i>
+    </div>
+    <div class="col-sm-11 col-11 p-0 pl-1">
+      <div class="mb-1 bold font-12">
+        Besoin d'aide pour passer commande ?
+      </div>
+      <div class="semi-bold font-10">
+        Notre service client vous assiste du lundi au vendredi de 10h à 18h hors jours fériés :<br/><b>0 800 800 181</b> (appels et service non-surtaxés)
+      </div>
+    </div>
+  </div>
+</div></div>
+    </div>
+  </div>
+</aside>
+    </div>
+
+    <div class="col-12 col-lg-10 px-2">
+        <div id="content-wrapper">
+          <div class="d-flex align-items-center mb-3 ps-2">
+  <h2>Les produits les plus populaires</h2>
+  <a class="ms-4 d-none d-sm-flex" href="/fr/bordeaux/boutiques/le-metropolitain?categories=all">
+    <div class="d-flex align-items-center pt-1 blue-navy me-4" style="white-space: nowrap;">
+      Voir tous les produits
+      <i class="icons8 icons8-forward font-16 ms-2"></i>
+    </div>
+</a>
+  <div class="ms-auto pt-1 align-items-center d-none d-sm-flex">
+    <button name="button" type="button" onclick="scrollX(`category-shops-star-products`, { &#39;large&#39;: 4, &#39;medium&#39;: 3 }, &#39;back&#39;);" class="me-3 px-0 border-0 bg-white">
+      <i class="icons8 icons8-back font-16"></i>
+</button>    <button name="button" type="button" onclick="scrollX(`category-shops-star-products`, { &#39;large&#39;: 4, &#39;medium&#39;: 3 });" class="px-0 border-0 bg-white">
+      <i class="icons8 icons8-forward font-16"></i>
+</button>  </div>
+</div>
+
+<div id="category-shops-star-products" class="mb-4 px-2" data-simplebar data-simplebar-theme="mvms">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 flex-nowrap g-3 mb-3">
+      <div class="col simplebar-item shop-product-item">
+        <div class="card product-box datalayered-entry" data-product="285265" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Les oiseaux de chante grives" data-item_id="285265" data-price="30.0" data-item_brand="" data-item_category="Vin et spiritueux" data-item_category2="Vin" data-item_category3="Bordeaux" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581541/file/thumb-bc8f7964249937c313615a4e243ab317.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/vin-et-spiritueux/vin/bordeaux/produits/les-oiseaux-de-chante-grives"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581541/file/thumb-bc8f7964249937c313615a4e243ab317.webp"></source><img alt="Les oiseaux de chante grives" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581541/file/c4e888d948a7f2207b8b7820e994bcdc.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Les oiseaux de chante grives</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>30,00 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506764" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+      </div>
+      <div class="col simplebar-item shop-product-item">
+        <div class="card product-box datalayered-entry" data-product="285249" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="La Met'" data-item_id="285249" data-price="24.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581492/file/thumb-8fef4fa66718f054275d19d9e3162914.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/la-met"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581492/file/thumb-8fef4fa66718f054275d19d9e3162914.webp"></source><img alt="La Met&#39;" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581492/file/2a27b4d56df12b151a9f2f6d53885936.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">La Met&#39;</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>24,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506748" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+      </div>
+      <div class="col simplebar-item shop-product-item">
+        <div class="card product-box datalayered-entry" data-product="285248" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="La douelle dégustation" data-item_id="285248" data-price="26.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581489/file/thumb-7b664928b7fed976dc90c863708deea7.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/la-douelle-degustation"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581489/file/thumb-7b664928b7fed976dc90c863708deea7.webp"></source><img alt="La douelle dégustation" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581489/file/c5bf7d156d7a50a832c1445c1a5a5dc3.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">La douelle dégustation</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>26,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506747" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+      </div>
+      <div class="col simplebar-item shop-product-item">
+        <div class="card product-box datalayered-entry" data-product="285250" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="La douelle Végéta Bio" data-item_id="285250" data-price="15.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581495/file/thumb-444ae70e07f3c2163d1c7ef82987203f.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/la-douelle-vegeta-bio"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581495/file/thumb-444ae70e07f3c2163d1c7ef82987203f.webp"></source><img alt="La douelle Végéta Bio" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581495/file/5454667a31e21f13e901421eea215359.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">La douelle Végéta Bio</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>15,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506749" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+      </div>
+      <div class="col simplebar-item shop-product-item">
+        <div class="card product-box datalayered-entry" data-product="285251" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Tartine du Sud Ouest" data-item_id="285251" data-price="14.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581498/file/thumb-156e3b2b10472a118c6f67e26e42aed2.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/tartine-du-sud-ouest"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581498/file/thumb-156e3b2b10472a118c6f67e26e42aed2.webp"></source><img alt="Tartine du Sud Ouest" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581498/file/dc9799117e1d02697cea34f6327d23d7.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Tartine du Sud Ouest</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>14,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506750" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+      </div>
+      <div class="col simplebar-item shop-product-item">
+        <div class="card product-box datalayered-entry" data-product="285252" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Douelle entre deux mers" data-item_id="285252" data-price="18.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581501/file/thumb-59851f8c5bd6154b23484a9a9651e9f3.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/douelle-entre-deux-mers"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581501/file/thumb-59851f8c5bd6154b23484a9a9651e9f3.webp"></source><img alt="Douelle entre deux mers" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581501/file/c927613ad2ac6ab00880495da2fad81e.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Douelle entre deux mers</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>18,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506751" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+      </div>
+      <div class="col simplebar-item shop-product-item">
+        <div class="card product-box datalayered-entry" data-product="285253" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Douelle Tortilla" data-item_id="285253" data-price="11.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581505/file/thumb-69af4ef9e80aef31ab7376667c284d34.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/douelle-tortilla"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581505/file/thumb-69af4ef9e80aef31ab7376667c284d34.webp"></source><img alt="Douelle Tortilla" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581505/file/4bd959e22270ccfcf179c1eb38e29abc.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Douelle Tortilla</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>11,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506752" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+      </div>
+      <div class="col simplebar-item shop-product-item">
+        <div class="card product-box datalayered-entry" data-product="285254" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Camembert roti au miel" data-item_id="285254" data-price="10.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581507/file/thumb-a2413c526ad75a95d1f134824a8aaeff.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/camembert-roti-au-miel"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581507/file/thumb-a2413c526ad75a95d1f134824a8aaeff.webp"></source><img alt="Camembert roti au miel" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581507/file/3a27b0ad634b9ac80cfae3d7be923a6c.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Camembert roti au miel</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>10,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506753" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+      </div>
+    <div class="col shop-product-item">
+      <div class="h-100">
+        <a class="product-box d-flex justify-content-center flex-column align-items-center blue-navy h-100" href="/fr/bordeaux/boutiques/le-metropolitain?categories=all">
+          <div class="bold font-24 line-29 text-center">Voir tous les produits</div>
+          <div class="ronded-background mt-1  d-flex">
+            <i class="icons8 icons8-right-arrow font-20  m-auto"></i>
+          </div>
+</a>      </div>
+    </div>
+  </div>
+</div>
+
+          
+      <div class="d-flex align-items-center mb-3 ps-2">
+        <h2>Cuisine française</h2>
+          <a class="ms-4" href="/fr/bordeaux/boutiques/le-metropolitain?categories=restauration%2Fcuisine-francaise">
+            <div class="d-none d-sm-flex align-items-center pt-1 blue-navy me-4" style="white-space: nowrap;">
+              Voir les 10 produits
+              <i class="icons8 icons8-forward font-16 ms-2"></i>
+            </div>
+</a>
+          <div class="ms-auto pt-1 align-items-center d-flex 
+            
+            ">
+            <button name="button" type="button" onclick="scrollX(`category-shops-1112`, { &#39;large&#39;: 4, &#39;medium&#39;: 3 }, &#39;back&#39;);" class="me-3 px-0 border-0 bg-white d-none d-sm-flex">
+              <i class="icons8 icons8-back font-16"></i>
+</button>            <button name="button" type="button" onclick="scrollX(`category-shops-1112`, { &#39;large&#39;: 4, &#39;medium&#39;: 3 });" class="px-0 border-0 bg-white d-none d-sm-flex">
+              <i class="icons8 icons8-forward font-16"></i>
+</button>          </div>
+      </div>
+
+        <div id="category-shops-1112" class="mb-4 px-2" data-simplebar data-simplebar-theme="mvms">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 flex-nowrap g-3 mb-3">
+              <div class="col simplebar-item shop-product-item">
+                <div class="card product-box datalayered-entry" data-product="285248" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="La douelle dégustation" data-item_id="285248" data-price="26.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581489/file/thumb-7b664928b7fed976dc90c863708deea7.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/la-douelle-degustation"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581489/file/thumb-7b664928b7fed976dc90c863708deea7.webp"></source><img alt="La douelle dégustation" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581489/file/c5bf7d156d7a50a832c1445c1a5a5dc3.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">La douelle dégustation</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>26,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506747" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+              </div>
+              <div class="col simplebar-item shop-product-item">
+                <div class="card product-box datalayered-entry" data-product="285249" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="La Met'" data-item_id="285249" data-price="24.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581492/file/thumb-8fef4fa66718f054275d19d9e3162914.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/la-met"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581492/file/thumb-8fef4fa66718f054275d19d9e3162914.webp"></source><img alt="La Met&#39;" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581492/file/2a27b4d56df12b151a9f2f6d53885936.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">La Met&#39;</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>24,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506748" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+              </div>
+              <div class="col simplebar-item shop-product-item">
+                <div class="card product-box datalayered-entry" data-product="285250" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="La douelle Végéta Bio" data-item_id="285250" data-price="15.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581495/file/thumb-444ae70e07f3c2163d1c7ef82987203f.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/la-douelle-vegeta-bio"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581495/file/thumb-444ae70e07f3c2163d1c7ef82987203f.webp"></source><img alt="La douelle Végéta Bio" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581495/file/5454667a31e21f13e901421eea215359.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">La douelle Végéta Bio</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>15,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506749" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+              </div>
+              <div class="col simplebar-item shop-product-item">
+                <div class="card product-box datalayered-entry" data-product="285251" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Tartine du Sud Ouest" data-item_id="285251" data-price="14.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581498/file/thumb-156e3b2b10472a118c6f67e26e42aed2.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/tartine-du-sud-ouest"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581498/file/thumb-156e3b2b10472a118c6f67e26e42aed2.webp"></source><img alt="Tartine du Sud Ouest" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581498/file/dc9799117e1d02697cea34f6327d23d7.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Tartine du Sud Ouest</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>14,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506750" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+              </div>
+              <div class="col simplebar-item shop-product-item">
+                <div class="card product-box datalayered-entry" data-product="285252" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Douelle entre deux mers" data-item_id="285252" data-price="18.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581501/file/thumb-59851f8c5bd6154b23484a9a9651e9f3.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/douelle-entre-deux-mers"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581501/file/thumb-59851f8c5bd6154b23484a9a9651e9f3.webp"></source><img alt="Douelle entre deux mers" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581501/file/c927613ad2ac6ab00880495da2fad81e.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Douelle entre deux mers</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>18,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506751" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+              </div>
+              <div class="col simplebar-item shop-product-item">
+                <div class="card product-box datalayered-entry" data-product="285253" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Douelle Tortilla" data-item_id="285253" data-price="11.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581505/file/thumb-69af4ef9e80aef31ab7376667c284d34.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/douelle-tortilla"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581505/file/thumb-69af4ef9e80aef31ab7376667c284d34.webp"></source><img alt="Douelle Tortilla" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581505/file/4bd959e22270ccfcf179c1eb38e29abc.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Douelle Tortilla</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>11,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506752" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+              </div>
+              <div class="col simplebar-item shop-product-item">
+                <div class="card product-box datalayered-entry" data-product="285254" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Camembert roti au miel" data-item_id="285254" data-price="10.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581507/file/thumb-a2413c526ad75a95d1f134824a8aaeff.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/camembert-roti-au-miel"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581507/file/thumb-a2413c526ad75a95d1f134824a8aaeff.webp"></source><img alt="Camembert roti au miel" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581507/file/3a27b0ad634b9ac80cfae3d7be923a6c.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Camembert roti au miel</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>10,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506753" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+              </div>
+              <div class="col simplebar-item shop-product-item">
+                <div class="card product-box datalayered-entry" data-product="285255" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Douelle de Fromage" data-item_id="285255" data-price="12.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581510/file/thumb-f8cccd598029bb95a0dbe0dc941cd490.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/douelle-de-fromage"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581510/file/thumb-f8cccd598029bb95a0dbe0dc941cd490.webp"></source><img alt="Douelle de Fromage" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581510/file/af911a0ec9b67890ade8bca0a3e9439e.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Douelle de Fromage</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>12,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506754" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+              </div>
+              <div class="col shop-product-item">
+                <div class="h-100">
+                  <a class="product-box d-flex justify-content-center flex-column align-items-center blue-navy h-100" href="/fr/bordeaux/boutiques/le-metropolitain?categories=restauration%2Fcuisine-francaise">
+  <div class="bold font-24 line-29">En voir plus</div>
+  <div class="">10 produits</div>
+  <div class="ronded-background mt-1  d-flex">
+    <i class="icons8 icons8-right-arrow font-20  m-auto"></i>
+  </div>
+</a>
+                </div>
+              </div>
+          </div>
+        </div>
+
+      <div class="d-flex align-items-center mb-3 ps-2">
+        <h2>Bordeaux</h2>
+
+          <div class="ms-auto pt-1 align-items-center d-flex 
+            d-md-none
+            d-xl-none">
+            <button name="button" type="button" onclick="scrollX(`category-shops-1127`, { &#39;large&#39;: 4, &#39;medium&#39;: 3 }, &#39;back&#39;);" class="me-3 px-0 border-0 bg-white d-none d-sm-flex">
+              <i class="icons8 icons8-back font-16"></i>
+</button>            <button name="button" type="button" onclick="scrollX(`category-shops-1127`, { &#39;large&#39;: 4, &#39;medium&#39;: 3 });" class="px-0 border-0 bg-white d-none d-sm-flex">
+              <i class="icons8 icons8-forward font-16"></i>
+</button>          </div>
+      </div>
+
+        <div id="category-shops-1127" class="mb-4 px-2" data-simplebar data-simplebar-theme="mvms">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 flex-nowrap g-3 mb-3">
+              <div class="col simplebar-item shop-product-item">
+                <div class="card product-box datalayered-entry" data-product="285262" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Inclassable" data-item_id="285262" data-price="28.0" data-item_brand="" data-item_category="Vin et spiritueux" data-item_category2="Vin" data-item_category3="Bordeaux" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581532/file/thumb-76dbe1de5f73e90bc87dda92c9c285ea.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/vin-et-spiritueux/vin/bordeaux/produits/inclassable"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581532/file/thumb-76dbe1de5f73e90bc87dda92c9c285ea.webp"></source><img alt="Inclassable" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581532/file/b951322b304956f6b6cebeccc5397e55.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Inclassable</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>28,00 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506761" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+              </div>
+              <div class="col simplebar-item shop-product-item">
+                <div class="card product-box datalayered-entry" data-product="285265" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Les oiseaux de chante grives" data-item_id="285265" data-price="30.0" data-item_brand="" data-item_category="Vin et spiritueux" data-item_category2="Vin" data-item_category3="Bordeaux" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581541/file/thumb-bc8f7964249937c313615a4e243ab317.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/vin-et-spiritueux/vin/bordeaux/produits/les-oiseaux-de-chante-grives"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581541/file/thumb-bc8f7964249937c313615a4e243ab317.webp"></source><img alt="Les oiseaux de chante grives" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581541/file/c4e888d948a7f2207b8b7820e994bcdc.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Les oiseaux de chante grives</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>30,00 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506764" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+              </div>
+          </div>
+        </div>
+
+      <div class="d-flex align-items-center mb-3 ps-2">
+        <h2>Ateliers créatifs et Do-It-Yourself</h2>
+
+          <div class="ms-auto pt-1 align-items-center d-flex d-none
+            d-md-none
+            d-xl-none">
+            <button name="button" type="button" onclick="scrollX(`category-shops-2304`, { &#39;large&#39;: 4, &#39;medium&#39;: 3 }, &#39;back&#39;);" class="me-3 px-0 border-0 bg-white d-none d-sm-flex">
+              <i class="icons8 icons8-back font-16"></i>
+</button>            <button name="button" type="button" onclick="scrollX(`category-shops-2304`, { &#39;large&#39;: 4, &#39;medium&#39;: 3 });" class="px-0 border-0 bg-white d-none d-sm-flex">
+              <i class="icons8 icons8-forward font-16"></i>
+</button>          </div>
+      </div>
+
+        <div id="category-shops-2304" class="mb-4 px-2" data-simplebar data-simplebar-theme="mvms">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 flex-nowrap g-3 mb-3">
+              <div class="col simplebar-item shop-product-item">
+                <div class="card product-box datalayered-entry" data-product="285267" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Atelier Dégustation" data-item_id="285267" data-price="25.0" data-item_brand="" data-item_category="Services" data-item_category2="Cours, ateliers et activités" data-item_category3="Ateliers créatifs et Do-It-Yourself" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581548/file/thumb-8c9ed7a500751b71e7b0d42366c0b558.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/services/cours-ateliers-et-activites/ateliers-creatifs-et-do-it-yourself/produits/atelier-degustation"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581548/file/thumb-8c9ed7a500751b71e7b0d42366c0b558.webp"></source><img alt="Atelier Dégustation" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581548/file/0482703c28de31229cf14eb4c7ef7107.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Atelier Dégustation</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>25,00 €</div>
+      </div>
+
+          <a class="add-to-cart" href="/fr/bordeaux/le-metropolitain/services/cours-ateliers-et-activites/ateliers-creatifs-et-do-it-yourself/produits/atelier-degustation">
+            <img src="/assets/product/card/icons8-add-calendar-white-938b2ccf459c079a775845576cfdd21d076b17aa32aaac36b3f1f94a3d209b47.svg" />
+</a>    </div>
+  </div>
+
+</div>
+
+              </div>
+          </div>
+        </div>
+
+      <div class="d-flex align-items-center mb-3 ps-2">
+        <h2>Vallée de la Loire</h2>
+
+          <div class="ms-auto pt-1 align-items-center d-flex d-none
+            d-md-none
+            d-xl-none">
+            <button name="button" type="button" onclick="scrollX(`category-shops-1132`, { &#39;large&#39;: 4, &#39;medium&#39;: 3 }, &#39;back&#39;);" class="me-3 px-0 border-0 bg-white d-none d-sm-flex">
+              <i class="icons8 icons8-back font-16"></i>
+</button>            <button name="button" type="button" onclick="scrollX(`category-shops-1132`, { &#39;large&#39;: 4, &#39;medium&#39;: 3 });" class="px-0 border-0 bg-white d-none d-sm-flex">
+              <i class="icons8 icons8-forward font-16"></i>
+</button>          </div>
+      </div>
+
+        <div id="category-shops-1132" class="mb-4 px-2" data-simplebar data-simplebar-theme="mvms">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 flex-nowrap g-3 mb-3">
+              <div class="col simplebar-item shop-product-item">
+                <div class="card product-box datalayered-entry" data-product="285259" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Les Bonnets Blancs" data-item_id="285259" data-price="28.0" data-item_brand="" data-item_category="Vin et spiritueux" data-item_category2="Vin" data-item_category3="Vallée de la Loire" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581523/file/thumb-db22b082fd5a0f0bcc6305b604a55455.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/vin-et-spiritueux/vin/vallee-de-la-loire/produits/les-bonnets-blancs"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581523/file/thumb-db22b082fd5a0f0bcc6305b604a55455.webp"></source><img alt="Les Bonnets Blancs" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581523/file/4eaa4725210219fdd0e8ced7705b798b.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Les Bonnets Blancs</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>28,00 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506758" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+              </div>
+          </div>
+        </div>
+
+      <div class="d-flex align-items-center mb-3 ps-2">
+        <h2>Bière arômatisée</h2>
+
+          <div class="ms-auto pt-1 align-items-center d-flex d-none
+            d-md-none
+            d-xl-none">
+            <button name="button" type="button" onclick="scrollX(`category-shops-1144`, { &#39;large&#39;: 4, &#39;medium&#39;: 3 }, &#39;back&#39;);" class="me-3 px-0 border-0 bg-white d-none d-sm-flex">
+              <i class="icons8 icons8-back font-16"></i>
+</button>            <button name="button" type="button" onclick="scrollX(`category-shops-1144`, { &#39;large&#39;: 4, &#39;medium&#39;: 3 });" class="px-0 border-0 bg-white d-none d-sm-flex">
+              <i class="icons8 icons8-forward font-16"></i>
+</button>          </div>
+      </div>
+
+        <div id="category-shops-1144" class="mb-4 px-2" data-simplebar data-simplebar-theme="mvms">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 flex-nowrap g-3 mb-3">
+              <div class="col simplebar-item shop-product-item">
+                <div class="card product-box datalayered-entry" data-product="285263" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="IPA" data-item_id="285263" data-price="7.0" data-item_brand="" data-item_category="Vin et spiritueux" data-item_category2="Bière" data-item_category3="Bière arômatisée" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581535/file/thumb-9e8f6227388ffc5c995bf077c4f7b0fc.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/vin-et-spiritueux/biere/biere-aromatisee/produits/ipa"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581535/file/thumb-9e8f6227388ffc5c995bf077c4f7b0fc.webp"></source><img alt="IPA" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581535/file/c6b05c88bc1abf86a4f1c8fcc314368c.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">IPA</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>7,00 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506762" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+              </div>
+          </div>
+        </div>
+
+      <div class="d-flex align-items-center mb-3 ps-2">
+        <h2>Soda</h2>
+
+          <div class="ms-auto pt-1 align-items-center d-flex d-none
+            d-md-none
+            d-xl-none">
+            <button name="button" type="button" onclick="scrollX(`category-shops-1085`, { &#39;large&#39;: 4, &#39;medium&#39;: 3 }, &#39;back&#39;);" class="me-3 px-0 border-0 bg-white d-none d-sm-flex">
+              <i class="icons8 icons8-back font-16"></i>
+</button>            <button name="button" type="button" onclick="scrollX(`category-shops-1085`, { &#39;large&#39;: 4, &#39;medium&#39;: 3 });" class="px-0 border-0 bg-white d-none d-sm-flex">
+              <i class="icons8 icons8-forward font-16"></i>
+</button>          </div>
+      </div>
+
+        <div id="category-shops-1085" class="mb-4 px-2" data-simplebar data-simplebar-theme="mvms">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 flex-nowrap g-3 mb-3">
+              <div class="col simplebar-item shop-product-item">
+                <div class="card product-box datalayered-entry" data-product="285261" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Elixia" data-item_id="285261" data-price="4.5" data-item_brand="" data-item_category="Alimentation" data-item_category2="Boisson" data-item_category3="Soda" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581529/file/thumb-92b3eb0bcd0119a295eb2c2f179572c6.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/alimentation/boisson/soda/produits/elixia"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581529/file/thumb-92b3eb0bcd0119a295eb2c2f179572c6.webp"></source><img alt="Elixia" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581529/file/6ff489bb4a1dc0c8319e093e01c37924.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Elixia</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>4,50 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506760" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+              </div>
+          </div>
+        </div>
+
+        </div>
+          <div id="load-more" class="text-center mt-2">
+              <a class="btn btn-primary" rel="next" data-page="2" data-disable-with="&lt;i class=&#39;icons8 icons8-spinner icon-spin&#39; aria-hidden=&#39;true&#39;&gt;&lt;/i&gt;" data-remote="true" href="/fr/bordeaux/boutiques/le-metropolitain?page=2">
+    <i class="icons8 icons8-spinner"></i>
+    Voir plus
+</a>
+          </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="see-more-modal" tabindex="-1" aria-labelledby="see-more" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-fullscreen-sm-down" style="max-width: 456px;">
+    <div class="modal-content" style="border-radius: 8px;">
+      <div class="modal-header d-block bg-transparent">
+        <button type="button" class="btn-close btn-close-blue-navy" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div id="map" style="height: 136px; border-radius: 8px 8px 0 0;"></div>
+
+          <input type="hidden" name="shop_longitude" id="shop-longitude" value="-0.5712249000000611" />
+          <input type="hidden" name="shop_latitude" id="shop-latitude" value="44.8378715" />
+      </div>
+
+      <div class="modal-body d-flex flex-column p-4 border-0">
+        <div class="mb-4">
+          <h2 class="mb-2">
+            Le Métropolitain
+          </h2>
+
+            <h5 class="grey-hanoi">
+              4,50 €&#32;&#45;
+              50,00 € 
+            </h5>
+
+        </div>
+
+        <div class="row gx-3">
+          <div class="col-7">
+            <div class="icon-square-medium mb-2 background-yellow-corn">
+              <i class="icons8 icons8-time-span d-flex font-32 yellow-orange"></i>
+            </div>
+            <h4 class="mb-1 fw-bold">Horaires</h4>
+            <table class="font-12 grey-hanoi">
+    <tr>
+      <td class="align-top">
+        <div class="me-2">Lundi</div>
+      </td>
+        <td colspan="4">fermé</td>
+    </tr>
+    <tr>
+      <td class="align-top">
+        <div class="me-2">Mardi</div>
+      </td>
+          <td>
+            <div>16h00 - 12h00</div>
+            <div>14h00 - 22h00</div>
+          </td>
+    </tr>
+    <tr>
+      <td class="align-top">
+        <div class="me-2">Mercredi</div>
+      </td>
+          <td>
+            <div>16h00 - 12h00</div>
+            <div>14h00 - 22h00</div>
+          </td>
+    </tr>
+    <tr>
+      <td class="align-top">
+        <div class="me-2">Jeudi</div>
+      </td>
+          <td>
+            <div>16h00 - 12h00</div>
+            <div>14h00 - 23h00</div>
+          </td>
+    </tr>
+    <tr>
+      <td class="align-top">
+        <div class="me-2">Vendredi</div>
+      </td>
+          <td>
+            <div>16h00 - 12h00</div>
+            <div>14h00 - 23h00</div>
+          </td>
+    </tr>
+    <tr>
+      <td class="align-top">
+        <div class="me-2">Samedi</div>
+      </td>
+          <td>
+            <div>16h00 - 12h00</div>
+            <div>14h00 - 23h00</div>
+          </td>
+    </tr>
+    <tr>
+      <td class="align-top">
+        <div class="me-2">Dimanche</div>
+      </td>
+        <td colspan="4">fermé</td>
+    </tr>
+</table>
+          </div>
+
+          <div class="col-5">
+            <div class="icon-square-medium mb-2 background-blue-alice">
+              <i class="icons8 icons8-shop d-flex font-32 blue-mvms-light"></i>
+            </div>
+
+            <h4 class="mb-1 fw-bold">
+              Adresse
+            </h4>
+
+            <div class="font-12 grey-hanoi" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <div itemprop="streetAddress">49 cours d&#39;Alsace-et-Lorraine</div>
+              <div itemprop="addressLocality">33000 BORDEAUX</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center mt-auto mt-md-4">
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div></main>
+
+    <section class="reinsurance my-5" data-cy="section-reinsurance">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-12 col-md-10 d-flex mx-auto p-0">
+        <ul class="d-flex flex-fill justify-content-evenly flex-wrap m-0" data-cy="ul-reinsurance">
+          <li class="my-2 my-lg-0 p-0">
+            <img width="102" src="/assets/reinsurance/shop-2cd7ceba03a761fb1e8b3bef62a4c528589d8d790041be1de21e0a6bec9b2ec4.svg" />
+            <span>Retrait en boutique <br>en 2h</span>
+          </li>
+          <li class="my-2 my-lg-0 p-0">
+            <img width="102" src="/assets/reinsurance/truck-376769b58f97d33e551c9fdda26c67b4d49d869ddb7cd2bd9d57e5cc6fba84b4.svg" />
+            <span>Livraison partout <br>en France</span>
+          </li>
+          <li class="my-2 my-lg-0 p-0">
+            <img width="102" src="/assets/reinsurance/lock-a282b350cf77230c9ee347fa39f2bd14e4778fbf254395b9673784371acffadb.svg" />
+            <span>Paiement 100% <br>sécurisé</span>
+          </li>
+          <li class="my-2 my-lg-0 p-0">
+            <img width="102" src="/assets/reinsurance/refund-492abe7297fe862d9198586ba57a06f7d1ab73e3c91b6a71e10eb928c852273f.svg" />
+            <span>Échanges et <br>remboursements</span>
+          </li>
+          <li class="my-2 my-lg-0 p-0">
+            <img width="102" src="/assets/reinsurance/phone-1a2b9f69e4f5974a57139ef284451268fba1ab68d47dbc5c8ae2425b73ba8462.svg" />
+            <span>Service client aux <br>petits oignons</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+    <footer id="footer">
+    <div id="container-newsletter" class="background-blue-very-light container-newsletter" data-cy="wrapper-newsletter">
+      <div class="font-12 text-center mb-2 orange uppercase semi-bold">La newsletter</div>
+      <div class="semi-bold font-22 mb-4 line-26 text-center blue-navy"><i>Et avec ceci</i>, vous voudrez sûrement un peu plus d'actu' et de bons plans ?<br>Abonnez-vous à notre newsletter pour tout savoir de la vie locale !</div>
+
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-5 mb-3 mb-md-1" style="max-width: 526px;">
+          <form id="form-newsletter" class="mb-3" action="/fr/email_newsletters" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="NciO7+JRFSIHlE6yuRHG09kQGzbZ7gl9EZXt/Y+Zv0FVif3eaZ9asjfcVSrijieI2jMdmRQ4sWM3mMYL236iTQ==" />
+            <div class="input-group">
+              <input placeholder="Votre e-mail" class="form-control" type="email" name="email_newsletter[email]" />
+              <input type="submit" name="commit" value="Je m&#39;abonne" class="btn btn-primary" data-disable-with="Je m&#39;abonne" />
+            </div>
+            <div id="error" class="red-rose font-10"></div>
+</form>          <p class="mb-0 text-center font-10 grey-hanoi fw-light">
+            Conformément à la réglementation relative à la protection des données à caractère personnel, E-SY COM traite vos données en qualité de responsable de traitement à des fins de gestion de la newsletter. Vous disposez d'un droit d'accès, de rectification, d'opposition, de limitation, de portabilité et d'effacement des données. Ces droits peuvent être exercés en écrivant à l'adresse suivante : <a href='mailto:rgpd@mavillemonshopping.fr'>rgpd@mavillemonshopping.fr</a>. Pour plus d'informations sur le traitement de vos données personnelles, <a target="_blank" href="/fr/politique-sur-les-cookies">consultez la Politique de confidentialité</a> de mavillemonshopping.fr.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  <div class="container-xxl py-4 px-3">
+    <div class="d-flex flex-column flex-md-row justify-content-md-around justify-content-xl-evenly">
+      <div class="mb-4 mb-md-0 px-0 px-md-2" data-cy="wrapper-about">
+        <div class="mb-2 font-18 fw-bolder">
+          À propos
+        </div>
+        <ul class="grey-typo">
+          <li><a href="/fr/about_us">Qui sommes-nous ?</a></li>
+          <li><a target="_blank" href="https://blog.mavillemonshopping.fr/">Blog</a></li>
+        </ul>
+
+        <ul class="icons-social d-flex mt-3 mb-3" data-cy="ul-social-networks">
+          <li>
+            <a target="_blank" href="https://www.facebook.com/mavillemonshopping.fr/">
+              <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Calque_1" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" height="20" width="20">
+<style type="text/css">
+	.st0{fill:#DE8E00;}
+</style>
+<path class="st0" d="M7,5C5.9,5,5,5.9,5,7v18c0,1.1,0.9,2,2,2h18c1.1,0,2-0.9,2-2V7c0-1.1-0.9-2-2-2H7z M7,7h18v18h-5.2v-6.8h2.6  l0.4-3h-3v-1.9c0-0.9,0.2-1.5,1.5-1.5h1.6V9.1c-0.3,0-1.2-0.1-2.3-0.1c-2.3,0-3.9,1.4-3.9,4v2.2h-2.6v3h2.6V25H7V7z"></path>
+</svg>
+
+</a>          </li>
+          <li>
+            <a target="_blank" href="https://www.instagram.com/mavillemonshopping/?hl=fr">
+              <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Calque_1" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" height="20" width="20">
+<style type="text/css">
+	.st0{fill:#DE8E00;}
+</style>
+<path class="st0" d="M11.5,5C7.9,5,5,7.9,5,11.5v9.1c0,3.6,2.9,6.5,6.5,6.5h9.1c3.6,0,6.5-2.9,6.5-6.5v-9.1C27,7.9,24.1,5,20.5,5  H11.5z M11.5,7h9.1C23,7,25,9,25,11.5v9.1c0,2.5-2,4.5-4.5,4.5h-9.1C9,25,7,23,7,20.5v-9.1C7,9,9,7,11.5,7z M21.9,9.2  c-0.5,0-0.9,0.4-0.9,0.9s0.4,0.9,0.9,0.9s0.9-0.4,0.9-0.9S22.4,9.2,21.9,9.2z M16,10c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6  S19.3,10,16,10z M16,12c2.2,0,4,1.8,4,4s-1.8,4-4,4s-4-1.8-4-4S13.8,12,16,12z"></path>
+</svg>
+
+</a>          </li>
+          <li>
+            <a target="_blank" href="https://twitter.com/mavillemonshop?lang=fr">
+              <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Calque_1" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" height="20" width="20">
+<style type="text/css">
+	.st0{fill:#DE8E00;}
+</style>
+<path class="st0" d="M28,8.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-0.9,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6  c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1c-4.1-0.2-7.7-2.2-10.1-5.1C5.2,7.9,5,8.7,5,9.6c0,1.7,0.9,3.2,2.2,4.1  c-0.8,0-1.6-0.2-2.2-0.6c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4  c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6  C26.5,10.4,27.3,9.5,28,8.6z"></path>
+</svg>
+
+</a>          </li>
+          <li>
+            <a target="_blank" href="https://www.youtube.com/channel/UCuHrlydxabQ75aTkKuapK0A?view_as=subscribe">
+              <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Calque_1" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve" height="20" width="20">
+<style type="text/css">
+	.st0{fill:#DE8E00;}
+</style>
+<path class="st0" d="M8,2C6,2,4.2,2.2,3.1,2.4C2.2,2.5,1.4,3.2,1.3,4.1C1.1,4.9,1,6.1,1,7.5c0,1.4,0.1,2.6,0.3,3.4  c0.2,0.9,0.9,1.6,1.8,1.7C4.2,12.8,6,13,8,13s3.8-0.2,4.9-0.4h0c0.9-0.1,1.6-0.8,1.8-1.7c0.1-0.8,0.3-1.9,0.3-3.4  c0-1.4-0.1-2.6-0.3-3.4c-0.2-0.9-0.9-1.6-1.8-1.7C11.8,2.2,10,2,8,2z M8,3c2,0,3.7,0.2,4.8,0.4c0.5,0.1,0.8,0.4,0.9,0.9  C13.9,5,14,6.1,14,7.5s-0.1,2.5-0.3,3.2c-0.1,0.5-0.5,0.9-0.9,0.9C11.7,11.8,10,12,8,12s-3.7-0.2-4.8-0.4c-0.5-0.1-0.9-0.4-0.9-0.9  C2.1,10,2,8.9,2,7.5C2,6.1,2.1,5,2.3,4.3c0.1-0.5,0.5-0.9,0.9-0.9h0C4.3,3.2,6,3,8,3z M6,5v5l5-2.5L6,5z"></path>
+</svg>
+
+</a>          </li>
+        </ul>
+
+        <div>
+          <div class="mb-2 font-18 fw-bolder">
+            Découvrez l’application<br>Ma Ville Mon Shopping
+          </div>
+        
+          <div class="d-flex">
+            <a class="me-3" target="_blank" href="https://apps.apple.com/app/ma-ville-mon-shopping/id1584987543">
+              <img width="100" height="32" alt="Bouton AppStore pour télécharger l&#39;application" src="/assets/citizens/appstore-link-78243d3c903467e4e99f53e805b7c53b185445ae5a63bf9c2caebf74472de0f9.svg" />
+</a>            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.mvms.app&amp;gl=FR">
+              <img width="100" height="32" alt="Bouton GooglePlay pour télécharger l&#39;application" src="/assets/citizens/google-play-link-e1b267c83e47d5408186f4859fe5796c6cc0e38bd0fc3d82f62c69fbb3691980.svg" />
+</a>          </div>
+        </div>   
+      </div>
+  
+
+      <div class="mb-4 mb-md-0 px-0 px-md-2">
+        <div class="mb-4" data-cy="wrapper-shops">
+          <div class="mb-2 font-18 fw-bolder">
+            Commerçants
+          </div>
+          <ul class="grey-typo">
+            <li><a href="/fr/commercant">Rejoindre la Marketplace</a></li>
+            <li><a href="/fr/commercant/pack-starter">Pack Starter</a></li>
+            <li><a href="/fr/commercant/pack-booster">Pack Booster</a></li>
+            <li><a href="/fr/commercant/pack-communication">Pack Communication</a></li>
+          </ul>
+        </div>
+
+        <div data-cy="wrapper-cityzens">
+          <div class="mb-2 font-18 fw-bolder">
+            Cityzens
+          </div>
+          <ul class="grey-typo">
+            <li><a href="/fr/cityzens">La communauté</a></li>
+            <li><a href="/fr/devenir-cityzen">Devenir Cityzen</a></li>
+            <li><a target="_blank" href="/fr/jeuconcourstousinfluenceurs">Règlement Jeu #TousInfluenceurs</a></li>
+            <li><a target="_blank" href="/fr/jeuconcoursfetedesperes">Règlement Jeu-concours Fête des Pères</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mb-4 mb-md-0 px-0 px-md-2">
+        <div class="mb-4" data-cy="wrapper-partners">
+          <div class="mb-2 font-18 fw-bolder">
+            Partenaires
+          </div>
+          <ul class="grey-typo">
+            <li><a target="_blank" href="https://lp.mavillemonshopping.fr/territoires/">Devenir Partenaire</a></li>
+            
+              <li><a target="_blank" href="/fr/territoires_partenaires">Nos territoires partenaires</a></li>
+          </ul>
+        </div>
+
+        <div data-cy="wrapper-informations">
+          <div class="mb-2 font-18 fw-bolder">
+            Informations
+          </div>
+          <ul class="grey-typo">
+            <li class="fw-bolder"><a href="https://faq.mavillemonshopping.fr/hc/fr">Foire Aux Questions</a></li>
+            <li><a href="/fr/services">Modes de livraison</a></li>
+            <li><a href="/fr/privacy_policy">Politique de confidentialité</a></li>
+            <li><a href="/fr/politique-sur-les-cookies">Politique des cookies</a></li>
+            <li><a href="javascript:openAxeptioCookies()">Paramétrer les cookies</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="px-0 px-md-2 blue-mvms-dark">
+        <div>Une entreprise de</div>
+        <img src="/assets/logo_la_poste-6211d1421527f77535cccb9e139015914ddbf4ce3b9dc6db4c0ea58192d9b40d.png" />
+      </div>
+    </div>
+  </div>
+
+    <div class="container text-center" style="font-size: 75%; line-height: 14px;" id="footer-legal-notice-free_service_offer">*Offre soumise aux Conditions Générales de la Marketplace, valable du 05/05 au 19/06/2022 inclus, applicable pour la Livraison par votre facteur et la livraison Colissimo, excluant la livraison par le commerçant ou autre prestataire. Remise appliquée après validation du panier d&#39;achat sur www.mavillemonshopping.fr dès 50 € d&#39;achat en ligne hors réservation, hors frais de livraison et hors remises promotionnelles. Offre cumulable avec les offres en cours si le montant final de la commande (une fois les remises appliquées) atteint 50 € ou plus.  **L’abus d’alcool est dangereux pour la santé. À consommer avec modération.</div>
+
+  <section class="background-blue-very-light">
+    <div class="container-xxl p-3">
+      <div class="d-flex flex-column flex-md-row justify-content-start justify-content-md-evenly align-items-start align-items-md-center font-12 grey-typo">
+        <div class="mb-3 mb-md-0 grey-typo">
+          © mavillemonshopping.fr 2022 • Tous droits réservés
+        </div>
+        <div class="mb-3 mb-md-0">
+          <a href="/fr/cgv_website">Conditions Générales de la MarketPlace</a>
+        </div>
+        <div class="mb-3 mb-md-0">
+          <a href="/fr/mentions_legales">Mentions légales</a>
+        </div>
+        <div>
+          <i class="icons8 icons8-lock"></i>
+          <i class="icons8 icons8-visa"></i>
+          <i class="icons8 icons8-mastercard-credit-card"></i>
+          <i class="icons8 icons8-mastercard-logo"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+</footer>
+
+<div id="loader">
+  <img width="100" alt="loader" src="/assets/puff-e708a72e7c58568de8536de736ea9ef04c1c1304b2ff8102cb9b6be513371d0a.svg" />
+</div>
+    <div id="sign-in" class="modal sign-in" role="dialog">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-bs-dismiss="modal">
+          <i class="icons8 icons8-delete"></i>
+        </button>
+        <p class="modal-title mx-auto h4">Connexion</p>
+      </div>
+      <div class="modal-body">
+        <form action="/fr/users/sign_in" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="Gd9mCGzv1wFTu2XI/ITzWQ0JgDv6PgZq5owPPNHXpAx5nhU55yGYkWPzflCnGxICDiqGlDfovnTAgSTKhTC5AA==" />
+        <div class="col-12 p-0">
+        	<div class="col-12 mt-3 d-grid">
+            <a class="btn btn-facebook position-relative" id="btn-facebook-sign-in" rel="nofollow" data-method="post" href="/users/auth/facebook">
+              <div style="width: 50px" class="position-absolute start-0 top-0 bottom-0 d-flex align-items-center justify-content-center"><i class="icons8 icons8-facebook"></i></div>
+              Continuer avec Facebook
+</a>          </div>
+          <div class="clear"></div>
+          <p class="border-bloc">
+            <span>ou</span>
+          </p>
+          <div class="form-group">
+            <input class="form-control" placeholder="Votre adresse email" id="user_email_sign_in" type="email" name="user[email]" />
+          </div>
+          <div class="form-group m-0">
+            <input class="form-control password-field" placeholder="Mot de passe" id="user_password_sign_in" type="password" name="user[password]" />
+            <span toggle=".password-field" class="field-icon toggle-password"><i class="icons8 icons8-eye"></i></span>
+          </div>
+         	<div class="text-end forgot-password">
+          	<a href="/fr/users/password/new">Mot de passe oublié ?</a>
+          </div>
+        	<div class="col-12 col-sm-8 offset-sm-2">
+          	<input type="submit" name="commit" value="Connexion" class="btn btn-primary margin-bottom w-100" data-disable-with="Connexion" />
+          </div>
+        </div>
+</form>      </div>
+      <div class="modal-footer text-center">
+        <p class="mb-1 mx-auto">Vous êtes client ? <a href="/fr/users/sign_up">Inscrivez-vous</a></p>
+      	<p class="mx-auto">Vous êtes un professionnel ? <a href="/fr/creer-ma-boutique">Inscrivez-vous</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    <div id="notices">
+</div>
+
+  <link href="https://cdn.jsdelivr.net/npm/@ecv-competition-2022/competition-2022@0.1.0/docs/index.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@ecv-competition-2022/competition-2022@0.1.0/docs/index.js"crossorigin="anonymous"></script>
+</body></html>
