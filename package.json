@@ -1,6 +1,6 @@
 {
   "name": "@ecv-competition-2022/competition-2022",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": ".",
   "scripts": {
     "start": "react-scripts start",
