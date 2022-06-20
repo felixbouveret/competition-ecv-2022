@@ -14999,3 +14999,12 @@ nav.navbar #links-menu > li.log-in:not(#search):before {
 .pro-wizard-product-images button.image-upload i {
   font-size: 40px;
 }
+#category-shops-star-products,
+#category-shops-1112,
+#category-shops-1127,
+#category-shops-2304 {
+  overflow-x: hidden;
+}
+header {
+  overflow-x: hidden;
+}
