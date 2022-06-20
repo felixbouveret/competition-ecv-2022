@@ -1,1 +1,41 @@
-$primary: rgb(0, 0, 0);
+$purple: #7a1047;
+$lightPurple: rgba(122, 16, 71, 0.5);
+$beige: #fffbfa;
+$white: #fff;
+$blue: #646b8e;
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: local("Montserrat-Regular"),
+    url(../public/font/Montserrat-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: local("Montserrat-Medium"),
+    url(../public/font/Montserrat-Medium.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: local("Montserrat-SemiBold"),
+    url(../public/font/Montserrat-SemiBold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: local("Montserrat-Bold"),
+    url(../public/font/Montserrat-Bold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
