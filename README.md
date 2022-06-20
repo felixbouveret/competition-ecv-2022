@@ -2,6 +2,17 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+## Use production script
+
+Our CDN :
+```
+<link href="https://cdn.jsdelivr.net/npm/@ecv-competition-2022/competition-2022@latest/docs/index.css" rel="stylesheet" />
+
+<script src="https://cdn.jsdelivr.net/npm/@ecv-competition-2022/competition-2022@latest/docs/index.js"crossorigin="anonymous"></script>
+```
+
+
 ## Available Scripts
 
 In the project directory, you can run:
