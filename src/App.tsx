@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import PopinContainer from "./Popin";
 import BannerContainer from "./Banner";
 
