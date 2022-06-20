@@ -1,43 +1,1858 @@
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<html lang="fr">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
+<head>  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<meta name='description' content="Commandez en ligne chez Le Métropolitain à Bordeaux. Disponible en Click &amp; Collect ou livraison. Consommer local, c&#39;est facile !">
+  <meta name="author" content="MVMS">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <title>
+		Commander chez Le Métropolitain à Bordeaux - Ma Ville Mon Shopping
+	</title>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  <link rel="stylesheet" media="all" href="style.css" />
+</head>
+
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+      <div id= "cart-overlay" class="cart-overlay"></div>
+      
+<header class="sticky-top bg-white">
+  <div class="announcement-navbar d-flex justify-content-center px-3 py-2 text-center">
+  <p class="m-0">
+    Profitez de la livraison offerte dès 50 € d&#39;achat 
+        <a class="font-12" href="#footer-legal-notice-free_service_offer">(voir conditions)</a>
+  </p>
+</div>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-white m-0 p-0 border-0">
+    <div class="container-fluid p-0">
+      <section class="col-3 d-lg-none order-1">
+        <button type="button" class="navbar-toggler px-1 border-0 rounded-0 bg-transparent text-center d-inline-block" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <i class="icons8 icons8-menu font-24 grey-dark"></i>
+        </button>
+      </section>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
-</html>
+      <section class="col-6 col-lg-auto order-2 d-flex justify-content-center flex-lg-shrink-1">
+        <a class="d-flex" style="height: 100%;" href="/fr">
+          <img class="w-100" style="object-fit: contain; height: 100%" data-cy="img-logo" src="/assets/logo_pantone_baseline-55d2071a97d27e6f2450866c59faa02059802aa5876cab9b8c3df5614f7745f9.svg" />
+</a>      </section>
+
+      <section class="col order-4 ms-0 me-0 me-lg-auto order-lg-3 p-0 search d-lg-flex" style="z-index: 1; min-width: 250px;">
+        <hr class="hr d-block d-lg-none">
+        <div class="d-flex align-items-center flex-fill mx-3 mx-lg-4" style="height: 100%;">
+  <button name="button" type="button" id="search-exit" class="btn btn-search-exit d-lg-none">
+    <i class="icons8 icons8-expand-arrow d-flex font-24"></i>
+</button>
+  <div id="search-bar" data-localisation-slug="" class="align-self-center w-100"> 
+    <form action="https://www.mavillemonshopping.fr/fr/recherche" accept-charset="UTF-8" method="get">
+        <input type="hidden" name="perimeter" id="perimeter" value="all" />
+      <div id="search-bar-part" class="row m-0">
+          <div class='hidden' id='empty-autosuggest' data-image-url="/assets/error_heroku-c0811c0885a270d1655678d2a34d3219868ca1ea5ef0a70ae84fa6f7d2b6d728.svg"></div>
+          <div id="multiple-datasets" class="navbar-search twitter-typeahead p-0" data-cy="div-autosuggest">
+              <label for="q" class="icon-search d-flex d-lg-none">
+                <i class="icons8 icons8-search font-24"></i>
+              </label>
+              <input type="search" name="q" id="q" class="form-control filter typeahead" autocomplete="off" placeholder="Recherchez produits, boutiques..." data-cy="input-search" />
+              <button type="button" data-cy="btn-search-delete" class="btn delete-search hidden"> 
+                  <i class="icons8 icons8-delete blue-placeholder font-24"></i>
+              </button>
+              <button type="submit" data-disable-with="<i class='icons8 icons8-spinner font-24' aria-hidden='true'></i>" data-cy="btn-search" class="btn btn-search d-none d-lg-block">
+                  <i class="icons8 icons8-search icon-orange font-24"></i>
+              </button>
+          </div>
+      </div>
+</form>  </div>
+
+
+    <a class="btn btn-search-filters ms-3 d-block d-lg-none" data-bs-toggle="offcanvas" href="#offcanvasShopCategorires" role="button" aria-controls="offcanvasShopCategorires">
+      <i class="icons8 icons8-slider d-flex font-36 orange"></i>
+    </a>
+</div>
+      </section>
+
+      <section class="col-3 col-lg-auto order-3 d-flex justify-content-end px-2">
+        <div class="d-none d-lg-flex px-2">
+          
+        </div>
+        <div class="dropdown dropdown-help d-none d-lg-block px-2">
+  <button class="btn p-0 d-flex align-items-center" style="height: 100%" type="button" id="dropdown-nav-help" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <div class="d-flex align-items-center">
+      <i class="icons8 icons8-help fs-2"></i>
+      <div class="d-none d-lg-flex align-items-center flex-column ms-1">
+        <div class='d-flex align-items-center align-self-start line-20 w-100'>
+          <p class="m-0 blue-navy font-14 fw-bold line-20 text-start flex-fill">Aide</p><i class="icons8 icons8-sort-down grey-typo ml-2"></i>
+        </div>
+        <p class="text-start m-0 grey-typo font-12 line-18 align-self-start">Une question ?</p>
+      </div>
+    </div>
+  </button>
+  <div class="dropdown-menu dropdown-menu-end p-0 border-0" aria-labelledby="dropdown-nav-help">
+    <div class="background-green-munsell w-100 d-flex" style="height: 48px; border-radius: 8px 8px 0 0;">
+      <div class="fw-bold font-20 m-auto white" style="line-height: 24px;">Besoin d’aide ?</div>
+    </div>
+    <div class="p-3">
+      <div class="d-flex">
+        <i class="icons8 icons8-help me-2 font-20 d-flex"></i>
+        <div class="mb-4">
+          <div class="fw-normal font-14 line-17 blue-navy mb-1">Foire Aux Questions</div>
+          <div class="fw-light font-12 line-15 grey-hanoi">Trouvez des réponses rapidement en visitant notre <a class='link grey-hanoi' href='https://faq.mavillemonshopping.fr/hc/fr'>Foire aux Questions</a></div>
+        </div>
+      </div>
+      <div class="p-2 background-yellow-light" style="border-radius: 4px;">
+  <div class="d-flex">
+    <div class="me-3 d-flex" style="min-width: 42px;">
+      <img width="42" height="42" class="my-auto" src="/assets/header/green_number-9eb0255fbb106a35a71aa11d788a50096f10cb1965b5a0dc550160707067b46c.png" />
+    </div>
+    <div>
+      <div class="d-flex align-items-center mb-1">
+        <div class="me-3 fw-bold font-14 line-17 blue-navy">
+          0 800 800 181
+        </div>
+        <div class="py-1 px-3 background-yellow-amber font-12 brown-medium-dark" style="border-radius: 20px;">
+          Gratuit*
+        </div>
+      </div>
+      <div class="font-12 line-15 grey-hanoi">
+        Notre service client vous assiste du lundi au vendredi de 10h à 18h hors jours fériés (*appels et service non-surtaxés)
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+          <div class="dropdown dropdown-menu-nav ml-2 position-relative d-none d-lg-flex px-2" data-cy="dropdown-account">
+    <button class="btn p-0 d-flex align-items-center" style="height: 100%" type="button" id="dropdown-nav-account" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      <div class="d-flex align-items-center">
+        <i class="icons8 icons8-male-user fs-2"></i>
+        <div class="d-none d-lg-flex align-items-center flex-column ms-1 ml-1">
+          <div class='d-flex align-items-center align-self-start d-flex line-20 w-100'>
+            <p class="m-0 blue-navy font-14 bold line-20 text-start flex-fill">Client ou Vendeur</p><i class="icons8 icons8-sort-down grey-typo ml-2"></i>
+          </div>
+          <p class="text-start m-0 grey-typo font-12 line-18 align-self-start">Se connecter ou s&#39;inscrire</p>
+        </div>
+      </div>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end m-0" aria-labelledby="dropdown-nav-account">
+      <li><a data-bs-toggle="modal" data-bs-target="#sign-in" class="blue-navy semi-bold border-b-blue-back d-flex px-3 py-1" style="cursor:pointer;">Se connecter</a></li>
+      <li class="pt-1" ><a class="grey-typo d-flex px-3 py-1" data-cy="link-signup-customer" href="/fr/users/sign_up">S&#39;inscrire</a></li>
+      <li><a class="grey-typo d-flex px-3 py-1" data-cy="link-signup-shop" href="/fr/creer-ma-boutique">Créer ma boutique</a></li>
+    </ul>
+  </div>
+
+  <a href="#" data-bs-toggle="modal" data-bs-target="#sign-in" data-cy="link-signin" class="d-flex d-lg-none align-items-center">
+    <i class="icons8 icons8-male-user fs-2 grey-dark"></i>
+  </a>
+
+        <div id="my-cart" class="cart-nav-container position-relative d-flex align-items-center px-2">
+  <a id="cart-link" data-cy="btn-cart" href="/fr/cart">
+    <div class="d-flex display-flex-end align-items-center">
+      <div class="grey-dark">
+        <i class="icons8 icons8-shopping-bag fs-2"></i>
+      </div>
+      <div class="ml-1 ms-1 d-none d-lg-block">
+        <div class="font-14 bold blue-navy line-20">
+          Panier
+        </div>
+        <div id="cart-price" class="font-12 grey-typo line-18">
+          0,00 €
+        </div>
+      </div>
+    </div>
+</a>
+  <div id="cart-content" class="cart-nav-content">
+    
+  </div>
+</div>
+      </section>
+
+    </div>
+  </nav>
+  <hr class="hr d-none d-lg-block">
+
+    <div class="nav-global">
+      <div class="container-xxl g-0" data-simplebar data-simplebar-theme="mvms">
+        <ul class="nav flex-nowrap justify-content-xxl-center">
+            <li class="nav-item">
+                <a class="nav-link pink-paradise" href="/fr/tag/fete-des-peres/produits">Fête des Pères</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link blue-navy" href="/fr/categorie/alimentation/produits">Alimentation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link blue-navy" href="/fr/categorie/vin-et-spiritueux/produits">Vin et spiritueux</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link blue-navy" href="/fr/categorie/fleurs-et-plantes/produits">Fleurs et plantes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link blue-navy" href="/fr/categorie/loisirs-sport-et-culture/produits">Loisirs, sport et culture</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link blue-navy" href="/fr/categorie/maison-et-bricolage/produits">Maison et bricolage</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link blue-navy" href="/fr/categorie/mode/produits">Mode</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link blue-navy" href="/fr/categorie/beaute-et-sante/produits">Beauté et santé</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link blue-navy" href="/fr/categorie/services/produits">Services</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+</header>
+
+<div id="offcanvasNavbar" class="offcanvas offcanvas-start offcanvas-sidebar offcanvas-menu border-0" tabindex="-1">
+  <div class="offcanvas-header p-3 border-bottom" style="height: 80px;">
+    <img height="50px" src="/assets/logo_pantone_baseline-55d2071a97d27e6f2450866c59faa02059802aa5876cab9b8c3df5614f7745f9.svg" />
+    <a href="#" role="button" class="close font-22 blue-navy" data-bs-dismiss="offcanvas" aria-label="Close">
+      <i class="icons8 icons8-delete"></i>
+    </a>
+  </div>
+
+  <div class="offcanvas-body flex-column p-0 px-4">  
+    <button name="button" type="submit" class="btn btn-primary sign-in p-0 w-100 mt-4" data-bs-dismiss="offcanvas" data-bs-toggle="modal" data-bs-target="#sign-in">Se connecter</button>
+
+
+    <section class="position-relative mb-4 pt-4">
+      <ul class="offcanvas-links list-unstyled m-0">
+          <li><a class="d-flex align-items-center" href="/fr/users/sign_up">Créer mon compte client</a></li>
+
+          <li><a class="d-flex align-items-center" href="/fr/devenir-cityzen">Devenir Cityzen</a></li>
+          <li><a class="d-flex align-items-center" href="/fr/devenir-commercant">Ajouter ma boutique</a></li>
+
+        <li><a href="https://faq.mavillemonshopping.fr/hc/fr" class="d-flex align-items-center">F.A.Q</a></li>
+      </ul>
+    </section>
+
+
+    <section class="position-relative mb-4 pt-4"><div class="p-2 background-yellow-light" style="border-radius: 4px;">
+  <div class="d-flex">
+    <div class="me-3 d-flex" style="min-width: 42px;">
+      <img width="42" height="42" class="my-auto" src="/assets/header/green_number-9eb0255fbb106a35a71aa11d788a50096f10cb1965b5a0dc550160707067b46c.png" />
+    </div>
+    <div>
+      <div class="d-flex align-items-center mb-1">
+        <div class="me-3 fw-bold font-14 line-17 blue-navy">
+          0 800 800 181
+        </div>
+        <div class="py-1 px-3 background-yellow-amber font-12 brown-medium-dark" style="border-radius: 20px;">
+          Gratuit*
+        </div>
+      </div>
+      <div class="font-12 line-15 grey-hanoi">
+        Notre service client vous assiste du lundi au vendredi de 10h à 18h hors jours fériés (*appels et service non-surtaxés)
+      </div>
+    </div>
+  </div>
+</div></section>
+  </div>
+</div> 
+      <main>
+<div class="container-xxl my-xxl-3 p-0 px-md-2 px-xxl-0">
+  
+  <div class="d-none d-sm-block my-3 font-12">
+  <ol class="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        
+            <a class="breadcrumb-link" itemprop="item" href="/fr">
+              <span itemprop="name">Accueil</span>
+</a>
+          <span class="breadcrumb-separator">></span>
+        <meta itemprop="position" content="1">
+      </li>
+      <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        
+            <a class="breadcrumb-link" itemprop="item" href="/fr/bordeaux">
+              <span itemprop="name">Bordeaux</span>
+</a>
+          <span class="breadcrumb-separator">></span>
+        <meta itemprop="position" content="2">
+      </li>
+      <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        
+          <span itemprop="name" class="breadcrumb-page fw-bold">
+            Le métropolitain
+          </span>
+
+        <meta itemprop="position" content="3">
+      </li>
+  </ol>
+</div>
+
+  <div class="banner position-relative" style="background-image: url(https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/563530/file/wide-6e95241b65be79435660721078b0c74d.webp);">
+    <div class="link-share position-absolute end-0 d-flex align-items-center mt-4 me-3">
+      <div class="d-none d-lg-block me-2">
+        <i class="icons8 icons8-share icon orange"></i>
+      </div>
+    
+      <div class="dropdown">
+        <a id="dropdown-social-share" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+          <div class="d-none d-lg-block blue-navy text-decoration-underline">
+            Partager
+          </div>
+          <div class="d-lg-none d-flex justify-content-center align-items-center rounded-circle bg-white" style="width: 33px; height: 33px;">
+            <i class="icons8 icons8-share icon orange"></i>
+          </div>
+</a>
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-social-share" aria-labelledby="dropdown-social-share">
+  <li>
+    <a target="_blank" class="dropdown-item background-blue-hover" href="http://www.facebook.com/sharer.php?u=https://www.mavillemonshopping.fr/fr/bordeaux/boutiques/le-metropolitain">
+      <div class="d-flex align-items-center">
+        <div class="me-2 blue-facebook">
+          <i class="icons8 icons8-facebook icon"></i>
+        </div>
+        <div class="blue-navy">
+          Partager sur Facebook
+        </div>
+      </div>
+</a>  </li>
+  <li>
+    <a target="_blank" class="dropdown-item background-blue-hover" href="http://twitter.com/share?url=https://www.mavillemonshopping.fr/fr/bordeaux/boutiques/le-metropolitain">
+      <div class="d-flex align-items-center">
+        <div class="me-2 blue-twitter">
+          <i class="icons8 icons8-twitter icon"></i>
+        </div>
+        <div class="blue-navy">
+          Partager sur Twitter
+        </div>
+      </div>
+</a>  </li>
+  <li>
+    <a target="_blank" class="dropdown-item background-blue-hover" href="https://linkedin.com/shareArticle?mini=true&amp;url=https://www.mavillemonshopping.fr/fr/bordeaux/boutiques/le-metropolitain">
+      <div class="d-flex align-items-center">
+        <div class="me-2 blue-linkedin">
+          <i class="icons8 icons8-linkedin icon"></i>
+        </div>
+        <div class="blue-navy">
+          Partager sur LinkedIn
+        </div>
+      </div>
+</a>  </li>
+  <li>
+    <a class="dropdown-item background-blue-hover" href="mailto:?body=Voici%20le%20lien%20vers%20le%20produit%20que%20j%27ai%20trouv%C3%A9%20https%3A%2F%2Fwww.mavillemonshopping.fr%2Ffr%2Fbordeaux%2Fboutiques%2Fle-metropolitain&amp;subject=J%27ai%20trouv%C3%A9%20ce%20produit%20qui%20devrait%20te%20plaire%20sur%20Ma%20Ville%20Mon%20Shopping">
+      <div class="d-flex align-items-center">
+        <div class="me-2 blue-navy">
+          <i class="icons8 icons8-mail icon"></i>
+        </div>
+        <div class="blue-navy">
+          Partager par Mail
+        </div>
+      </div>
+</a>  </li>
+</ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-xxl my-xxl-3 px-xxl-0" itemscope itemtype="https://schema.org/LocalBusiness">
+  <div class="ms-0 ms-md-5 text-center text-md-start">
+    <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/563529/file/thumb-21ba99343a1d482d2f601c1f24459d7f.webp"></source><img alt="Le Métropolitain" width="160" height="160" class="img-profil rounded-circle" itemprop="image" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/563529/file/0dbf525782b704ab714c799161f805a1.jpeg" /></picture>
+  </div>
+
+  <div class="row mb-5">
+    <div class="col-12 col-md-5 px-3 px-xxl-5 main-information">
+      <h1 class="mb-1 mb-md-2 text-center text-md-start font-32" itemprop="name">
+       Le Métropolitain
+      </h1>
+
+      <h5 class="mb-3 mb-md-2 text-center text-md-start grey-hanoi">
+        &quot;Ici, on ne sert pas! On reçoit!&quot; 
+      </h5>
+
+      <div class="d-flex align-items-center mb-2">
+        <i class="icons8 icons8-marker icon orange"></i>
+        <div class="mx-2">
+          Bordeaux
+        </div>
+          <div>&bull;</div>
+          <a data-bs-toggle="modal" data-bs-target="#see-more-modal" class="mx-2 blue-navy text-decoration-underline" href="#">Voir plus</a>
+      </div>
+
+      <div class="d-flex align-items-center mb-2">
+        <a class="mx-2 blue-navy text-decoration-underline" href="/fr/bordeaux/boutiques/le-metropolitain/avis?display_modal_new=true">Partager votre avis</a>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-7 px-3 px-xxl-5">
+      <h5 class="d-flex align-items-center mb-3 grey-hanoi">
+          <i class="icons8 icons8-shop icon"></i>
+          <div class="mx-2">
+            Click &amp; Collect
+          </div>
+          <i class="icons8 icons8-in-transit icon"></i>
+          <div class="mx-2">
+            Livraison
+          </div>
+        <div>&bull;</div>
+        <div class="mx-2">
+          €
+        </div>
+      </h5>
+
+        <div class="container-description">
+          <p id="description" class="mb-2 grey-hanoi collapse" aria-expanded="false" itemprop="description">
+            Découverte de vins, bières et Champagnes avec des ateliers de dégustations &amp; soirées à thèmes dans un concept original à Bordeaux.
+          </p>
+          <a id="description-button" role="button" href="#description"
+            class="font-12 blue-navy text-decoration-underline collapsed"
+            data-bs-toggle="collapse" aria-expanded="false" aria-controls="description">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="bannerEcv" ></div>
+
+  <div class="row">
+    <div class="col-lg-2 px-4">
+      <aside class="navbar-expand-lg">
+  <div id="offcanvasShopCategorires" class="offcanvas offcanvas-end offcanvas-sidebar border-0" tabindex="-1">
+    <div class="offcanvas-header p-3 background-blue" style="height: 56px;">
+      <div class="ms-4 font-24 blue-navy">
+        Filtrer
+      </div>
+
+      <a href="#" role="button" class="font-22 blue-navy" data-bs-dismiss="offcanvas" aria-label="Close">
+        <i class="icons8 icons8-delete"></i>
+      </a>
+    </div>
+
+    <div class="offcanvas-body flex-column pt-4 px-5 px-lg-0">
+      <h2 class="font-14 fw-bold blue-navy uppercase">
+        Catégories
+      </h2>
+
+      <hr class="orange-line mt-2 mb-3" style="width: 40px;">
+      
+      <div class="pb-2">
+          <div id="shop-filter-all-categories">
+            <span class="font-14 light line-17 blue-navy cursor-pointer">
+              Toutes les catégories
+              <span class="grey-typo"> (20)</span>
+            </span>
+          </div>
+      </div>
+
+        <div>
+          <div class="mb-1 mt-2">
+            <span class="bold line-17 font-14 text-capitalize">Restauration</span>
+          </div>
+            <div class="pb-2">
+              <a href="/fr/bordeaux/boutiques/le-metropolitain?categories=restauration%2Fcuisine-francaise">
+                <span class="font-14 light line-17 blue-navy">
+                  Cuisine française
+                  <span class="grey-typo"> (10)</span>
+                </span>
+</a>            </div>
+        </div>
+        <div>
+          <div class="mb-1 mt-2">
+            <span class="bold line-17 font-14 text-capitalize">Vin</span>
+          </div>
+            <div class="pb-2">
+              <a href="/fr/bordeaux/boutiques/le-metropolitain?categories=vin-et-spiritueux%2Fvin%2Fbordeaux">
+                <span class="font-14 light line-17 blue-navy">
+                  Bordeaux
+                  <span class="grey-typo"> (2)</span>
+                </span>
+</a>            </div>
+            <div class="pb-2">
+              <a href="/fr/bordeaux/boutiques/le-metropolitain?categories=vin-et-spiritueux%2Fvin%2Fvallee-de-la-loire">
+                <span class="font-14 light line-17 blue-navy">
+                  Vallée de la Loire
+                  <span class="grey-typo"> (1)</span>
+                </span>
+</a>            </div>
+        </div>
+        <div>
+          <div class="mb-1 mt-2">
+            <span class="bold line-17 font-14 text-capitalize">Cours, ateliers et activités</span>
+          </div>
+            <div class="pb-2">
+              <a href="/fr/bordeaux/boutiques/le-metropolitain?categories=services%2Fcours-ateliers-et-activites%2Fateliers-creatifs-et-do-it-yourself">
+                <span class="font-14 light line-17 blue-navy">
+                  Ateliers créatifs et Do-It-Yourself
+                  <span class="grey-typo"> (1)</span>
+                </span>
+</a>            </div>
+        </div>
+        <div>
+          <div class="mb-1 mt-2">
+            <span class="bold line-17 font-14 text-capitalize">Bière</span>
+          </div>
+            <div class="pb-2">
+              <a href="/fr/bordeaux/boutiques/le-metropolitain?categories=vin-et-spiritueux%2Fbiere%2Fbiere-sans-alcool">
+                <span class="font-14 light line-17 blue-navy">
+                  Bière sans alcool
+                  <span class="grey-typo"> (1)</span>
+                </span>
+</a>            </div>
+            <div class="pb-2">
+              <a href="/fr/bordeaux/boutiques/le-metropolitain?categories=vin-et-spiritueux%2Fbiere%2Fbiere-brune-et-ambree">
+                <span class="font-14 light line-17 blue-navy">
+                  Bière brune et ambrée
+                  <span class="grey-typo"> (1)</span>
+                </span>
+</a>            </div>
+            <div class="pb-2">
+              <a href="/fr/bordeaux/boutiques/le-metropolitain?categories=vin-et-spiritueux%2Fbiere%2Fbiere-aromatisee">
+                <span class="font-14 light line-17 blue-navy">
+                  Bière arômatisée
+                  <span class="grey-typo"> (1)</span>
+                </span>
+</a>            </div>
+        </div>
+        <div>
+          <div class="mb-1 mt-2">
+            <span class="bold line-17 font-14 text-capitalize">Champagne</span>
+          </div>
+            <div class="pb-2">
+              <a href="/fr/bordeaux/boutiques/le-metropolitain?categories=vin-et-spiritueux%2Fchampagne%2Fchampagne-brut">
+                <span class="font-14 light line-17 blue-navy">
+                  Champagne brut
+                  <span class="grey-typo"> (1)</span>
+                </span>
+</a>            </div>
+        </div>
+        <div>
+          <div class="mb-1 mt-2">
+            <span class="bold line-17 font-14 text-capitalize">Boisson</span>
+          </div>
+            <div class="pb-2">
+              <a href="/fr/bordeaux/boutiques/le-metropolitain?categories=alimentation%2Fboisson%2Fsoda">
+                <span class="font-14 light line-17 blue-navy">
+                  Soda
+                  <span class="grey-typo"> (1)</span>
+                </span>
+</a>            </div>
+        </div>
+        <div>
+          <div class="mb-1 mt-2">
+            <span class="bold line-17 font-14 text-capitalize">Explicit</span>
+          </div>
+            <div class="pb-2">
+              <a href="/fr/bordeaux/boutiques/le-metropolitain?categories=explicit%2Fcbd-thc-0-2">
+                <span class="font-14 light line-17 blue-navy">
+                  CBD (THC &lt;0,2%)
+                  <span class="grey-typo"> (1)</span>
+                </span>
+</a>            </div>
+        </div>
+
+      <div class="d-lg-none mt-4"><div class="p-4 background-yellow" style="border-radius: 10px;">
+  <h4 class="text-center bold uppercase">
+    Modes de livraison
+  </h4>
+  <hr class="orange-line my-3 mx-auto" style="width: 88px;">
+
+  <div class="row mb-3">
+    <div class="col-sm-1 col-1 p-0">
+      <i class="icons8 icons8-bicycle orange"></i>
+    </div>
+    <div class="col-sm-11 col-11 p-0 pl-1">
+      <span class="semi-bold font-12">
+        Livraison de proximité par le facteur
+      </span>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-sm-1 col-1 p-0">
+      <i class="icons8 icons8-in-transit orange"></i>
+    </div>
+    <div class="col-sm-11 col-11 p-0 pl-1">
+      <span class="semi-bold font-12">
+        Livraison Colissimo partout en France
+      </span>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-sm-1 col-1 p-0">
+      <i class="icons8 icons8-shop orange"></i>
+    </div>
+    <div class="col-sm-11 col-11 p-0 pl-1">
+      <span class="semi-bold font-12">
+        Click &amp; Collect : retrait en boutique
+      </span>
+    </div>
+  </div>
+
+  <hr class="orange-line my-4 mx-auto" style="width: 88px;">
+
+  <div class="row">
+    <div class="col-sm-1 col-1 p-0">
+      <i class="icons8 icons8-phone orange"></i>
+    </div>
+    <div class="col-sm-11 col-11 p-0 pl-1">
+      <div class="mb-1 bold font-12">
+        Besoin d'aide pour passer commande ?
+      </div>
+      <div class="semi-bold font-10">
+        Notre service client vous assiste du lundi au vendredi de 10h à 18h hors jours fériés :<br/><b>0 800 800 181</b> (appels et service non-surtaxés)
+      </div>
+    </div>
+  </div>
+</div></div>
+    </div>
+  </div>
+</aside>
+    </div>
+
+    <div class="col-12 col-lg-10 px-2">
+        <div id="content-wrapper">
+          <div class="d-flex align-items-center mb-3 ps-2">
+  <h2>Les produits les plus populaires</h2>
+  <a class="ms-4 d-none d-sm-flex" href="/fr/bordeaux/boutiques/le-metropolitain?categories=all">
+    <div class="d-flex align-items-center pt-1 blue-navy me-4" style="white-space: nowrap;">
+      Voir tous les produits
+      <i class="icons8 icons8-forward font-16 ms-2"></i>
+    </div>
+</a>
+  <div class="ms-auto pt-1 align-items-center d-none d-sm-flex">
+    <button name="button" type="button" onclick="scrollX(`category-shops-star-products`, { &#39;large&#39;: 4, &#39;medium&#39;: 3 }, &#39;back&#39;);" class="me-3 px-0 border-0 bg-white">
+      <i class="icons8 icons8-back font-16"></i>
+</button>    <button name="button" type="button" onclick="scrollX(`category-shops-star-products`, { &#39;large&#39;: 4, &#39;medium&#39;: 3 });" class="px-0 border-0 bg-white">
+      <i class="icons8 icons8-forward font-16"></i>
+</button>  </div>
+</div>
+
+<div id="category-shops-star-products" class="mb-4 px-2" data-simplebar data-simplebar-theme="mvms">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 flex-nowrap g-3 mb-3">
+      <div class="col simplebar-item shop-product-item">
+        <div class="card product-box datalayered-entry" data-product="285265" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Les oiseaux de chante grives" data-item_id="285265" data-price="30.0" data-item_brand="" data-item_category="Vin et spiritueux" data-item_category2="Vin" data-item_category3="Bordeaux" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581541/file/thumb-bc8f7964249937c313615a4e243ab317.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/vin-et-spiritueux/vin/bordeaux/produits/les-oiseaux-de-chante-grives"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581541/file/thumb-bc8f7964249937c313615a4e243ab317.webp"></source><img alt="Les oiseaux de chante grives" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581541/file/c4e888d948a7f2207b8b7820e994bcdc.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Les oiseaux de chante grives</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>30,00 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506764" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+      </div>
+      <div class="col simplebar-item shop-product-item">
+        <div class="card product-box datalayered-entry" data-product="285249" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="La Met'" data-item_id="285249" data-price="24.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581492/file/thumb-8fef4fa66718f054275d19d9e3162914.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/la-met"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581492/file/thumb-8fef4fa66718f054275d19d9e3162914.webp"></source><img alt="La Met&#39;" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581492/file/2a27b4d56df12b151a9f2f6d53885936.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">La Met&#39;</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>24,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506748" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+      </div>
+      <div class="col simplebar-item shop-product-item">
+        <div class="card product-box datalayered-entry" data-product="285248" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="La douelle dégustation" data-item_id="285248" data-price="26.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581489/file/thumb-7b664928b7fed976dc90c863708deea7.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/la-douelle-degustation"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581489/file/thumb-7b664928b7fed976dc90c863708deea7.webp"></source><img alt="La douelle dégustation" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581489/file/c5bf7d156d7a50a832c1445c1a5a5dc3.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">La douelle dégustation</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>26,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506747" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+      </div>
+      <div class="col simplebar-item shop-product-item">
+        <div class="card product-box datalayered-entry" data-product="285250" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="La douelle Végéta Bio" data-item_id="285250" data-price="15.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581495/file/thumb-444ae70e07f3c2163d1c7ef82987203f.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/la-douelle-vegeta-bio"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581495/file/thumb-444ae70e07f3c2163d1c7ef82987203f.webp"></source><img alt="La douelle Végéta Bio" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581495/file/5454667a31e21f13e901421eea215359.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">La douelle Végéta Bio</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>15,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506749" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+      </div>
+      <div class="col simplebar-item shop-product-item">
+        <div class="card product-box datalayered-entry" data-product="285251" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Tartine du Sud Ouest" data-item_id="285251" data-price="14.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581498/file/thumb-156e3b2b10472a118c6f67e26e42aed2.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/tartine-du-sud-ouest"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581498/file/thumb-156e3b2b10472a118c6f67e26e42aed2.webp"></source><img alt="Tartine du Sud Ouest" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581498/file/dc9799117e1d02697cea34f6327d23d7.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Tartine du Sud Ouest</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>14,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506750" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+      </div>
+      <div class="col simplebar-item shop-product-item">
+        <div class="card product-box datalayered-entry" data-product="285252" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Douelle entre deux mers" data-item_id="285252" data-price="18.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581501/file/thumb-59851f8c5bd6154b23484a9a9651e9f3.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/douelle-entre-deux-mers"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581501/file/thumb-59851f8c5bd6154b23484a9a9651e9f3.webp"></source><img alt="Douelle entre deux mers" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581501/file/c927613ad2ac6ab00880495da2fad81e.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Douelle entre deux mers</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>18,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506751" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+      </div>
+      <div class="col simplebar-item shop-product-item">
+        <div class="card product-box datalayered-entry" data-product="285253" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Douelle Tortilla" data-item_id="285253" data-price="11.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581505/file/thumb-69af4ef9e80aef31ab7376667c284d34.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/douelle-tortilla"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581505/file/thumb-69af4ef9e80aef31ab7376667c284d34.webp"></source><img alt="Douelle Tortilla" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581505/file/4bd959e22270ccfcf179c1eb38e29abc.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Douelle Tortilla</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>11,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506752" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+      </div>
+      <div class="col simplebar-item shop-product-item">
+        <div class="card product-box datalayered-entry" data-product="285254" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Camembert roti au miel" data-item_id="285254" data-price="10.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581507/file/thumb-a2413c526ad75a95d1f134824a8aaeff.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/camembert-roti-au-miel"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581507/file/thumb-a2413c526ad75a95d1f134824a8aaeff.webp"></source><img alt="Camembert roti au miel" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581507/file/3a27b0ad634b9ac80cfae3d7be923a6c.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Camembert roti au miel</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>10,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506753" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+      </div>
+    <div class="col shop-product-item">
+      <div class="h-100">
+        <a class="product-box d-flex justify-content-center flex-column align-items-center blue-navy h-100" href="/fr/bordeaux/boutiques/le-metropolitain?categories=all">
+          <div class="bold font-24 line-29 text-center">Voir tous les produits</div>
+          <div class="ronded-background mt-1  d-flex">
+            <i class="icons8 icons8-right-arrow font-20  m-auto"></i>
+          </div>
+</a>      </div>
+    </div>
+  </div>
+</div>
+
+          
+      <div class="d-flex align-items-center mb-3 ps-2">
+        <h2>Cuisine française</h2>
+          <a class="ms-4" href="/fr/bordeaux/boutiques/le-metropolitain?categories=restauration%2Fcuisine-francaise">
+            <div class="d-none d-sm-flex align-items-center pt-1 blue-navy me-4" style="white-space: nowrap;">
+              Voir les 10 produits
+              <i class="icons8 icons8-forward font-16 ms-2"></i>
+            </div>
+</a>
+          <div class="ms-auto pt-1 align-items-center d-flex 
+            
+            ">
+            <button name="button" type="button" onclick="scrollX(`category-shops-1112`, { &#39;large&#39;: 4, &#39;medium&#39;: 3 }, &#39;back&#39;);" class="me-3 px-0 border-0 bg-white d-none d-sm-flex">
+              <i class="icons8 icons8-back font-16"></i>
+</button>            <button name="button" type="button" onclick="scrollX(`category-shops-1112`, { &#39;large&#39;: 4, &#39;medium&#39;: 3 });" class="px-0 border-0 bg-white d-none d-sm-flex">
+              <i class="icons8 icons8-forward font-16"></i>
+</button>          </div>
+      </div>
+
+        <div id="category-shops-1112" class="mb-4 px-2" data-simplebar data-simplebar-theme="mvms">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 flex-nowrap g-3 mb-3">
+              <div class="col simplebar-item shop-product-item">
+                <div class="card product-box datalayered-entry" data-product="285248" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="La douelle dégustation" data-item_id="285248" data-price="26.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581489/file/thumb-7b664928b7fed976dc90c863708deea7.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/la-douelle-degustation"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581489/file/thumb-7b664928b7fed976dc90c863708deea7.webp"></source><img alt="La douelle dégustation" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581489/file/c5bf7d156d7a50a832c1445c1a5a5dc3.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">La douelle dégustation</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>26,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506747" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+              </div>
+              <div class="col simplebar-item shop-product-item">
+                <div class="card product-box datalayered-entry" data-product="285249" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="La Met'" data-item_id="285249" data-price="24.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581492/file/thumb-8fef4fa66718f054275d19d9e3162914.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/la-met"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581492/file/thumb-8fef4fa66718f054275d19d9e3162914.webp"></source><img alt="La Met&#39;" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581492/file/2a27b4d56df12b151a9f2f6d53885936.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">La Met&#39;</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>24,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506748" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+              </div>
+              <div class="col simplebar-item shop-product-item">
+                <div class="card product-box datalayered-entry" data-product="285250" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="La douelle Végéta Bio" data-item_id="285250" data-price="15.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581495/file/thumb-444ae70e07f3c2163d1c7ef82987203f.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/la-douelle-vegeta-bio"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581495/file/thumb-444ae70e07f3c2163d1c7ef82987203f.webp"></source><img alt="La douelle Végéta Bio" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581495/file/5454667a31e21f13e901421eea215359.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">La douelle Végéta Bio</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>15,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506749" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+              </div>
+              <div class="col simplebar-item shop-product-item">
+                <div class="card product-box datalayered-entry" data-product="285251" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Tartine du Sud Ouest" data-item_id="285251" data-price="14.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581498/file/thumb-156e3b2b10472a118c6f67e26e42aed2.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/tartine-du-sud-ouest"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581498/file/thumb-156e3b2b10472a118c6f67e26e42aed2.webp"></source><img alt="Tartine du Sud Ouest" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581498/file/dc9799117e1d02697cea34f6327d23d7.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Tartine du Sud Ouest</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>14,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506750" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+              </div>
+              <div class="col simplebar-item shop-product-item">
+                <div class="card product-box datalayered-entry" data-product="285252" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Douelle entre deux mers" data-item_id="285252" data-price="18.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581501/file/thumb-59851f8c5bd6154b23484a9a9651e9f3.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/douelle-entre-deux-mers"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581501/file/thumb-59851f8c5bd6154b23484a9a9651e9f3.webp"></source><img alt="Douelle entre deux mers" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581501/file/c927613ad2ac6ab00880495da2fad81e.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Douelle entre deux mers</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>18,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506751" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+              </div>
+              <div class="col simplebar-item shop-product-item">
+                <div class="card product-box datalayered-entry" data-product="285253" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Douelle Tortilla" data-item_id="285253" data-price="11.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581505/file/thumb-69af4ef9e80aef31ab7376667c284d34.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/douelle-tortilla"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581505/file/thumb-69af4ef9e80aef31ab7376667c284d34.webp"></source><img alt="Douelle Tortilla" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581505/file/4bd959e22270ccfcf179c1eb38e29abc.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Douelle Tortilla</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>11,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506752" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+              </div>
+              <div class="col simplebar-item shop-product-item">
+                <div class="card product-box datalayered-entry" data-product="285254" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Camembert roti au miel" data-item_id="285254" data-price="10.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581507/file/thumb-a2413c526ad75a95d1f134824a8aaeff.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/camembert-roti-au-miel"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581507/file/thumb-a2413c526ad75a95d1f134824a8aaeff.webp"></source><img alt="Camembert roti au miel" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581507/file/3a27b0ad634b9ac80cfae3d7be923a6c.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Camembert roti au miel</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>10,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506753" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+              </div>
+              <div class="col simplebar-item shop-product-item">
+                <div class="card product-box datalayered-entry" data-product="285255" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Douelle de Fromage" data-item_id="285255" data-price="12.9" data-item_brand="" data-item_category="Restauration" data-item_category2="Cuisine française" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581510/file/thumb-f8cccd598029bb95a0dbe0dc941cd490.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/restauration/cuisine-francaise/produits/douelle-de-fromage"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581510/file/thumb-f8cccd598029bb95a0dbe0dc941cd490.webp"></source><img alt="Douelle de Fromage" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581510/file/af911a0ec9b67890ade8bca0a3e9439e.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Douelle de Fromage</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>12,90 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506754" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+              </div>
+              <div class="col shop-product-item">
+                <div class="h-100">
+                  <a class="product-box d-flex justify-content-center flex-column align-items-center blue-navy h-100" href="/fr/bordeaux/boutiques/le-metropolitain?categories=restauration%2Fcuisine-francaise">
+  <div class="bold font-24 line-29">En voir plus</div>
+  <div class="">10 produits</div>
+  <div class="ronded-background mt-1  d-flex">
+    <i class="icons8 icons8-right-arrow font-20  m-auto"></i>
+  </div>
+</a>
+                </div>
+              </div>
+          </div>
+        </div>
+
+      <div class="d-flex align-items-center mb-3 ps-2">
+        <h2>Bordeaux</h2>
+
+          <div class="ms-auto pt-1 align-items-center d-flex 
+            d-md-none
+            d-xl-none">
+            <button name="button" type="button" onclick="scrollX(`category-shops-1127`, { &#39;large&#39;: 4, &#39;medium&#39;: 3 }, &#39;back&#39;);" class="me-3 px-0 border-0 bg-white d-none d-sm-flex">
+              <i class="icons8 icons8-back font-16"></i>
+</button>            <button name="button" type="button" onclick="scrollX(`category-shops-1127`, { &#39;large&#39;: 4, &#39;medium&#39;: 3 });" class="px-0 border-0 bg-white d-none d-sm-flex">
+              <i class="icons8 icons8-forward font-16"></i>
+</button>          </div>
+      </div>
+
+        <div id="category-shops-1127" class="mb-4 px-2" data-simplebar data-simplebar-theme="mvms">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 flex-nowrap g-3 mb-3">
+              <div class="col simplebar-item shop-product-item">
+                <div class="card product-box datalayered-entry" data-product="285262" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Inclassable" data-item_id="285262" data-price="28.0" data-item_brand="" data-item_category="Vin et spiritueux" data-item_category2="Vin" data-item_category3="Bordeaux" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581532/file/thumb-76dbe1de5f73e90bc87dda92c9c285ea.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/vin-et-spiritueux/vin/bordeaux/produits/inclassable"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581532/file/thumb-76dbe1de5f73e90bc87dda92c9c285ea.webp"></source><img alt="Inclassable" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581532/file/b951322b304956f6b6cebeccc5397e55.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Inclassable</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>28,00 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506761" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+              </div>
+              <div class="col simplebar-item shop-product-item">
+                <div class="card product-box datalayered-entry" data-product="285265" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Les oiseaux de chante grives" data-item_id="285265" data-price="30.0" data-item_brand="" data-item_category="Vin et spiritueux" data-item_category2="Vin" data-item_category3="Bordeaux" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581541/file/thumb-bc8f7964249937c313615a4e243ab317.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/vin-et-spiritueux/vin/bordeaux/produits/les-oiseaux-de-chante-grives"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581541/file/thumb-bc8f7964249937c313615a4e243ab317.webp"></source><img alt="Les oiseaux de chante grives" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581541/file/c4e888d948a7f2207b8b7820e994bcdc.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Les oiseaux de chante grives</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>30,00 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506764" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+              </div>
+          </div>
+        </div>
+
+      <div class="d-flex align-items-center mb-3 ps-2">
+        <h2>Ateliers créatifs et Do-It-Yourself</h2>
+
+          <div class="ms-auto pt-1 align-items-center d-flex d-none
+            d-md-none
+            d-xl-none">
+            <button name="button" type="button" onclick="scrollX(`category-shops-2304`, { &#39;large&#39;: 4, &#39;medium&#39;: 3 }, &#39;back&#39;);" class="me-3 px-0 border-0 bg-white d-none d-sm-flex">
+              <i class="icons8 icons8-back font-16"></i>
+</button>            <button name="button" type="button" onclick="scrollX(`category-shops-2304`, { &#39;large&#39;: 4, &#39;medium&#39;: 3 });" class="px-0 border-0 bg-white d-none d-sm-flex">
+              <i class="icons8 icons8-forward font-16"></i>
+</button>          </div>
+      </div>
+
+        <div id="category-shops-2304" class="mb-4 px-2" data-simplebar data-simplebar-theme="mvms">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 flex-nowrap g-3 mb-3">
+              <div class="col simplebar-item shop-product-item">
+                <div class="card product-box datalayered-entry" data-product="285267" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Atelier Dégustation" data-item_id="285267" data-price="25.0" data-item_brand="" data-item_category="Services" data-item_category2="Cours, ateliers et activités" data-item_category3="Ateliers créatifs et Do-It-Yourself" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581548/file/thumb-8c9ed7a500751b71e7b0d42366c0b558.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/services/cours-ateliers-et-activites/ateliers-creatifs-et-do-it-yourself/produits/atelier-degustation"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581548/file/thumb-8c9ed7a500751b71e7b0d42366c0b558.webp"></source><img alt="Atelier Dégustation" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581548/file/0482703c28de31229cf14eb4c7ef7107.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Atelier Dégustation</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>25,00 €</div>
+      </div>
+
+          <a class="add-to-cart" href="/fr/bordeaux/le-metropolitain/services/cours-ateliers-et-activites/ateliers-creatifs-et-do-it-yourself/produits/atelier-degustation">
+            <img src="/assets/product/card/icons8-add-calendar-white-938b2ccf459c079a775845576cfdd21d076b17aa32aaac36b3f1f94a3d209b47.svg" />
+</a>    </div>
+  </div>
+
+</div>
+
+              </div>
+          </div>
+        </div>
+
+      <div class="d-flex align-items-center mb-3 ps-2">
+        <h2>Vallée de la Loire</h2>
+
+          <div class="ms-auto pt-1 align-items-center d-flex d-none
+            d-md-none
+            d-xl-none">
+            <button name="button" type="button" onclick="scrollX(`category-shops-1132`, { &#39;large&#39;: 4, &#39;medium&#39;: 3 }, &#39;back&#39;);" class="me-3 px-0 border-0 bg-white d-none d-sm-flex">
+              <i class="icons8 icons8-back font-16"></i>
+</button>            <button name="button" type="button" onclick="scrollX(`category-shops-1132`, { &#39;large&#39;: 4, &#39;medium&#39;: 3 });" class="px-0 border-0 bg-white d-none d-sm-flex">
+              <i class="icons8 icons8-forward font-16"></i>
+</button>          </div>
+      </div>
+
+        <div id="category-shops-1132" class="mb-4 px-2" data-simplebar data-simplebar-theme="mvms">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 flex-nowrap g-3 mb-3">
+              <div class="col simplebar-item shop-product-item">
+                <div class="card product-box datalayered-entry" data-product="285259" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Les Bonnets Blancs" data-item_id="285259" data-price="28.0" data-item_brand="" data-item_category="Vin et spiritueux" data-item_category2="Vin" data-item_category3="Vallée de la Loire" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581523/file/thumb-db22b082fd5a0f0bcc6305b604a55455.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/vin-et-spiritueux/vin/vallee-de-la-loire/produits/les-bonnets-blancs"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581523/file/thumb-db22b082fd5a0f0bcc6305b604a55455.webp"></source><img alt="Les Bonnets Blancs" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581523/file/4eaa4725210219fdd0e8ced7705b798b.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Les Bonnets Blancs</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>28,00 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506758" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+              </div>
+          </div>
+        </div>
+
+      <div class="d-flex align-items-center mb-3 ps-2">
+        <h2>Bière arômatisée</h2>
+
+          <div class="ms-auto pt-1 align-items-center d-flex d-none
+            d-md-none
+            d-xl-none">
+            <button name="button" type="button" onclick="scrollX(`category-shops-1144`, { &#39;large&#39;: 4, &#39;medium&#39;: 3 }, &#39;back&#39;);" class="me-3 px-0 border-0 bg-white d-none d-sm-flex">
+              <i class="icons8 icons8-back font-16"></i>
+</button>            <button name="button" type="button" onclick="scrollX(`category-shops-1144`, { &#39;large&#39;: 4, &#39;medium&#39;: 3 });" class="px-0 border-0 bg-white d-none d-sm-flex">
+              <i class="icons8 icons8-forward font-16"></i>
+</button>          </div>
+      </div>
+
+        <div id="category-shops-1144" class="mb-4 px-2" data-simplebar data-simplebar-theme="mvms">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 flex-nowrap g-3 mb-3">
+              <div class="col simplebar-item shop-product-item">
+                <div class="card product-box datalayered-entry" data-product="285263" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="IPA" data-item_id="285263" data-price="7.0" data-item_brand="" data-item_category="Vin et spiritueux" data-item_category2="Bière" data-item_category3="Bière arômatisée" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581535/file/thumb-9e8f6227388ffc5c995bf077c4f7b0fc.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/vin-et-spiritueux/biere/biere-aromatisee/produits/ipa"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581535/file/thumb-9e8f6227388ffc5c995bf077c4f7b0fc.webp"></source><img alt="IPA" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581535/file/c6b05c88bc1abf86a4f1c8fcc314368c.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">IPA</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>7,00 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506762" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+              </div>
+          </div>
+        </div>
+
+      <div class="d-flex align-items-center mb-3 ps-2">
+        <h2>Soda</h2>
+
+          <div class="ms-auto pt-1 align-items-center d-flex d-none
+            d-md-none
+            d-xl-none">
+            <button name="button" type="button" onclick="scrollX(`category-shops-1085`, { &#39;large&#39;: 4, &#39;medium&#39;: 3 }, &#39;back&#39;);" class="me-3 px-0 border-0 bg-white d-none d-sm-flex">
+              <i class="icons8 icons8-back font-16"></i>
+</button>            <button name="button" type="button" onclick="scrollX(`category-shops-1085`, { &#39;large&#39;: 4, &#39;medium&#39;: 3 });" class="px-0 border-0 bg-white d-none d-sm-flex">
+              <i class="icons8 icons8-forward font-16"></i>
+</button>          </div>
+      </div>
+
+        <div id="category-shops-1085" class="mb-4 px-2" data-simplebar data-simplebar-theme="mvms">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 flex-nowrap g-3 mb-3">
+              <div class="col simplebar-item shop-product-item">
+                <div class="card product-box datalayered-entry" data-product="285261" data-cy="card-product">
+  <input class="datalayered-items" type="hidden" data-item_name="Elixia" data-item_id="285261" data-price="4.5" data-item_brand="" data-item_category="Alimentation" data-item_category2="Boisson" data-item_category3="Soda" data-item_variant="Modèle par défaut" data-item_image="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581529/file/thumb-92b3eb0bcd0119a295eb2c2f179572c6.webp" data-quantity="1">
+  <a class="stretched-link" href="/fr/bordeaux/le-metropolitain/alimentation/boisson/soda/produits/elixia"></a>
+
+  <div class="position-relative" style="height: 256px;">
+    <div class="lazyload imgLiquid" style="border-radius: 8px 8px 0px 0px;">
+      <picture><source srcset="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581529/file/thumb-92b3eb0bcd0119a295eb2c2f179572c6.webp"></source><img alt="Elixia" src="https://mavillemonshopping-pages.s3.eu-west-1.amazonaws.com/uploads/production/image/581529/file/6ff489bb4a1dc0c8319e093e01c37924.png" /></picture>
+    </div>
+
+
+  </div>
+
+  <div class="d-flex flex-column mx-3 my-2" style="height: 80px">
+    <div class="mb-1 text-truncate">Elixia</div>
+    <div class="text-truncate font-12 grey-hanoi">Le Métropolitain</div>
+
+    <div class="d-flex align-items-end mt-auto">
+      <div class="d-flex align-items-center me-auto gap-2 font-16">
+          <div>4,50 €</div>
+      </div>
+
+          <a class="add-to-cart" data-url="/cart_entries" data-reference-id="506760" 
+            data-cy="btn-quick-add-to-cart" onclick="PushAddCartData(this)">
+            <img src="/assets/product/card/icons8-add-shopping-bag-white-3d7d2a5408cb728d43332d1ce58c3f1b7e778d941b45d83aa817c4ff2920b6f1.svg" />
+          </a>
+    </div>
+  </div>
+
+</div>
+
+              </div>
+          </div>
+        </div>
+
+        </div>
+          <div id="load-more" class="text-center mt-2">
+              <a class="btn btn-primary" rel="next" data-page="2" data-disable-with="&lt;i class=&#39;icons8 icons8-spinner icon-spin&#39; aria-hidden=&#39;true&#39;&gt;&lt;/i&gt;" data-remote="true" href="/fr/bordeaux/boutiques/le-metropolitain?page=2">
+    <i class="icons8 icons8-spinner"></i>
+    Voir plus
+</a>
+          </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="see-more-modal" tabindex="-1" aria-labelledby="see-more" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-fullscreen-sm-down" style="max-width: 456px;">
+    <div class="modal-content" style="border-radius: 8px;">
+      <div class="modal-header d-block bg-transparent">
+        <button type="button" class="btn-close btn-close-blue-navy" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div id="map" style="height: 136px; border-radius: 8px 8px 0 0;"></div>
+
+          <input type="hidden" name="shop_longitude" id="shop-longitude" value="-0.5712249000000611" />
+          <input type="hidden" name="shop_latitude" id="shop-latitude" value="44.8378715" />
+      </div>
+
+      <div class="modal-body d-flex flex-column p-4 border-0">
+        <div class="mb-4">
+          <h2 class="mb-2">
+            Le Métropolitain
+          </h2>
+
+            <h5 class="grey-hanoi">
+              4,50 €&#32;&#45;
+              50,00 € 
+            </h5>
+
+        </div>
+
+        <div class="row gx-3">
+          <div class="col-7">
+            <div class="icon-square-medium mb-2 background-yellow-corn">
+              <i class="icons8 icons8-time-span d-flex font-32 yellow-orange"></i>
+            </div>
+            <h4 class="mb-1 fw-bold">Horaires</h4>
+            <table class="font-12 grey-hanoi">
+    <tr>
+      <td class="align-top">
+        <div class="me-2">Lundi</div>
+      </td>
+        <td colspan="4">fermé</td>
+    </tr>
+    <tr>
+      <td class="align-top">
+        <div class="me-2">Mardi</div>
+      </td>
+          <td>
+            <div>16h00 - 12h00</div>
+            <div>14h00 - 22h00</div>
+          </td>
+    </tr>
+    <tr>
+      <td class="align-top">
+        <div class="me-2">Mercredi</div>
+      </td>
+          <td>
+            <div>16h00 - 12h00</div>
+            <div>14h00 - 22h00</div>
+          </td>
+    </tr>
+    <tr>
+      <td class="align-top">
+        <div class="me-2">Jeudi</div>
+      </td>
+          <td>
+            <div>16h00 - 12h00</div>
+            <div>14h00 - 23h00</div>
+          </td>
+    </tr>
+    <tr>
+      <td class="align-top">
+        <div class="me-2">Vendredi</div>
+      </td>
+          <td>
+            <div>16h00 - 12h00</div>
+            <div>14h00 - 23h00</div>
+          </td>
+    </tr>
+    <tr>
+      <td class="align-top">
+        <div class="me-2">Samedi</div>
+      </td>
+          <td>
+            <div>16h00 - 12h00</div>
+            <div>14h00 - 23h00</div>
+          </td>
+    </tr>
+    <tr>
+      <td class="align-top">
+        <div class="me-2">Dimanche</div>
+      </td>
+        <td colspan="4">fermé</td>
+    </tr>
+</table>
+          </div>
+
+          <div class="col-5">
+            <div class="icon-square-medium mb-2 background-blue-alice">
+              <i class="icons8 icons8-shop d-flex font-32 blue-mvms-light"></i>
+            </div>
+
+            <h4 class="mb-1 fw-bold">
+              Adresse
+            </h4>
+
+            <div class="font-12 grey-hanoi" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <div itemprop="streetAddress">49 cours d&#39;Alsace-et-Lorraine</div>
+              <div itemprop="addressLocality">33000 BORDEAUX</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center mt-auto mt-md-4">
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div></main>
+
+    <section class="reinsurance my-5" data-cy="section-reinsurance">
+  <div class="container-xxl">
+    <div class="row">
+      <div class="col-12 col-md-10 d-flex mx-auto p-0">
+        <ul class="d-flex flex-fill justify-content-evenly flex-wrap m-0" data-cy="ul-reinsurance">
+          <li class="my-2 my-lg-0 p-0">
+            <img width="102" src="/assets/reinsurance/shop-2cd7ceba03a761fb1e8b3bef62a4c528589d8d790041be1de21e0a6bec9b2ec4.svg" />
+            <span>Retrait en boutique <br>en 2h</span>
+          </li>
+          <li class="my-2 my-lg-0 p-0">
+            <img width="102" src="/assets/reinsurance/truck-376769b58f97d33e551c9fdda26c67b4d49d869ddb7cd2bd9d57e5cc6fba84b4.svg" />
+            <span>Livraison partout <br>en France</span>
+          </li>
+          <li class="my-2 my-lg-0 p-0">
+            <img width="102" src="/assets/reinsurance/lock-a282b350cf77230c9ee347fa39f2bd14e4778fbf254395b9673784371acffadb.svg" />
+            <span>Paiement 100% <br>sécurisé</span>
+          </li>
+          <li class="my-2 my-lg-0 p-0">
+            <img width="102" src="/assets/reinsurance/refund-492abe7297fe862d9198586ba57a06f7d1ab73e3c91b6a71e10eb928c852273f.svg" />
+            <span>Échanges et <br>remboursements</span>
+          </li>
+          <li class="my-2 my-lg-0 p-0">
+            <img width="102" src="/assets/reinsurance/phone-1a2b9f69e4f5974a57139ef284451268fba1ab68d47dbc5c8ae2425b73ba8462.svg" />
+            <span>Service client aux <br>petits oignons</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+    <footer id="footer">
+    <div id="container-newsletter" class="background-blue-very-light container-newsletter" data-cy="wrapper-newsletter">
+      <div class="font-12 text-center mb-2 orange uppercase semi-bold">La newsletter</div>
+      <div class="semi-bold font-22 mb-4 line-26 text-center blue-navy"><i>Et avec ceci</i>, vous voudrez sûrement un peu plus d'actu' et de bons plans ?<br>Abonnez-vous à notre newsletter pour tout savoir de la vie locale !</div>
+
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-5 mb-3 mb-md-1" style="max-width: 526px;">
+          <form id="form-newsletter" class="mb-3" action="/fr/email_newsletters" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="NciO7+JRFSIHlE6yuRHG09kQGzbZ7gl9EZXt/Y+Zv0FVif3eaZ9asjfcVSrijieI2jMdmRQ4sWM3mMYL236iTQ==" />
+            <div class="input-group">
+              <input placeholder="Votre e-mail" class="form-control" type="email" name="email_newsletter[email]" />
+              <input type="submit" name="commit" value="Je m&#39;abonne" class="btn btn-primary" data-disable-with="Je m&#39;abonne" />
+            </div>
+            <div id="error" class="red-rose font-10"></div>
+</form>          <p class="mb-0 text-center font-10 grey-hanoi fw-light">
+            Conformément à la réglementation relative à la protection des données à caractère personnel, E-SY COM traite vos données en qualité de responsable de traitement à des fins de gestion de la newsletter. Vous disposez d'un droit d'accès, de rectification, d'opposition, de limitation, de portabilité et d'effacement des données. Ces droits peuvent être exercés en écrivant à l'adresse suivante : <a href='mailto:rgpd@mavillemonshopping.fr'>rgpd@mavillemonshopping.fr</a>. Pour plus d'informations sur le traitement de vos données personnelles, <a target="_blank" href="/fr/politique-sur-les-cookies">consultez la Politique de confidentialité</a> de mavillemonshopping.fr.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  <div class="container-xxl py-4 px-3">
+    <div class="d-flex flex-column flex-md-row justify-content-md-around justify-content-xl-evenly">
+      <div class="mb-4 mb-md-0 px-0 px-md-2" data-cy="wrapper-about">
+        <div class="mb-2 font-18 fw-bolder">
+          À propos
+        </div>
+        <ul class="grey-typo">
+          <li><a href="/fr/about_us">Qui sommes-nous ?</a></li>
+          <li><a target="_blank" href="https://blog.mavillemonshopping.fr/">Blog</a></li>
+        </ul>
+
+        <ul class="icons-social d-flex mt-3 mb-3" data-cy="ul-social-networks">
+          <li>
+            <a target="_blank" href="https://www.facebook.com/mavillemonshopping.fr/">
+              <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Calque_1" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" height="20" width="20">
+<style type="text/css">
+	.st0{fill:#DE8E00;}
+</style>
+<path class="st0" d="M7,5C5.9,5,5,5.9,5,7v18c0,1.1,0.9,2,2,2h18c1.1,0,2-0.9,2-2V7c0-1.1-0.9-2-2-2H7z M7,7h18v18h-5.2v-6.8h2.6  l0.4-3h-3v-1.9c0-0.9,0.2-1.5,1.5-1.5h1.6V9.1c-0.3,0-1.2-0.1-2.3-0.1c-2.3,0-3.9,1.4-3.9,4v2.2h-2.6v3h2.6V25H7V7z"></path>
+</svg>
+
+</a>          </li>
+          <li>
+            <a target="_blank" href="https://www.instagram.com/mavillemonshopping/?hl=fr">
+              <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Calque_1" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" height="20" width="20">
+<style type="text/css">
+	.st0{fill:#DE8E00;}
+</style>
+<path class="st0" d="M11.5,5C7.9,5,5,7.9,5,11.5v9.1c0,3.6,2.9,6.5,6.5,6.5h9.1c3.6,0,6.5-2.9,6.5-6.5v-9.1C27,7.9,24.1,5,20.5,5  H11.5z M11.5,7h9.1C23,7,25,9,25,11.5v9.1c0,2.5-2,4.5-4.5,4.5h-9.1C9,25,7,23,7,20.5v-9.1C7,9,9,7,11.5,7z M21.9,9.2  c-0.5,0-0.9,0.4-0.9,0.9s0.4,0.9,0.9,0.9s0.9-0.4,0.9-0.9S22.4,9.2,21.9,9.2z M16,10c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6-6  S19.3,10,16,10z M16,12c2.2,0,4,1.8,4,4s-1.8,4-4,4s-4-1.8-4-4S13.8,12,16,12z"></path>
+</svg>
+
+</a>          </li>
+          <li>
+            <a target="_blank" href="https://twitter.com/mavillemonshop?lang=fr">
+              <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Calque_1" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" height="20" width="20">
+<style type="text/css">
+	.st0{fill:#DE8E00;}
+</style>
+<path class="st0" d="M28,8.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-0.9,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6  c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1c-4.1-0.2-7.7-2.2-10.1-5.1C5.2,7.9,5,8.7,5,9.6c0,1.7,0.9,3.2,2.2,4.1  c-0.8,0-1.6-0.2-2.2-0.6c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4  c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6  C26.5,10.4,27.3,9.5,28,8.6z"></path>
+</svg>
+
+</a>          </li>
+          <li>
+            <a target="_blank" href="https://www.youtube.com/channel/UCuHrlydxabQ75aTkKuapK0A?view_as=subscribe">
+              <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Calque_1" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve" height="20" width="20">
+<style type="text/css">
+	.st0{fill:#DE8E00;}
+</style>
+<path class="st0" d="M8,2C6,2,4.2,2.2,3.1,2.4C2.2,2.5,1.4,3.2,1.3,4.1C1.1,4.9,1,6.1,1,7.5c0,1.4,0.1,2.6,0.3,3.4  c0.2,0.9,0.9,1.6,1.8,1.7C4.2,12.8,6,13,8,13s3.8-0.2,4.9-0.4h0c0.9-0.1,1.6-0.8,1.8-1.7c0.1-0.8,0.3-1.9,0.3-3.4  c0-1.4-0.1-2.6-0.3-3.4c-0.2-0.9-0.9-1.6-1.8-1.7C11.8,2.2,10,2,8,2z M8,3c2,0,3.7,0.2,4.8,0.4c0.5,0.1,0.8,0.4,0.9,0.9  C13.9,5,14,6.1,14,7.5s-0.1,2.5-0.3,3.2c-0.1,0.5-0.5,0.9-0.9,0.9C11.7,11.8,10,12,8,12s-3.7-0.2-4.8-0.4c-0.5-0.1-0.9-0.4-0.9-0.9  C2.1,10,2,8.9,2,7.5C2,6.1,2.1,5,2.3,4.3c0.1-0.5,0.5-0.9,0.9-0.9h0C4.3,3.2,6,3,8,3z M6,5v5l5-2.5L6,5z"></path>
+</svg>
+
+</a>          </li>
+        </ul>
+
+        <div>
+          <div class="mb-2 font-18 fw-bolder">
+            Découvrez l’application<br>Ma Ville Mon Shopping
+          </div>
+        
+          <div class="d-flex">
+            <a class="me-3" target="_blank" href="https://apps.apple.com/app/ma-ville-mon-shopping/id1584987543">
+              <img width="100" height="32" alt="Bouton AppStore pour télécharger l&#39;application" src="/assets/citizens/appstore-link-78243d3c903467e4e99f53e805b7c53b185445ae5a63bf9c2caebf74472de0f9.svg" />
+</a>            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.mvms.app&amp;gl=FR">
+              <img width="100" height="32" alt="Bouton GooglePlay pour télécharger l&#39;application" src="/assets/citizens/google-play-link-e1b267c83e47d5408186f4859fe5796c6cc0e38bd0fc3d82f62c69fbb3691980.svg" />
+</a>          </div>
+        </div>   
+      </div>
+  
+
+      <div class="mb-4 mb-md-0 px-0 px-md-2">
+        <div class="mb-4" data-cy="wrapper-shops">
+          <div class="mb-2 font-18 fw-bolder">
+            Commerçants
+          </div>
+          <ul class="grey-typo">
+            <li><a href="/fr/commercant">Rejoindre la Marketplace</a></li>
+            <li><a href="/fr/commercant/pack-starter">Pack Starter</a></li>
+            <li><a href="/fr/commercant/pack-booster">Pack Booster</a></li>
+            <li><a href="/fr/commercant/pack-communication">Pack Communication</a></li>
+          </ul>
+        </div>
+
+        <div data-cy="wrapper-cityzens">
+          <div class="mb-2 font-18 fw-bolder">
+            Cityzens
+          </div>
+          <ul class="grey-typo">
+            <li><a href="/fr/cityzens">La communauté</a></li>
+            <li><a href="/fr/devenir-cityzen">Devenir Cityzen</a></li>
+            <li><a target="_blank" href="/fr/jeuconcourstousinfluenceurs">Règlement Jeu #TousInfluenceurs</a></li>
+            <li><a target="_blank" href="/fr/jeuconcoursfetedesperes">Règlement Jeu-concours Fête des Pères</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mb-4 mb-md-0 px-0 px-md-2">
+        <div class="mb-4" data-cy="wrapper-partners">
+          <div class="mb-2 font-18 fw-bolder">
+            Partenaires
+          </div>
+          <ul class="grey-typo">
+            <li><a target="_blank" href="https://lp.mavillemonshopping.fr/territoires/">Devenir Partenaire</a></li>
+            
+              <li><a target="_blank" href="/fr/territoires_partenaires">Nos territoires partenaires</a></li>
+          </ul>
+        </div>
+
+        <div data-cy="wrapper-informations">
+          <div class="mb-2 font-18 fw-bolder">
+            Informations
+          </div>
+          <ul class="grey-typo">
+            <li class="fw-bolder"><a href="https://faq.mavillemonshopping.fr/hc/fr">Foire Aux Questions</a></li>
+            <li><a href="/fr/services">Modes de livraison</a></li>
+            <li><a href="/fr/privacy_policy">Politique de confidentialité</a></li>
+            <li><a href="/fr/politique-sur-les-cookies">Politique des cookies</a></li>
+            <li><a href="javascript:openAxeptioCookies()">Paramétrer les cookies</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="px-0 px-md-2 blue-mvms-dark">
+        <div>Une entreprise de</div>
+        <img src="/assets/logo_la_poste-6211d1421527f77535cccb9e139015914ddbf4ce3b9dc6db4c0ea58192d9b40d.png" />
+      </div>
+    </div>
+  </div>
+
+    <div class="container text-center" style="font-size: 75%; line-height: 14px;" id="footer-legal-notice-free_service_offer">*Offre soumise aux Conditions Générales de la Marketplace, valable du 05/05 au 19/06/2022 inclus, applicable pour la Livraison par votre facteur et la livraison Colissimo, excluant la livraison par le commerçant ou autre prestataire. Remise appliquée après validation du panier d&#39;achat sur www.mavillemonshopping.fr dès 50 € d&#39;achat en ligne hors réservation, hors frais de livraison et hors remises promotionnelles. Offre cumulable avec les offres en cours si le montant final de la commande (une fois les remises appliquées) atteint 50 € ou plus.  **L’abus d’alcool est dangereux pour la santé. À consommer avec modération.</div>
+
+  <section class="background-blue-very-light">
+    <div class="container-xxl p-3">
+      <div class="d-flex flex-column flex-md-row justify-content-start justify-content-md-evenly align-items-start align-items-md-center font-12 grey-typo">
+        <div class="mb-3 mb-md-0 grey-typo">
+          © mavillemonshopping.fr 2022 • Tous droits réservés
+        </div>
+        <div class="mb-3 mb-md-0">
+          <a href="/fr/cgv_website">Conditions Générales de la MarketPlace</a>
+        </div>
+        <div class="mb-3 mb-md-0">
+          <a href="/fr/mentions_legales">Mentions légales</a>
+        </div>
+        <div>
+          <i class="icons8 icons8-lock"></i>
+          <i class="icons8 icons8-visa"></i>
+          <i class="icons8 icons8-mastercard-credit-card"></i>
+          <i class="icons8 icons8-mastercard-logo"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+</footer>
+
+<div id="loader">
+  <img width="100" alt="loader" src="/assets/puff-e708a72e7c58568de8536de736ea9ef04c1c1304b2ff8102cb9b6be513371d0a.svg" />
+</div>
+    <div id="sign-in" class="modal sign-in" role="dialog">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-bs-dismiss="modal">
+          <i class="icons8 icons8-delete"></i>
+        </button>
+        <p class="modal-title mx-auto h4">Connexion</p>
+      </div>
+      <div class="modal-body">
+        <form action="/fr/users/sign_in" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="Gd9mCGzv1wFTu2XI/ITzWQ0JgDv6PgZq5owPPNHXpAx5nhU55yGYkWPzflCnGxICDiqGlDfovnTAgSTKhTC5AA==" />
+        <div class="col-12 p-0">
+        	<div class="col-12 mt-3 d-grid">
+            <a class="btn btn-facebook position-relative" id="btn-facebook-sign-in" rel="nofollow" data-method="post" href="/users/auth/facebook">
+              <div style="width: 50px" class="position-absolute start-0 top-0 bottom-0 d-flex align-items-center justify-content-center"><i class="icons8 icons8-facebook"></i></div>
+              Continuer avec Facebook
+</a>          </div>
+          <div class="clear"></div>
+          <p class="border-bloc">
+            <span>ou</span>
+          </p>
+          <div class="form-group">
+            <input class="form-control" placeholder="Votre adresse email" id="user_email_sign_in" type="email" name="user[email]" />
+          </div>
+          <div class="form-group m-0">
+            <input class="form-control password-field" placeholder="Mot de passe" id="user_password_sign_in" type="password" name="user[password]" />
+            <span toggle=".password-field" class="field-icon toggle-password"><i class="icons8 icons8-eye"></i></span>
+          </div>
+         	<div class="text-end forgot-password">
+          	<a href="/fr/users/password/new">Mot de passe oublié ?</a>
+          </div>
+        	<div class="col-12 col-sm-8 offset-sm-2">
+          	<input type="submit" name="commit" value="Connexion" class="btn btn-primary margin-bottom w-100" data-disable-with="Connexion" />
+          </div>
+        </div>
+</form>      </div>
+      <div class="modal-footer text-center">
+        <p class="mb-1 mx-auto">Vous êtes client ? <a href="/fr/users/sign_up">Inscrivez-vous</a></p>
+      	<p class="mx-auto">Vous êtes un professionnel ? <a href="/fr/creer-ma-boutique">Inscrivez-vous</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    <div id="notices">
+</div>
+
+  <link href="https://cdn.jsdelivr.net/npm/@ecv-competition-2022/competition-2022@latest/docs/index.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@ecv-competition-2022/competition-2022@latest/docs/index.js"crossorigin="anonymous"></script>
+</body></html>

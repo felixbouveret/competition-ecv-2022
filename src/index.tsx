@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 
 const root = ReactDOM.createRoot(
-  document.getElementById("description") as HTMLElement
+  document.getElementById("bannerEcv") as HTMLElement
 );
 root.render(
   <React.StrictMode>
