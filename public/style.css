@@ -3174,9 +3174,9 @@ img {
   top: 0;
   left: 0;
 }
-.imgLiquid img {
+/* .imgLiquid img {
   display: none;
-}
+} */
 .default-product-img {
   height: 362px;
   position: inherit;
