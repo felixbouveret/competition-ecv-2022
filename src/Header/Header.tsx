@@ -13,24 +13,26 @@ export default function HeaderContainer({ isLight }: { isLight: boolean }) {
         className="headerContainer"
         style={{ backgroundColor: isLight ? "" : "#fffbfa" }}
       >
-        {isLight ? null : (
-          <div className="circle">
-            <img src="/forward.svg" alt="" />
+        <div className="headerContent">
+          {isLight ? null : (
+            <div className="circle">
+              <img src="/forward.svg" alt="" />
+            </div>
+          )}
+          {isLight ? (
+            <img src="/light-logo.svg" alt="" />
+          ) : (
+            <img src="/purple-logo.svg" alt="" />
+          )}
+          <div
+            className="circle"
+            onClick={() => dispatch(setPopinDisplayed(false))}
+          >
+            <img src="/delete.svg" alt="" />
           </div>
-        )}
-        {isLight ? (
-          <img src="/light-logo.svg" alt="" />
-        ) : (
-          <img src="/purple-logo.svg" alt="" />
-        )}
-        <div
-          className="circle"
-          onClick={() => dispatch(setPopinDisplayed(false))}
-        >
-          <img src="/delete.svg" alt="" />
         </div>
+        {isLight ? null : <ProgressBar />}
       </div>
-      {isLight ? null : <ProgressBar />}
     </>
   );
 }
