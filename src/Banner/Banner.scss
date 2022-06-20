@@ -1,6 +1,18 @@
 @import "../variables.scss";
 
 .bannerContainer {
+  background-color: $purple;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  color: $white;
+  font-size: 12px;
+  font-weight: 400;
+  max-width: 400px;
+  margin: auto;
   .text{
     padding: 25px 20px;
     .title{
@@ -9,14 +21,4 @@
       font-size: 16px;
     }
   }
-  background-color: $purple;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-  color: $white;
-  font-size: 12px;
-  font-weight: 400;
 }
