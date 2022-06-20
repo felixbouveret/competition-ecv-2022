@@ -9,9 +9,14 @@ export default function BannerContainer() {
 
   return (
     <section className="bannerContainer">
-      <button onClick={() => dispatch(setPopinDisplayed(true))}>
-        Open Popin
-      </button>
+      <div className="text">
+        <p className="title">Besoin d'aide ?</p>
+        <p>Julie vous guide dans votre choix de vin.</p>
+        <button onClick={() => dispatch(setPopinDisplayed(true))}>
+          Open Popin
+        </button>
+      </div>
+      <img src="/assets/img/artisan.jpg" alt="" />
     </section>
   );
 }
