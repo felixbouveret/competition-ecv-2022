@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import AppReducer from "./App";
+import StepsReducer from "./Steps";
 
 export const store = configureStore({
   reducer: {
     app: AppReducer,
+    steps: StepsReducer,
   },
 });
 
