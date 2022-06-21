@@ -3,7 +3,6 @@ import ButtonContainer from "../Components/Button/Button";
 import "./Banner.scss";
 
 export default function BannerContainer() {
-
   return (
     <section className="bannerContainer">
       <div className="text">
