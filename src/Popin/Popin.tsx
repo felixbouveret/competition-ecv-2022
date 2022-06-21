@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderContainer from "../Header";
+import HeaderContainer from "./Components/Header";
 import "./Popin.scss";
 
 export default function PopinContainer({ isVisible }: { isVisible: boolean }) {

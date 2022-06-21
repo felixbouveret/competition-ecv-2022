@@ -1,7 +1,7 @@
 import React from "react";
 import ProgressBar from "../ProgressBar";
 import { useDispatch } from "react-redux";
-import { setPopinDisplayed } from "../store/App";
+import { setPopinDisplayed } from "../../../store/App";
 import "./Header.scss";
 
 export default function HeaderContainer({ isLight }: { isLight: boolean }) {
