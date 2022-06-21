@@ -3,18 +3,15 @@ import { useDispatch } from "react-redux";
 import { setPopinDisplayed } from "../../store/App";
 
 import "./Button.scss";
+interface PropsInterface{ isLight? : boolean, text:string };
 
-export default function ButtonContainer() {
+export default function ButtonContainer({ isLight = false, text }: PropsInterface) {
   const dispatch = useDispatch();
-  const btn = {
-  color: 'light',
-  text: 'Demander conseil',
-};
-
+  
   return (
     <section className="buttonContainer">
-        <button className={btn.color} onClick={() => dispatch(setPopinDisplayed(true))}>
-          {btn.text}
+        <button className={ isLight ? "" : "dark" } onClick={() => dispatch(setPopinDisplayed(true))}>
+          {text}
         </button>
     </section>
   );

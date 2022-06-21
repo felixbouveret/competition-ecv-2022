@@ -9,7 +9,7 @@ export default function BannerContainer() {
       <div className="text">
         <p className="title">Besoin d'aide ?</p>
         <p>Julie vous guide dans votre choix de vin.</p>
-        <ButtonContainer></ButtonContainer>
+        <ButtonContainer text="demander conseil" isLight></ButtonContainer>
       </div>
       <img src="/assets/img/artisan.jpg" alt="" />
     </section>
