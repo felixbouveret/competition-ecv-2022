@@ -6,7 +6,7 @@ interface PropsInterface {
   onClick?: any;
 }
 
-export default function ButtonContainer({
+export default function Button({
   isLight = false,
   text,
   onClick,

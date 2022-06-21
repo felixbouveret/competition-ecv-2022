@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonContainer from "../Components/Button/Button";
+import Button from "../Components/Button/Button";
 import "./Banner.scss";
 
 import { useDispatch } from "react-redux";
@@ -12,7 +12,7 @@ export default function BannerContainer() {
       <div className="text">
         <p className="title">Besoin d'aide ?</p>
         <p>Julie vous guide dans votre choix de vin.</p>
-        <ButtonContainer
+        <Button
           text="demander conseil"
           isLight
           onClick={() => dispatch(setPopinDisplayed(true))}
