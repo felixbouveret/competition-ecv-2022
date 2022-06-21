@@ -12,10 +12,8 @@ export default function ButtonContainer({
   onClick,
 }: PropsInterface) {
   return (
-    <section className="buttonContainer">
-      <button className={isLight ? "light " : ""} onClick={onClick}>
-        {text}
-      </button>
-    </section>
+    <button className={isLight ? "light " : ""} onClick={onClick}>
+      {text}
+    </button>
   );
 }

@@ -16,7 +16,7 @@ export default function BannerContainer() {
           text="demander conseil"
           isLight
           onClick={() => dispatch(setPopinDisplayed(true))}
-        ></ButtonContainer>
+        />
       </div>
       <img src="/assets/img/artisan.jpg" alt="" />
     </section>
