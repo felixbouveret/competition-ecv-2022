@@ -1,6 +1,4 @@
-import { Method } from "@testing-library/react";
 import React from "react";
-
 import "./Button.scss";
 interface PropsInterface {
   isLight?: boolean;
