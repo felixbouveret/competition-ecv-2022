@@ -3,6 +3,7 @@ import ProgressBar from "../ProgressBar";
 import { useDispatch } from "react-redux";
 import { setPopinDisplayed } from "../../../store/App";
 import "./Header.scss";
+import Icon from "../../../Components/Icon";
 
 export default function HeaderContainer({ isLight }: { isLight: boolean }) {
   const dispatch = useDispatch();
@@ -16,19 +17,15 @@ export default function HeaderContainer({ isLight }: { isLight: boolean }) {
         <div className="headerContent">
           {isLight ? null : (
             <div className="circle">
-              <img src="/forward.svg" alt="" />
+              <Icon name="arrow-left" />
             </div>
           )}
-          {isLight ? (
-            <img src="/light-logo.svg" alt="" />
-          ) : (
-            <img src="/purple-logo.svg" alt="" />
-          )}
+          <Icon name={isLight ? "logo-light" : "logo-purple"} />
           <div
             className="circle"
             onClick={() => dispatch(setPopinDisplayed(false))}
           >
-            <img src="/delete.svg" alt="" />
+            <Icon name="cross" />
           </div>
         </div>
         {isLight ? null : <ProgressBar />}
