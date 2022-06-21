@@ -29,10 +29,10 @@
 
 @media (min-width: 900px) {
   .headerContainer {
-    flex-direction: column-reverse !important;
+    flex-direction: column-reverse;
 
     .headerContent {
-      justify-content: center !important;
+      justify-content: center;
       .circle {
         position: absolute;
         top: 22px;

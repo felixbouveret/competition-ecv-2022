@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../store";
 import "./ProgressBar.scss";
 
 export default function ProgressBar() {
   const totalQuestions = useSelector(
-    (state: RootState) => state.app.totalQuestions
+    (state: RootState) => state.steps.totalQuestions
   );
 
   const questionIndex = useSelector(
-    (state: RootState) => state.app.questionIndex
+    (state: RootState) => state.steps.questionIndex
   );
 
   return (
