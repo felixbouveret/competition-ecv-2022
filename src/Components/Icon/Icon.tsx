@@ -1,5 +1,4 @@
-import arrowLeftIcon from "./Icons/arrowLeftIcon";
-import crossIcon from "./Icons/crossIcon";
+import { arrowLeftIcon, crossIcon, logoLight, logoPurple } from "./Icons/index";
 
 interface PropsInterface {
   name: string;
@@ -15,6 +14,8 @@ export default function Icon({
   const getIcon = () => {
     if (name === "arrow-left") return arrowLeftIcon;
     if (name === "cross") return crossIcon;
+    if (name === "logo-light") return logoLight;
+    if (name === "logo-purple") return logoPurple;
     return () => null;
   };
   return getIcon()({ color, size });

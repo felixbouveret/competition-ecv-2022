@@ -20,11 +20,7 @@ export default function HeaderContainer({ isLight }: { isLight: boolean }) {
               <Icon name="arrow-left" />
             </div>
           )}
-          {isLight ? (
-            <img src="/light-logo.svg" alt="" />
-          ) : (
-            <img src="/purple-logo.svg" alt="" />
-          )}
+          <Icon name={isLight ? "logo-light" : "logo-purple"} />
           <div
             className="circle"
             onClick={() => dispatch(setPopinDisplayed(false))}
