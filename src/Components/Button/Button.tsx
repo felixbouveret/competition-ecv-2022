@@ -1,25 +1,21 @@
+import { Method } from "@testing-library/react";
 import React from "react";
-import { useDispatch } from "react-redux";
-import { setPopinDisplayed } from "../../store/App";
 
 import "./Button.scss";
 interface PropsInterface {
   isLight?: boolean;
   text: string;
+  onClick?: any;
 }
 
 export default function ButtonContainer({
   isLight = false,
   text,
+  onClick,
 }: PropsInterface) {
-  const dispatch = useDispatch();
-
   return (
     <section className="buttonContainer">
-      <button
-        className={isLight ? "" : "dark"}
-        onClick={() => dispatch(setPopinDisplayed(true))}
-      >
+      <button className={isLight ? "light " : ""} onClick={onClick}>
         {text}
       </button>
     </section>
