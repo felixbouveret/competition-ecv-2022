@@ -4,14 +4,14 @@ export interface ProductInterface {
   compatibility?: string;
   tags: string[];
   price: number;
-  region: string;
+  region?: string;
   image: string;
-  advices: {
+  advices?: {
     title: string;
     description: string;
   }[];
-  details: [];
-  infos: {
+  details?: [];
+  infos?: {
     title: string;
     icon: string;
     description: string;

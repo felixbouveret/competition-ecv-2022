@@ -21,7 +21,14 @@ export default function BannerContainer() {
         </div>
         <img src="/assets/img/artisan.jpg" alt="" />
       </section>
-      <ResultCard />
+      <ResultCard
+        tags={["yes", "no", "oups"]}
+        title="test"
+        compatibility="compat"
+        price={20}
+        image="/assets/img/wine-glass.png"
+        shop="shop"
+      />
     </>
   );
 }
