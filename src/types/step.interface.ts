@@ -2,7 +2,7 @@ export interface StepInterface {
   id: string;
   title: string;
   description?: string;
-  type: "question" | "transition";
+  type: string;
 }
 
 export interface Answer {

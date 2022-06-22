@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HeaderContainer from "./Components/Header";
 import Question from "./Question";
-import { QuestionStepInterface } from "../types/step.interface";
+import { useDispatch } from "react-redux";
 import "./Popin.scss";
+import { QuestionStepInterface } from "../types/step.interface";
 
 export default function PopinContainer({ isVisible }: { isVisible: boolean }) {
   const myQuestion: QuestionStepInterface = {
@@ -34,6 +35,7 @@ export default function PopinContainer({ isVisible }: { isVisible: boolean }) {
       },
     ],
   };
+
   if (isVisible)
     return (
       <section className="popinContainer">

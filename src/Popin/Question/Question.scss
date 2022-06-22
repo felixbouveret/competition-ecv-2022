@@ -13,6 +13,7 @@
       font-size: 22px;
       line-height: 27px;
       margin-bottom: 12px;
+      text-align: center;
     }
 
     .questionDescription {
@@ -31,6 +32,7 @@
 
   .buttons {
     text-align: center;
+    margin-bottom: 89px;
     .nextPrev {
       margin-bottom: 40px;
       display: flex;
@@ -38,12 +40,7 @@
 
       button {
         margin: 0 12px 0 12px;
-        padding: 14px 24px;
       }
-    }
-
-    .why {
-      margin-bottom: 80px;
     }
   }
 }

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import useAnswers from "../../hooks/useAnswers";
 import { QuestionStepInterface } from "../../types/step.interface";
 import Answer from "./Answer";
+import Button from "../../Components/Button";
 
 import "./Question.scss";
 
@@ -35,10 +36,10 @@ export default function Question({
       </div>
       <div className="buttons">
         <div className="nextPrev">
-          <button>Précédent</button>
-          <button>Suivant</button>
+          <Button text={"Précédent"} isLight={true} />
+          <Button text={"Suivant"} />
         </div>
-        <button className="why">Pourquoi ?</button>
+        <Button text={"Pourquoi cette question ?"} isLight={true} />
       </div>
     </section>
   );
