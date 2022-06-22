@@ -5,7 +5,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:widget": "parcel build src/index.tsx --no-source-maps -d docs",
+    "build:widget": "parcel build src/index.tsx --no-source-maps --dist-dir docs",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -37,8 +37,8 @@
     "@types/node": "^16.11.41",
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
-    "node-sass": "^7.0.1",
     "@types/react-redux": "^7.1.24",
+    "node-sass": "^7.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.2",
@@ -48,8 +48,9 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.1",
     "@redux-devtools/core": "^3.13.1",
-    "parcel-bundler": "^1.12.4"
+    "parcel": "^2.0.0"
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "docs/index.js",
