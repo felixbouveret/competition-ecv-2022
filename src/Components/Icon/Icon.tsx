@@ -1,4 +1,11 @@
-import { arrowLeftIcon, crossIcon, logoLight, logoPurple } from "./Icons/index";
+import {
+  arrowLeftIcon,
+  cartIcon,
+  crossIcon,
+  heartIcon,
+  logoLight,
+  logoPurple,
+} from "./Icons/index";
 
 interface PropsInterface {
   name: string;
@@ -16,6 +23,8 @@ export default function Icon({
     if (name === "cross") return crossIcon;
     if (name === "logo-light") return logoLight;
     if (name === "logo-purple") return logoPurple;
+    if (name === "heart-icon") return heartIcon;
+    if (name === "cart-icon") return cartIcon;
     return () => null;
   };
   return getIcon()({ color, size });

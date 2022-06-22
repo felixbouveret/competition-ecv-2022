@@ -1,0 +1,87 @@
+@import "../../../variables.scss";
+
+.resultCard {
+  border-radius: 8px;
+  background-color: $white;
+  border: 1px solid #e2e6f5;
+  width: 280px;
+  height: 350px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .personalisation {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 16px;
+    left: 16px;
+    right: 16px;
+
+    p {
+      color: $white;
+      background-color: $green;
+      padding: 2px 4px;
+      font-weight: 500;
+      font-size: 14px;
+      border-radius: 8px;
+    }
+  }
+
+  .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    background-color: $white;
+    box-shadow: 0px 1px 4px rgba(29, 33, 57, 0.08);
+    cursor: pointer;
+
+    img {
+      width: 12px;
+      align-self: center;
+    }
+  }
+
+  .content {
+    padding: 16px;
+    .description {
+      display: flex;
+      p {
+        padding: 2px 4px;
+        margin-right: 10px;
+        background: rgba(122, 16, 71, 0.08);
+        border-radius: 3px;
+        color: $purple;
+      }
+    }
+    h4 {
+      font-weight: 500;
+    }
+    .winery {
+      color: $blue;
+      font-weight: 500;
+      margin-top: 10px;
+    }
+    .selling {
+      display: flex;
+      justify-content: space-between;
+      p {
+        margin: auto 0;
+        font-weight: 500;
+        font-size: 14px;
+      }
+      .circle {
+        background-color: $purple;
+      }
+    }
+  }
+}
