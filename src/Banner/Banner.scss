@@ -1,4 +1,4 @@
-@import "../variables.scss";
+@import "../style/variables.scss";
 
 .bannerContainer {
   background-color: $purple;
@@ -13,9 +13,9 @@
   font-weight: 400;
   max-width: 400px;
   margin: auto;
-  .text{
+  .text {
     padding: 25px 20px;
-    .title{
+    .title {
       color: $white;
       font-weight: 500;
       font-size: 16px;

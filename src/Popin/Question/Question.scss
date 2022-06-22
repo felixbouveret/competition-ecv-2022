@@ -1,0 +1,49 @@
+@import "../../style/variables.scss";
+
+.questionContainer {
+  padding: 148px 16px 0 16px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .heading {
+    .questionTitle {
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 27px;
+      margin-bottom: 12px;
+    }
+
+    .questionDescription {
+      text-align: center;
+      font-size: 14px;
+      color: #646b8e;
+    }
+  }
+
+  .answerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .buttons {
+    text-align: center;
+    .nextPrev {
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: center;
+
+      button {
+        margin: 0 12px 0 12px;
+        padding: 14px 24px;
+      }
+    }
+
+    .why {
+      margin-bottom: 80px;
+    }
+  }
+}
