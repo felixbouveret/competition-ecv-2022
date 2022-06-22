@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderContainer from "./Header";
+import HeaderContainer from "./Components/Header";
 import Question from "./Question";
 import { QuestionStepInterface } from "../types/step.interface";
 import "./Popin.scss";
