@@ -24,7 +24,9 @@ export default function AnswerContent({
       onClick={() => onClick(answer.id)}
     >
       <div className="icon"></div>
-      <div className="answerDescription">{answer.description}</div>
+      {answer.description && (
+        <div className="answerDescription">{answer.description}</div>
+      )}
     </div>
   );
 }
