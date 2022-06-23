@@ -4,10 +4,16 @@ interface AppState {
   isPopinDisplayed: boolean;
   isProgressBarDisplayed: boolean;
   productId: string;
+  isIntroduction: boolean;
+  currentStepType: string;
+  isVideoDisplayed: boolean;
 }
 const initialState: AppState = {
   isPopinDisplayed: false,
-  isProgressBarDisplayed: true,
+  isProgressBarDisplayed: false,
+  isIntroduction: true,
+  isVideoDisplayed: false,
+  currentStepType: "",
   productId: "",
 };
 export const appSlice = createSlice({
@@ -25,10 +31,25 @@ export const appSlice = createSlice({
     setProductId: (state, { payload }) => {
       state.productId = payload;
     },
+    setIntroduction: (state, { payload }) => {
+      state.isIntroduction = payload;
+    },
+    setCurrentStepType: (state, { payload }) => {
+      state.currentStepType = payload;
+    },
+    setVideoDisplayed: (state, { payload }) => {
+      state.isVideoDisplayed = payload;
+    },
   },
 });
 
-export const { setPopinDisplayed, setProgressBarDisplayed, setProductId } =
-  appSlice.actions;
+export const {
+  setPopinDisplayed,
+  setProgressBarDisplayed,
+  setIntroduction,
+  setCurrentStepType,
+  setVideoDisplayed,
+  setProductId,
+} = appSlice.actions;
 
 export default appSlice.reducer;

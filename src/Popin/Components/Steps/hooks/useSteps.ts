@@ -7,15 +7,14 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../../../store";
 import { useDispatch } from "react-redux";
 import { setProgress } from "../../../../store/Steps";
+import { setCurrentStepType } from "../../../../store/App";
 
 export default function useSteps() {
   const dispatch = useDispatch();
   const allSteps = getSteps();
 
   const { answers } = useSelector((state: RootState) => state.steps);
-  const [currentStepId, setCurrentStepId] = React.useState<string>(
-    stepsNameEnum.FOR_WHO_STEP
-  );
+  const [currentStepId, setCurrentStepId] = React.useState<string>();
   const currentStep = allSteps.find((step) => step.id === currentStepId);
 
   const updateProgress = (): void => {
@@ -34,7 +33,6 @@ export default function useSteps() {
   const goNext = async (customAnswers?: answerId[]) => {
     let nextStepId = currentStepId;
     const answerArray = customAnswers || answers;
-    console.log(answerArray);
 
     for (const stepId of flow) {
       const step = allSteps.find((s) => s.id === stepId);
@@ -45,6 +43,7 @@ export default function useSteps() {
         step.shouldBeSkipped(answerArray) === false
       ) {
         nextStepId = step.id;
+        dispatch(setCurrentStepType(step.type));
         break;
       }
     }

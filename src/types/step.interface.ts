@@ -63,6 +63,10 @@ export interface TransitionStepInterface extends StepInterface {
 export interface LoaderStepInterface extends StepInterface {
   type: "loader";
 }
+export interface IntroductionStepInterface extends StepInterface {
+  type: "introduction";
+  description: string;
+}
 
 export interface Answer {
   icon: string;
