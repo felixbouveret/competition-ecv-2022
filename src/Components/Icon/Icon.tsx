@@ -1,3 +1,4 @@
+import grape from "./Icons/grape";
 import {
   arrowLeftIcon,
   cartIcon,
@@ -5,9 +6,18 @@ import {
   heartIcon,
   logoLight,
   logoPurple,
+  shopLocation,
+  verifiedBadge,
+  timeIcon,
+  playIcon,
 } from "./Icons/index";
+import mouth from "./Icons/mouth";
+import nose from "./Icons/nose";
+import shop from "./Icons/shop";
+import shoppingBag from "./Icons/shoppingBag";
 
 interface PropsInterface {
+  className?: string;
   name: string;
   color?: string;
   size?: number;
@@ -25,6 +35,15 @@ export default function Icon({
     if (name === "logo-purple") return logoPurple;
     if (name === "heart-icon") return heartIcon;
     if (name === "cart-icon") return cartIcon;
+    if (name === "virified-badge") return verifiedBadge;
+    if (name === "shop-location") return shopLocation;
+    if (name === "shopping-bag") return shoppingBag;
+    if (name === "shop") return shop;
+    if (name === "grape") return grape;
+    if (name === "nose") return nose;
+    if (name === "mouth") return mouth;
+    if (name === "time-icon") return timeIcon;
+    if (name === "play-icon") return playIcon;
     return () => null;
   };
   return getIcon()({ color, size });

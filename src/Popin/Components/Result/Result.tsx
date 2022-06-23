@@ -15,7 +15,15 @@ export default function ResultCard({
     <div className="resultCard">
       <img src={image} alt="" />
       <div className="personalisation">
-        <p>{compatibility}% de compatibilité</p>
+        <div>
+          {compatibility && (
+            <p>
+              {compatibility}
+              "% de compatibilité"
+            </p>
+          )}
+        </div>
+
         <div className="circle">
           <Icon name="heart-icon" />
         </div>

@@ -2,6 +2,7 @@ import {
   TransitionStepInterface,
   QuestionStepInterface,
   LoaderStepInterface,
+  IntroductionStepInterface,
 } from "../../../types/step.interface";
 import {
   budgetStepEnum,
@@ -25,7 +26,10 @@ import {
 import { stepsNameEnum } from "../../../types/stepsName.enum";
 
 export const getSteps = (): Array<
-  QuestionStepInterface | TransitionStepInterface | LoaderStepInterface
+  | QuestionStepInterface
+  | TransitionStepInterface
+  | LoaderStepInterface
+  | IntroductionStepInterface
 > => [
   {
     id: stepsNameEnum.LOADER_STEP,
@@ -36,6 +40,17 @@ export const getSteps = (): Array<
     shouldBeSkipped: (answers: Array<string>): boolean => false,
     canGoNext: (answers: Array<string>): boolean =>
       answers.includes(transitionSteps.LOADER_PASSED),
+  },
+  {
+    id: stepsNameEnum.INTRODUCTION_STEP,
+    title: "Besoin d’aide ?",
+    type: "introduction",
+    description:
+      "Julie, caviste chez Le Puits d’Amour, vous guide dans le choix de vin afin qu’il soit plus adapté à vos goûts et vos envies.",
+    subtitle: "Durée du test : ~ 6 minutes",
+    shouldBeSkipped: (answers: Array<string>): boolean => false,
+    canGoNext: (answers: Array<string>): boolean =>
+      answers.includes(transitionSteps.INTRODUCTION_PASSED),
   },
   {
     id: stepsNameEnum.TASTES_TRANSITION_STEP,

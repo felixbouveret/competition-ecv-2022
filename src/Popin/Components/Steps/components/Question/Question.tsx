@@ -37,6 +37,7 @@ export default function Question({
         goBack={goBack}
         goNext={goNext}
         canGoBack={canGoBack}
+        canGoNext={question.canGoNext(answers)}
       />
     </div>
   );

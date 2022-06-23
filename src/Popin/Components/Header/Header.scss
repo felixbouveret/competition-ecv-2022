@@ -35,9 +35,32 @@
       grid-column: 2;
     }
   }
+  &.isLight {
+    .logo {
+      justify-self: start;
+      grid-column: 1;
+    }
+  }
+
+  &.isVideoDisplayed {
+    width: 100%;
+    @media (min-width: 920px) {
+      width: 60%;
+    }
+  }
+  &.isIntroduction {
+    width: 100%;
+
+    @media (min-width: 920px) {
+      width: 60%;
+      .logo path {
+        fill: $purple;
+      }
+    }
+  }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 920px) {
   .headerContainer {
     flex-direction: column-reverse;
 
