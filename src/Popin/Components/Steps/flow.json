@@ -1,11 +1,13 @@
 [
   "for-who-step",
+  "tastes-transition-step",
   "coffee-step",
   "juice-step",
   "cook-step",
   "parfum-step",
   "spices-step",
   "rank-step",
+  "needs-transition-step",
   "why-step",
   "eat-with-step",
   "meal-type-step",

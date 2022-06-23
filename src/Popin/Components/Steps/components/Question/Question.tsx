@@ -1,14 +1,43 @@
 import React from "react";
-import { QuestionStepInterface } from "../../../../../types/step.interface";
+import {
+  answerId,
+  QuestionStepInterface,
+} from "../../../../../types/step.interface";
+import useAnswers from "../../hooks/useAnswers";
 import AnswersList from "../AnswersList";
-import QuestionHead from "../QuestionHead";
+import Navigation from "../Navigation";
+import StepHead from "../StepHead";
 import "./Question.scss";
+interface QuestionProps {
+  goBack: () => void;
+  goNext: () => void;
+  canGoBack: boolean;
+  question: QuestionStepInterface;
+}
+export default function Question({
+  goBack,
+  goNext,
+  canGoBack,
+  question,
+}: QuestionProps) {
+  const { answers, handleAnswer } = useAnswers();
+  const addAnswer = (id: answerId) =>
+    handleAnswer(id, question.isMultiple, question.answers);
 
-export default function Question(props: QuestionStepInterface) {
   return (
     <div className="questionRoot">
-      <QuestionHead {...props} />
-      <AnswersList answersArray={props.answers} isMultiple={props.isMultiple} />
+      <StepHead {...question} />
+      <AnswersList
+        answersArray={question.answers}
+        onClick={addAnswer}
+        selectedAnswers={answers}
+      />
+      <Navigation
+        className="navigation"
+        goBack={goBack}
+        goNext={goNext}
+        canGoBack={canGoBack}
+      />
     </div>
   );
 }

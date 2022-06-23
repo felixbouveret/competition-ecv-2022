@@ -4,14 +4,14 @@ import AnswerBlock from "../AnswerBlock";
 import "./AnswersList.scss";
 
 export default function AnswerContent({
-  isMultiple,
   answersArray,
+  onClick,
+  selectedAnswers,
 }: {
-  isMultiple: boolean;
   answersArray: Answer[];
+  onClick: (answerId: answerId) => void;
+  selectedAnswers: answerId[];
 }) {
-  const { answers, handleAnswer } = useAnswers();
-
   return (
     <div className="answersList">
       {answersArray.map((answer, index) => (
@@ -19,8 +19,8 @@ export default function AnswerContent({
           className="answerItem"
           answer={answer}
           key={index}
-          isActive={answers.includes(answer.id)}
-          onClick={(id: answerId) => handleAnswer(id, isMultiple, answersArray)}
+          isActive={selectedAnswers.includes(answer.id)}
+          onClick={() => onClick(answer.id)}
         />
       ))}
     </div>

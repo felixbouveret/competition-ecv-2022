@@ -1,6 +1,7 @@
 import React from "react";
 import Navigation from "./components/Navigation";
 import Question from "./components/Question";
+import Transition from "./components/Transition";
 import useSteps from "./hooks/useSteps";
 import "./Steps.scss";
 
@@ -9,18 +10,25 @@ export default function UserProfileFlow() {
   if (!currentStep) return <div></div>;
 
   const stepComponent = () => {
-    if (currentStep.type === "question") return <Question {...currentStep} />;
+    if (currentStep.type === "question")
+      return (
+        <Question
+          question={currentStep}
+          goBack={goBack}
+          goNext={goNext}
+          canGoBack={canGoBack()}
+        />
+      );
+    if (currentStep.type === "transition")
+      return (
+        <Transition
+          transition={currentStep}
+          goBack={goBack}
+          goNext={goNext}
+          canGoBack={canGoBack()}
+        />
+      );
     return null;
   };
-  return (
-    <div className="rootSteps">
-      {stepComponent()}
-      <Navigation
-        className="navigation"
-        goBack={goBack}
-        goNext={goNext}
-        canGoBack={canGoBack()}
-      />
-    </div>
-  );
+  return <div className="rootSteps">{stepComponent()}</div>;
 }

@@ -4,101 +4,106 @@ export enum forWhoStepEnum {
 }
 
 export enum coffeeStepEnum {
-  BLACK = "black",
-  LACTOSE = "lactose",
-  SUGAR = "sugar",
-  NO_COFFEE = "no-coffee",
+  BLACK = "black-answer",
+  LACTOSE = "lactose-answer",
+  SUGAR = "sugar-answer",
+  NO_COFFEE = "no-coffee-answer",
 }
 
 export enum juiceStepEnum {
-  ORANGE = "orange",
-  APPLE = "apple",
-  GRAPFRUIT = "grapefruit",
-  EXOTIC = "exotic",
+  ORANGE = "orange-answer",
+  APPLE = "apple-answer",
+  GRAPFRUIT = "grapefruit-answer",
+  EXOTIC = "exotic-answer",
 }
 
 export enum cookStepEnum {
-  FRENCH = "french",
-  ITALIAN = "italian",
-  ASIAN = "asian",
-  AMERICAN = "american",
-  VEG = "veg",
+  FRENCH = "french-answer",
+  ITALIAN = "italian-answer",
+  ASIAN = "asian-answer",
+  AMERICAN = "american-answer",
+  VEG = "veg-answer",
 }
 
 export enum parfumStepEnum {
-  DIRT = "dirt",
-  CHOCOLATE = "chocolate",
-  GRASS = "grass",
-  FRUITY = "fruity",
+  DIRT = "dirt-answer",
+  CHOCOLATE = "chocolate-answer",
+  GRASS = "grass-answer",
+  FRUITY = "fruity-answer",
 }
 
 export enum spicesStepEnum {
-  SAGE = "sage",
-  BASIL = "basil",
-  PARSLEY = "parsley",
-  SMOCKED_PAPRIKA = "smocked-paprika",
+  SAGE = "sage-answer",
+  BASIL = "basil-answer",
+  PARSLEY = "parsley-answer",
+  SMOCKED_PAPRIKA = "smocked-paprika-answer",
 }
 
 export enum rankStepEnum {
-  BEGINNER = "beginner",
-  AMATEUR = "amateur",
-  KEEN = "keen",
-  EXPERT = "expert",
+  BEGINNER = "beginner-answer",
+  AMATEUR = "amateur-answer",
+  KEEN = "keen-answer",
+  EXPERT = "expert-answer",
 }
 
 export enum whyStepEnum {
-  KEEP = "keep",
-  READY_DRINK = "ready-drink",
+  KEEP = "keep-answer",
+  READY_DRINK = "ready-drink-answer",
 }
 
 export enum eatWithStepEnum {
-  MEAT = "meat",
-  SEAFOOD = "sea-food",
-  VEGETABLE = "vegetable",
-  CHEESE = "cheese",
-  DESSERT = "dessert",
+  MEAT = "meat-answer",
+  SEAFOOD = "fish-answer",
+  VEGETABLE = "vegetable-answer",
+  CHEESE = "cheese-answer",
+  DESSERT = "dessert-answer",
 }
 
 export enum mealTypeStepEnum {
-  FULL = "full",
-  SPECIFIC = "specific",
+  FULL = "full-answer",
+  SPECIFIC = "specific-answer",
 }
 
 export enum meatStepEnum {
-  BEEF_GRILLED = "beef-grilled",
-  BEEF_SIMMERED = "beef-simmered",
-  CHICKEN = "chicken",
-  PREY = "prey",
-  WHITE = "white",
+  BEEF_GRILLED = "beef-grilled-answer",
+  BEEF_SIMMERED = "beef-simmered-answer",
+  CHICKEN = "chicken-answer",
+  PREY = "prey-answer",
+  WHITE = "white-answer",
 }
 
 export enum fishStepEnum {
-  LEAN = "lean",
-  BOLD = "bold",
-  SEA_FOOD = "sea-food",
+  LEAN = "lean-answer",
+  BOLD = "bold-answer",
+  SEA_FOOD = "sea-food-answer",
 }
 
 export enum cheeseStepEnum {
-  GOAT = "goat",
-  HARD = "hard",
-  SOFT = "soft",
+  GOAT = "goat-answer",
+  HARD = "hard-answer",
+  SOFT = "soft-answer",
 }
 
 export enum budgetStepEnum {
-  VERY_LOW = "very-low",
-  LOW = "low",
-  MEDIUM = "medium",
-  HIGH = "high",
-  VERY_HIGH = "very-high",
+  VERY_LOW = "very-low-answer",
+  LOW = "low-answer",
+  MEDIUM = "medium-answer",
+  HIGH = "high-answer",
+  VERY_HIGH = "very-high-answer",
 }
 
 export enum wineTypeStepEnum {
-  RED = "red",
-  WHITE = "white",
-  ROSE = "rose",
-  SPARKLING = "sparkling",
+  RED = "red-answer",
+  WHITE = "white-answer",
+  ROSE = "rose-answer",
+  SPARKLING = "sparkling-answer",
 }
 
 export enum multipleQuestion {
-  I_DONT_KNOW = "i-dont-know",
+  I_DONT_KNOW = "i-dont-know-answer",
+}
+
+export enum transitionSteps {
+  TASTE_PASSED = "tastes-transition-step",
+  NEEDS_PASSED = "needs-transition-step",
 }

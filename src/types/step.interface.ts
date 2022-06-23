@@ -15,6 +15,7 @@ import {
   budgetStepEnum,
   wineTypeStepEnum,
   multipleQuestion,
+  transitionSteps,
 } from "./stepsAnswers.enum";
 import { stepsNameEnum } from "./stepsName.enum";
 
@@ -23,6 +24,7 @@ export interface StepInterface {
   title: string;
   subtitle: string;
   shouldBeSkipped: (answers: Array<string>) => boolean;
+  canGoNext: (answers: Array<string>) => boolean;
 }
 
 export type answerId =
@@ -41,7 +43,8 @@ export type answerId =
   | cheeseStepEnum
   | budgetStepEnum
   | wineTypeStepEnum
-  | multipleQuestion;
+  | multipleQuestion
+  | transitionSteps;
 
 export interface QuestionStepInterface extends StepInterface {
   titleForOther?: string;

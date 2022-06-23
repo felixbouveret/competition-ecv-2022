@@ -17,6 +17,7 @@ import {
   parfumStepEnum,
   rankStepEnum,
   spicesStepEnum,
+  transitionSteps,
   whyStepEnum,
   wineTypeStepEnum,
 } from "../../../types/stepsAnswers.enum";
@@ -26,12 +27,41 @@ export const getSteps = (): Array<
   QuestionStepInterface | TransitionStepInterface
 > => [
   {
+    id: stepsNameEnum.TASTES_TRANSITION_STEP,
+    title: "Regardons ensemble quelles sont vos préférences",
+    type: "transition",
+    description:
+      "J’ai besoin d’en apprendre un peu plus sur vous afin de trouver un vin qui vous correspond.",
+    image: "",
+    subtitle: "Vos gouts",
+    index: 1,
+    shouldBeSkipped: (answers: Array<string>): boolean => false,
+    canGoNext: (answers: Array<string>): boolean =>
+      answers.includes(transitionSteps.TASTE_PASSED),
+  },
+  {
+    id: stepsNameEnum.NEEDS_TRANSITION_STEP,
+    title: "Une envie particulière ? Un repas de prévu ?",
+    type: "transition",
+    description:
+      "Affinons vos recherches en fonction de ce que vous avez de prévu.",
+    image: "",
+    subtitle: "Vos besoins",
+    index: 2,
+    shouldBeSkipped: (answers: Array<string>): boolean => false,
+    canGoNext: (answers: Array<string>): boolean =>
+      answers.includes(transitionSteps.NEEDS_PASSED),
+  },
+  {
     id: stepsNameEnum.FOR_WHO_STEP,
     title: "Pour qui cherchez-vous du vin ?",
     type: "question",
     isMultiple: false,
     subtitle: "",
     shouldBeSkipped: (answers: Array<string>): boolean => false,
+    canGoNext: (answers: Array<string>): boolean =>
+      answers.includes(forWhoStepEnum.ME) ||
+      answers.includes(forWhoStepEnum.OTHER),
     answers: [
       {
         icon: "/",
@@ -52,7 +82,12 @@ export const getSteps = (): Array<
     type: "question",
     isMultiple: true,
     subtitle: "VOs GOÛTs",
-    shouldBeSkipped: (answers: Array<string>): boolean => true,
+    shouldBeSkipped: (answers: Array<string>): boolean => false,
+    canGoNext: (answers: Array<string>): boolean =>
+      answers.includes(coffeeStepEnum.BLACK) ||
+      answers.includes(coffeeStepEnum.LACTOSE) ||
+      answers.includes(coffeeStepEnum.NO_COFFEE) ||
+      answers.includes(coffeeStepEnum.SUGAR),
     answers: [
       {
         icon: "/",
@@ -82,7 +117,11 @@ export const getSteps = (): Array<
     type: "question",
     isMultiple: false,
     subtitle: "VOs GOÛTs",
-    shouldBeSkipped: (answers: Array<string>): boolean => true,
+    shouldBeSkipped: (answers: Array<string>): boolean => false,
+    canGoNext: (answers: Array<string>): boolean =>
+      answers.includes(juiceStepEnum.GRAPFRUIT) ||
+      answers.includes(juiceStepEnum.APPLE) ||
+      answers.includes(juiceStepEnum.EXOTIC),
     answers: [
       {
         icon: "/",
@@ -108,6 +147,12 @@ export const getSteps = (): Array<
     isMultiple: true,
     subtitle: "VOs GOÛTs",
     shouldBeSkipped: (answers: Array<string>): boolean => false,
+    canGoNext: (answers: Array<string>): boolean =>
+      answers.includes(cookStepEnum.FRENCH) ||
+      answers.includes(cookStepEnum.ASIAN) ||
+      answers.includes(cookStepEnum.AMERICAN) ||
+      answers.includes(cookStepEnum.ITALIAN) ||
+      answers.includes(cookStepEnum.VEG),
     answers: [
       {
         icon: "/",
@@ -143,6 +188,11 @@ export const getSteps = (): Array<
     isMultiple: false,
     subtitle: "VOs GOÛTs",
     shouldBeSkipped: (answers: Array<string>): boolean => false,
+    canGoNext: (answers: Array<string>): boolean =>
+      answers.includes(parfumStepEnum.DIRT) ||
+      answers.includes(parfumStepEnum.CHOCOLATE) ||
+      answers.includes(parfumStepEnum.GRASS) ||
+      answers.includes(parfumStepEnum.FRUITY),
     answers: [
       {
         icon: "/",
@@ -173,6 +223,11 @@ export const getSteps = (): Array<
     isMultiple: false,
     subtitle: "VOs GOÛTs",
     shouldBeSkipped: (answers: Array<string>): boolean => false,
+    canGoNext: (answers: Array<string>): boolean =>
+      answers.includes(spicesStepEnum.SAGE) ||
+      answers.includes(spicesStepEnum.SMOCKED_PAPRIKA) ||
+      answers.includes(spicesStepEnum.BASIL) ||
+      answers.includes(spicesStepEnum.PARSLEY),
     answers: [
       {
         icon: "/",
@@ -203,6 +258,11 @@ export const getSteps = (): Array<
     isMultiple: false,
     subtitle: "VOs GOÛTs",
     shouldBeSkipped: (answers: Array<string>): boolean => false,
+    canGoNext: (answers: Array<string>): boolean =>
+      answers.includes(rankStepEnum.BEGINNER) ||
+      answers.includes(rankStepEnum.AMATEUR) ||
+      answers.includes(rankStepEnum.KEEN),
+
     answers: [
       {
         icon: "/",
@@ -228,6 +288,9 @@ export const getSteps = (): Array<
     isMultiple: false,
     subtitle: "",
     shouldBeSkipped: (answers: Array<string>): boolean => false,
+    canGoNext: (answers: Array<string>): boolean =>
+      answers.includes(whyStepEnum.KEEP) ||
+      answers.includes(whyStepEnum.READY_DRINK),
     answers: [
       {
         icon: "/",
@@ -247,7 +310,16 @@ export const getSteps = (): Array<
     type: "question",
     isMultiple: true,
     subtitle: "",
-    shouldBeSkipped: (answers: Array<string>): boolean => false,
+    shouldBeSkipped: (answers: Array<string>): boolean =>
+      answers.includes(whyStepEnum.KEEP),
+    canGoNext: (answers: Array<string>): boolean =>
+      answers.includes(eatWithStepEnum.MEAT) ||
+      answers.includes(eatWithStepEnum.SEAFOOD) ||
+      answers.includes(eatWithStepEnum.VEGETABLE) ||
+      answers.includes(eatWithStepEnum.CHEESE) ||
+      answers.includes(multipleQuestion.I_DONT_KNOW) ||
+      answers.includes(eatWithStepEnum.DESSERT),
+
     answers: [
       {
         icon: "/",
@@ -287,7 +359,12 @@ export const getSteps = (): Array<
     type: "question",
     isMultiple: false,
     subtitle: "",
-    shouldBeSkipped: (answers: Array<string>): boolean => false,
+    shouldBeSkipped: (answers: Array<string>): boolean =>
+      answers.includes(whyStepEnum.KEEP),
+    canGoNext: (answers: Array<string>): boolean =>
+      answers.includes(mealTypeStepEnum.FULL) ||
+      answers.includes(mealTypeStepEnum.SPECIFIC),
+
     answers: [
       {
         icon: "/",
@@ -309,6 +386,14 @@ export const getSteps = (): Array<
     subtitle: "",
     shouldBeSkipped: (answers: Array<string>): boolean =>
       !answers.includes(eatWithStepEnum.MEAT),
+
+    canGoNext: (answers: Array<string>): boolean =>
+      answers.includes(meatStepEnum.BEEF_GRILLED) ||
+      answers.includes(meatStepEnum.BEEF_SIMMERED) ||
+      answers.includes(meatStepEnum.WHITE) ||
+      answers.includes(meatStepEnum.CHICKEN) ||
+      answers.includes(meatStepEnum.PREY),
+
     answers: [
       {
         icon: "/",
@@ -345,6 +430,10 @@ export const getSteps = (): Array<
     subtitle: "",
     shouldBeSkipped: (answers: Array<string>): boolean =>
       !answers.includes(eatWithStepEnum.SEAFOOD),
+    canGoNext: (answers: Array<string>): boolean =>
+      answers.includes(fishStepEnum.LEAN) ||
+      answers.includes(fishStepEnum.BOLD) ||
+      answers.includes(fishStepEnum.SEA_FOOD),
     answers: [
       {
         icon: "/",
@@ -371,6 +460,10 @@ export const getSteps = (): Array<
     subtitle: "",
     shouldBeSkipped: (answers: Array<string>): boolean =>
       !answers.includes(eatWithStepEnum.CHEESE),
+    canGoNext: (answers: Array<string>): boolean =>
+      answers.includes(cheeseStepEnum.GOAT) ||
+      answers.includes(cheeseStepEnum.HARD) ||
+      answers.includes(cheeseStepEnum.SOFT),
     answers: [
       {
         icon: "/",
@@ -396,6 +489,12 @@ export const getSteps = (): Array<
     isMultiple: false,
     subtitle: "",
     shouldBeSkipped: (answers: Array<string>): boolean => false,
+    canGoNext: (answers: Array<string>): boolean =>
+      answers.includes(budgetStepEnum.VERY_LOW) ||
+      answers.includes(budgetStepEnum.LOW) ||
+      answers.includes(budgetStepEnum.MEDIUM) ||
+      answers.includes(budgetStepEnum.HIGH) ||
+      answers.includes(budgetStepEnum.VERY_HIGH),
     answers: [
       {
         icon: "/",
@@ -431,6 +530,11 @@ export const getSteps = (): Array<
     isMultiple: true,
     subtitle: "",
     shouldBeSkipped: (answers: Array<string>): boolean => false,
+    canGoNext: (answers: Array<string>): boolean =>
+      answers.includes(wineTypeStepEnum.RED) ||
+      answers.includes(wineTypeStepEnum.WHITE) ||
+      answers.includes(wineTypeStepEnum.RED) ||
+      answers.includes(wineTypeStepEnum.SPARKLING),
     answers: [
       {
         icon: "/",
