@@ -31,6 +31,7 @@ export default function Transition({
       <StepHead {...transition} />
       <Navigation
         className="navigation"
+        isTransition
         goBack={goBack}
         goNext={goNext}
         canGoBack={canGoBack}
