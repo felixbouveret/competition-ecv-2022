@@ -1,8 +1,8 @@
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { RootState } from "../../../../store";
-import { setAnswers } from "../../../../store/Steps";
-import { Answer, answerId } from "../../../../types/step.interface";
+import { RootState } from "@/store";
+import { setAnswers } from "@/store/Steps";
+import { Answer, answerId } from "@/types/step.interface";
 
 export default function useAnswers() {
   const { answers } = useSelector((state: RootState) => state.steps);

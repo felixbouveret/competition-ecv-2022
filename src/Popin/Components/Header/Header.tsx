@@ -1,10 +1,10 @@
 import React from "react";
-import ProgressBar from "../ProgressBar";
+import ProgressBar from "@/Popin/Components/ProgressBar";
 import { useDispatch } from "react-redux";
-import { setPopinDisplayed } from "../../../store/App";
+import { setPopinDisplayed } from "@/store/App";
 import "./Header.scss";
-import Icon from "../../../Components/Icon";
-import { RootState } from "../../../store";
+import Icon from "@/Components/Icon";
+import { RootState } from "@/store";
 import { useSelector } from "react-redux";
 import className from "classnames";
 

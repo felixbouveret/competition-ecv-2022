@@ -1,4 +1,4 @@
-import { Answer, answerId } from "../../../../../types/step.interface";
+import { Answer, answerId } from "@/types/step.interface";
 import AnswerBlock from "../AnswerBlock";
 import "./AnswersList.scss";
 

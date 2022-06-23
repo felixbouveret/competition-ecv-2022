@@ -2,8 +2,7 @@ import {
   TransitionStepInterface,
   QuestionStepInterface,
   LoaderStepInterface,
-  IntroductionStepInterface,
-} from "../../../types/step.interface";
+} from "@/types/step.interface";
 import {
   budgetStepEnum,
   cheeseStepEnum,
@@ -22,8 +21,8 @@ import {
   transitionSteps,
   whyStepEnum,
   wineTypeStepEnum,
-} from "../../../types/stepsAnswers.enum";
-import { stepsNameEnum } from "../../../types/stepsName.enum";
+} from "@/types/stepsAnswers.enum";
+import { stepsNameEnum } from "@/types/stepsName.enum";
 
 export const getSteps = (): Array<
   | QuestionStepInterface

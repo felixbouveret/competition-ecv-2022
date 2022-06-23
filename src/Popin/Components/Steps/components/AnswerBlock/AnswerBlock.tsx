@@ -1,8 +1,8 @@
 import React from "react";
-import { Answer, answerId } from "../../../../../types/step.interface";
+import { Answer, answerId } from "@/types/step.interface";
 import "./AnswerBlock.scss";
 import classNames from "classnames";
-import Image from "../../../../../Components/Image";
+import Image from "@/Components/Image";
 
 export default function AnswerBlock({
   answer,

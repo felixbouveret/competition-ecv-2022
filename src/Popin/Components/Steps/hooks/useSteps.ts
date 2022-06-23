@@ -1,13 +1,12 @@
 import React from "react";
-import { answerId } from "../../../../types/step.interface";
+import { answerId } from "@/types/step.interface";
 import { getSteps } from "../stepsList";
 import flow from "../flow.json";
-import { stepsNameEnum } from "../../../../types/stepsName.enum";
+import { stepsNameEnum } from "@/types/stepsName.enum";
 import { useSelector } from "react-redux";
-import { RootState } from "../../../../store";
+import { RootState } from "@/store";
 import { useDispatch } from "react-redux";
-import { setProgress } from "../../../../store/Steps";
-import { setCurrentStepType } from "../../../../store/App";
+import { setProgress } from "@/store/Steps";
 
 export default function useSteps() {
   const dispatch = useDispatch();
