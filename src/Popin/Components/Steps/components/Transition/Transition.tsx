@@ -18,7 +18,7 @@ export default function Transition({
   canGoBack,
   transition,
 }: TransitionProps) {
-  const { handleAnswer } = useAnswers();
+  const { handleAnswer, answers } = useAnswers();
 
   useEffect(() => {
     // @ts-ignore:next-line
@@ -35,6 +35,7 @@ export default function Transition({
         goBack={goBack}
         goNext={goNext}
         canGoBack={canGoBack}
+        canGoNext={transition.canGoNext(answers)}
       />
     </div>
   );

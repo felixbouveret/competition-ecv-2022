@@ -10,4 +10,17 @@
   background-color: $beige;
   overflow: auto;
   font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: row-reverse;
+
+  > .steps {
+    flex: 1;
+  }
+  > .video {
+    display: none;
+    @media screen and (min-width: 920px) {
+      display: block;
+      width: 40%;
+    }
+  }
 }

@@ -23,4 +23,10 @@
     color: $purple;
     background-color: $white;
   }
+  &.whiteMobile {
+    @media screen and (max-width: 920px) {
+      color: $purple;
+      background-color: $white;
+    }
+  }
 }

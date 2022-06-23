@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Introduction from "./components/Introduction";
 import Loader from "./components/Loader";
-import Navigation from "./components/Navigation";
 import Question from "./components/Question";
 import Transition from "./components/Transition";
 import useSteps from "./hooks/useSteps";
@@ -8,6 +8,11 @@ import "./Steps.scss";
 
 export default function UserProfileFlow() {
   const { goNext, goBack, currentStep, canGoBack } = useSteps();
+
+  useEffect(() => {
+    goNext();
+  }, []);
+
   if (!currentStep) return <div></div>;
 
   const stepComponent = () => {
@@ -24,6 +29,15 @@ export default function UserProfileFlow() {
       return (
         <Transition
           transition={currentStep}
+          goBack={goBack}
+          goNext={goNext}
+          canGoBack={canGoBack()}
+        />
+      );
+    if (currentStep.type === "introduction")
+      return (
+        <Introduction
+          introduction={currentStep}
           goBack={goBack}
           goNext={goNext}
           canGoBack={canGoBack()}
