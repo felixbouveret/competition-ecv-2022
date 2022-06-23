@@ -3,9 +3,10 @@
   "version": "0.1.1",
   "homepage": ".",
   "scripts": {
+    "upload": "node scripts/uploadImages.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:widget": "parcel build src/index.tsx --no-source-maps --dist-dir docs",
+    "build:widget": "yarn upload && parcel build src/index.tsx --no-source-maps -d docs",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -30,6 +31,7 @@
   "dependencies": {
     "@ecv-competition-2022/competition-2022": "^0.1.2",
     "@reduxjs/toolkit": "^1.8.2",
+    "@supabase/supabase-js": "^1.35.3",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
@@ -38,8 +40,10 @@
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
     "@types/react-redux": "^7.1.24",
+    "chart.js": "^3.0.0",
     "node-sass": "^7.0.1",
     "react": "^18.2.0",
+    "react-chartjs-2": "^4.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.2",
     "react-scripts": "5.0.1",
@@ -48,9 +52,8 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.6.1",
     "@redux-devtools/core": "^3.13.1",
-    "parcel": "^2.0.0"
+    "parcel-bundler": "^1.12.4"
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "docs/index.js",
