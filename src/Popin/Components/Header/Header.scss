@@ -5,7 +5,7 @@
   flex-direction: column;
   position: fixed;
   width: 100%;
-
+  z-index: 1;
   .headerContent {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

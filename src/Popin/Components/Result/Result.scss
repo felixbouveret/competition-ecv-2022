@@ -1,18 +1,21 @@
 @import "@/variables.scss";
 
 .result {
-  padding: 20px;
+  margin-top: 86px;
+  padding: 20px 0;
   width: 100vw;
   text-align: center;
   .log {
+    padding: 0 20px;
     color: $blue;
     font-weight: 400;
     font-size: 14px;
-    a {
+    span {
       color: $purple;
     }
   }
   .title {
+    padding: 0 20px;
     font-size: 22px;
     font-weight: 500;
     margin-top: 40px;
@@ -24,7 +27,8 @@
     margin-top: 50px;
     width: min-content;
     display: flex;
-    //overflow-x: scroll;
+    overflow-x: scroll;
+    padding-left: 20px;
     .resultCard {
       height: 380px;
       margin-right: 10px;
@@ -32,16 +36,22 @@
   }
   .graph {
     .log {
+      padding: 20px;
       margin-bottom: 50px;
     }
     .graphs {
       width: min-content;
       display: flex;
+      overflow-x: scroll;
+      padding-left: 20px;
       .profileChart {
         margin-right: 10px;
         height: 415px;
-        max-width: 325px;
+        max-width: 275px;
       }
     }
+  }
+  .graphsContainer {
+    overflow-x: scroll;
   }
 }
