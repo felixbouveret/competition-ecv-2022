@@ -1,4 +1,5 @@
 import React from "react";
+import Loader from "./components/Loader";
 import Navigation from "./components/Navigation";
 import Question from "./components/Question";
 import Transition from "./components/Transition";
@@ -28,6 +29,8 @@ export default function UserProfileFlow() {
           canGoBack={canGoBack()}
         />
       );
+    if (currentStep.type === "loader")
+      return <Loader loader={currentStep} goNext={goNext} />;
     return null;
   };
   return <div className="rootSteps">{stepComponent()}</div>;

@@ -106,4 +106,5 @@ export enum multipleQuestion {
 export enum transitionSteps {
   TASTE_PASSED = "tastes-transition-step",
   NEEDS_PASSED = "needs-transition-step",
+  LOADER_PASSED = "loader-step",
 }

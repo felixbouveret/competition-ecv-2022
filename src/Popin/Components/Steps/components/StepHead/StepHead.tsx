@@ -4,12 +4,13 @@ import { RootState } from "../../../../../store";
 import {
   QuestionStepInterface,
   TransitionStepInterface,
+  LoaderStepInterface,
 } from "../../../../../types/step.interface";
 import { forWhoStepEnum } from "../../../../../types/stepsAnswers.enum";
 import "./StepHead.scss";
 
 export default function StepHead(
-  props: QuestionStepInterface | TransitionStepInterface
+  props: QuestionStepInterface | TransitionStepInterface | LoaderStepInterface
 ) {
   const { answers } = useSelector((state: RootState) => state.steps);
 
@@ -28,7 +29,14 @@ export default function StepHead(
       return <p className="description">(Plusieurs réponses possibles)</p>;
     if (props.type === "transition")
       return <p className="description">{props.description}</p>;
+    if (props.type === "loader")
+      return <p className="description">{props.subtitle}</p>;
     return null;
+  };
+
+  const subtitle = () => {
+    if (props.type === "loader") return null;
+    return <p className="subtitle">{props.subtitle}</p>;
   };
 
   const subtitleIndex = () => {
@@ -40,7 +48,7 @@ export default function StepHead(
   return (
     <div className="stepHead">
       {subtitleIndex()}
-      <p className="subtitle">{props.subtitle}</p>
+      {subtitle()}
       <h2 className="title">{title()}</h2>
       {description()}
     </div>

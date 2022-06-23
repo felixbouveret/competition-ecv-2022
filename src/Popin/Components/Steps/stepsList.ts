@@ -1,6 +1,7 @@
 import {
   TransitionStepInterface,
   QuestionStepInterface,
+  LoaderStepInterface,
 } from "../../../types/step.interface";
 import {
   budgetStepEnum,
@@ -24,8 +25,18 @@ import {
 import { stepsNameEnum } from "../../../types/stepsName.enum";
 
 export const getSteps = (): Array<
-  QuestionStepInterface | TransitionStepInterface
+  QuestionStepInterface | TransitionStepInterface | LoaderStepInterface
 > => [
+  {
+    id: stepsNameEnum.LOADER_STEP,
+    title: "Merci pour votre temps",
+    type: "loader",
+    subtitle:
+      "D’après ces informations, je pense que le vin qui vous correspondrait le mieux serait...",
+    shouldBeSkipped: (answers: Array<string>): boolean => false,
+    canGoNext: (answers: Array<string>): boolean =>
+      answers.includes(transitionSteps.LOADER_PASSED),
+  },
   {
     id: stepsNameEnum.TASTES_TRANSITION_STEP,
     title: "Regardons ensemble quelles sont vos préférences",
