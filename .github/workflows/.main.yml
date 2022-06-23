@@ -26,7 +26,6 @@ jobs:
         with:
           node-version: 12
       - run: npm install
-      - run: npm test
       # Runs a single command using the runners shell
       - uses: JS-DevTools/npm-publish@v1
         with:
