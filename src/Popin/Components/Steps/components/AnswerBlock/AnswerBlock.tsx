@@ -2,6 +2,7 @@ import React from "react";
 import { Answer, answerId } from "../../../../../types/step.interface";
 import "./AnswerBlock.scss";
 import classNames from "classnames";
+import Image from "../../../../../Components/Image";
 
 export default function AnswerBlock({
   answer,
@@ -24,7 +25,7 @@ export default function AnswerBlock({
       id={answer.id}
       onClick={() => onClick(answer.id)}
     >
-      <div className="icon">{answer.icon}</div>
+      <Image className="icon" src={answer.icon} alt="" />
       {answer.description && (
         <div className="answerDescription">{answer.description}</div>
       )}

@@ -64,13 +64,13 @@ export const getSteps = (): Array<
       answers.includes(forWhoStepEnum.OTHER),
     answers: [
       {
-        icon: "/",
+        icon: "/icn_me.svg",
         description: "Pour moi",
         descriptionForOther: "",
         id: forWhoStepEnum.ME,
       },
       {
-        icon: "/",
+        icon: "/icn_gift.svg",
         description: "Quelqu'un d'autre ",
         id: forWhoStepEnum.OTHER,
       },
@@ -90,22 +90,22 @@ export const getSteps = (): Array<
       answers.includes(coffeeStepEnum.SUGAR),
     answers: [
       {
-        icon: "/",
+        icon: "/icn_coffee.svg",
         description: "Noir",
         id: coffeeStepEnum.BLACK,
       },
       {
-        icon: "/",
+        icon: "/icn_milk.svg",
         description: "Avec du lait",
         id: coffeeStepEnum.LACTOSE,
       },
       {
-        icon: "/",
+        icon: "/icn_sugar.svg",
         description: "Avec du sucre",
         id: coffeeStepEnum.SUGAR,
       },
       {
-        icon: "/",
+        icon: "/icn_idk.svg",
         description: "Je n'en bois pas",
         id: coffeeStepEnum.NO_COFFEE,
       },
@@ -124,17 +124,17 @@ export const getSteps = (): Array<
       answers.includes(juiceStepEnum.EXOTIC),
     answers: [
       {
-        icon: "/",
+        icon: "/icn_grapefruit.svg",
         description: "Le jus de pamplemousse",
         id: juiceStepEnum.GRAPFRUIT,
       },
       {
-        icon: "/",
+        icon: "/icn_apple.svg",
         description: "Le jus de pomme",
         id: juiceStepEnum.APPLE,
       },
       {
-        icon: "/",
+        icon: "/icn_papaye.svg",
         description: "Le jus de fruits exotiques",
         id: juiceStepEnum.EXOTIC,
       },
@@ -155,27 +155,27 @@ export const getSteps = (): Array<
       answers.includes(cookStepEnum.VEG),
     answers: [
       {
-        icon: "/",
+        icon: "/icn_french.svg",
         description: "Française",
         id: cookStepEnum.FRENCH,
       },
       {
-        icon: "/",
+        icon: "/icn_sushis.svg",
         description: "Asiatique",
         id: cookStepEnum.ASIAN,
       },
       {
-        icon: "/",
+        icon: "/icn_burger.svg",
         description: "Américaine",
         id: cookStepEnum.AMERICAN,
       },
       {
-        icon: "/",
+        icon: "/icn_pizza.svg",
         description: "Italienne",
         id: cookStepEnum.ITALIAN,
       },
       {
-        icon: "/",
+        icon: "/icn_vegetables.svg",
         description: "Végé",
         id: cookStepEnum.VEG,
       },
@@ -195,22 +195,22 @@ export const getSteps = (): Array<
       answers.includes(parfumStepEnum.FRUITY),
     answers: [
       {
-        icon: "/",
+        icon: "/icn_fire.svg",
         description: "Boisé, terreux",
         id: parfumStepEnum.DIRT,
       },
       {
-        icon: "/",
+        icon: "/icn_chocolate.svg",
         description: "Caramel, chocolat",
         id: parfumStepEnum.CHOCOLATE,
       },
       {
-        icon: "/",
+        icon: "/icn_sage.svg",
         description: "Herbacé, à base de plantes",
         id: parfumStepEnum.GRASS,
       },
       {
-        icon: "/",
+        icon: "/icn_flowers.svg",
         description: "Floral, fruité",
         id: parfumStepEnum.FRUITY,
       },
@@ -230,22 +230,22 @@ export const getSteps = (): Array<
       answers.includes(spicesStepEnum.PARSLEY),
     answers: [
       {
-        icon: "/",
+        icon: "/icn_sage.svg",
         description: "Thym et sauge",
         id: spicesStepEnum.SAGE,
       },
       {
-        icon: "/",
+        icon: "/icn_pepper.svg",
         description: "Paprika fumé et piment chipotle",
         id: spicesStepEnum.SMOCKED_PAPRIKA,
       },
       {
-        icon: "/",
+        icon: "/icn_basil.svg",
         description: "Basilic et origan",
         id: spicesStepEnum.BASIL,
       },
       {
-        icon: "/",
+        icon: "/icn_parsley.svg",
         description: "Aneth et persil",
         id: spicesStepEnum.PARSLEY,
       },
@@ -265,17 +265,17 @@ export const getSteps = (): Array<
 
     answers: [
       {
-        icon: "/",
+        icon: "/icn_grape.svg",
         description: "Débutant(e)",
         id: rankStepEnum.BEGINNER,
       },
       {
-        icon: "/",
+        icon: "/icn_bottle.svg",
         description: "Amateur(rice)",
         id: rankStepEnum.AMATEUR,
       },
       {
-        icon: "/",
+        icon: "/icn_glass.svg",
         description: "Passioné(e)",
         id: rankStepEnum.KEEN,
       },
@@ -293,12 +293,12 @@ export const getSteps = (): Array<
       answers.includes(whyStepEnum.READY_DRINK),
     answers: [
       {
-        icon: "/",
+        icon: "/icn_wine.svg",
         description: "A garder",
         id: whyStepEnum.KEEP,
       },
       {
-        icon: "/",
+        icon: "/icn_red-wine.svg",
         description: "Prêt à boire",
         id: whyStepEnum.READY_DRINK,
       },
@@ -322,32 +322,32 @@ export const getSteps = (): Array<
 
     answers: [
       {
-        icon: "/",
+        icon: "/icn_meat.svg",
         description: "De la viande",
         id: eatWithStepEnum.MEAT,
       },
       {
-        icon: "/",
+        icon: "/icn_fish.svg",
         description: "Produits de la mer",
         id: eatWithStepEnum.SEAFOOD,
       },
       {
-        icon: "/",
+        icon: "/icn_vegetables.svg",
         description: "Légumes",
         id: eatWithStepEnum.VEGETABLE,
       },
       {
-        icon: "/",
+        icon: "/icn_cheese.svg",
         description: "Fromages",
         id: eatWithStepEnum.CHEESE,
       },
       {
-        icon: "/",
+        icon: "/icn_dessert.svg",
         description: "Dessert",
         id: eatWithStepEnum.DESSERT,
       },
       {
-        icon: "/",
+        icon: "/icn_idk.svg",
         description: "Je ne sais pas",
         id: multipleQuestion.I_DONT_KNOW,
       },
@@ -367,12 +367,12 @@ export const getSteps = (): Array<
 
     answers: [
       {
-        icon: "/",
+        icon: "/icn_bottle_2.svg",
         description: "Un seul vin pour le repas",
         id: mealTypeStepEnum.FULL,
       },
       {
-        icon: "/",
+        icon: "/icn_plate.svg",
         description: "Un vin par plat",
         id: mealTypeStepEnum.SPECIFIC,
       },
@@ -396,27 +396,27 @@ export const getSteps = (): Array<
 
     answers: [
       {
-        icon: "/",
+        icon: "/icn_red-meat.svg",
         description: "Viande rouge grillée",
         id: meatStepEnum.BEEF_GRILLED,
       },
       {
-        icon: "/",
+        icon: "/icn_cooked-meat.svg",
         description: "Viande rouge mijotée",
         id: meatStepEnum.BEEF_SIMMERED,
       },
       {
-        icon: "/",
+        icon: "/icn_turkey.svg",
         description: "Viande blanche",
         id: meatStepEnum.WHITE,
       },
       {
-        icon: "/",
+        icon: "/icn_poultry.svg",
         description: "Volaille",
         id: meatStepEnum.CHICKEN,
       },
       {
-        icon: "/",
+        icon: "/icn_game.svg",
         description: "Gibier",
         id: meatStepEnum.PREY,
       },
@@ -436,17 +436,17 @@ export const getSteps = (): Array<
       answers.includes(fishStepEnum.SEA_FOOD),
     answers: [
       {
-        icon: "/",
+        icon: "/icn_white-fish.svg",
         description: "Poisson maigre",
         id: fishStepEnum.LEAN,
       },
       {
-        icon: "/",
+        icon: "/icn_fish.svg",
         description: "Poisson gras",
         id: fishStepEnum.BOLD,
       },
       {
-        icon: "/",
+        icon: "/icn_seafood.svg",
         description: "Fruits de mer",
         id: fishStepEnum.SEA_FOOD,
       },
@@ -466,17 +466,17 @@ export const getSteps = (): Array<
       answers.includes(cheeseStepEnum.SOFT),
     answers: [
       {
-        icon: "/",
+        icon: "/icn_goat_cheese.svg",
         description: "Fromage de chèvre",
         id: cheeseStepEnum.GOAT,
       },
       {
-        icon: "/",
+        icon: "/icn_strong_cheese.svg",
         description: "Fromage affiné et à pâte dure",
         id: cheeseStepEnum.HARD,
       },
       {
-        icon: "/",
+        icon: "/icn_sweet_cheese.svg",
         description: "Fromage doux et à pâte molle",
         id: cheeseStepEnum.SOFT,
       },
@@ -497,29 +497,29 @@ export const getSteps = (): Array<
       answers.includes(budgetStepEnum.VERY_HIGH),
     answers: [
       {
-        icon: "/",
+        icon: "/icn_5.svg",
         description: "Moins de 10€",
         id: budgetStepEnum.VERY_LOW,
       },
       {
-        icon: "/",
+        icon: "/icn_10.svg",
         description: "10€-15€",
         id: budgetStepEnum.LOW,
       },
       {
-        icon: "/",
+        icon: "/icn_20.svg",
         description: "15€-20€",
         id: budgetStepEnum.MEDIUM,
       },
       {
-        icon: "/",
+        icon: "/icn_50.svg",
         description: "20€-50€",
-        id: budgetStepEnum.LOW,
+        id: budgetStepEnum.HIGH,
       },
       {
-        icon: "/",
+        icon: "/icn_50+.svg",
         description: "Plus de 50€",
-        id: budgetStepEnum.HIGH,
+        id: budgetStepEnum.VERY_HIGH,
       },
     ],
   },
@@ -537,22 +537,22 @@ export const getSteps = (): Array<
       answers.includes(wineTypeStepEnum.SPARKLING),
     answers: [
       {
-        icon: "/",
+        icon: "/icn_bottle-red.svg",
         description: "Un vin rouge",
         id: wineTypeStepEnum.RED,
       },
       {
-        icon: "/",
+        icon: "/icn_bottle-white.svg",
         description: "Un vin blanc",
         id: wineTypeStepEnum.WHITE,
       },
       {
-        icon: "/",
+        icon: "/icn_bottle-rose.svg",
         description: "Un vin rosé",
         id: wineTypeStepEnum.ROSE,
       },
       {
-        icon: "/",
+        icon: "/icn_bottle-champagne.svg",
         description: "Un champagne",
         id: wineTypeStepEnum.SPARKLING,
       },
