@@ -23,7 +23,7 @@ export default function ProductDetails({ productId }: { productId: string }) {
             <Image src="/wineBottleCentered.png" alt="" />
           </div>
           <div className="headerContent">
-            <div className="circle">
+            <div className="circle" onClick={() => dispatch(setProductId(""))}>
               <Icon name="arrow-left" />
             </div>
             <Icon name="logo-purple" />

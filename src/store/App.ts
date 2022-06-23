@@ -8,7 +8,7 @@ interface AppState {
 const initialState: AppState = {
   isPopinDisplayed: false,
   isProgressBarDisplayed: true,
-  productId: "",
+  productId: "aa",
 };
 export const appSlice = createSlice({
   name: "app",
