@@ -30,6 +30,7 @@ export const getSteps = (): Array<
     title: "Pour qui cherchez-vous du vin ?",
     type: "question",
     isMultiple: false,
+    subtitle: "",
     shouldBeSkipped: (answers: Array<string>): boolean => false,
     answers: [
       {
@@ -48,9 +49,9 @@ export const getSteps = (): Array<
   {
     id: stepsNameEnum.COFFEE_STEP,
     title: "Comment aimez-vous votre café le matin ?",
-    description: "(Plusieurs réponses possibles)",
     type: "question",
     isMultiple: true,
+    subtitle: "VOs GOÛTs",
     shouldBeSkipped: (answers: Array<string>): boolean => true,
     answers: [
       {
@@ -80,6 +81,7 @@ export const getSteps = (): Array<
     title: "Vous préférez...",
     type: "question",
     isMultiple: false,
+    subtitle: "VOs GOÛTs",
     shouldBeSkipped: (answers: Array<string>): boolean => true,
     answers: [
       {
@@ -104,6 +106,7 @@ export const getSteps = (): Array<
     title: "Vous aimez la cuisine...",
     type: "question",
     isMultiple: true,
+    subtitle: "VOs GOÛTs",
     shouldBeSkipped: (answers: Array<string>): boolean => false,
     answers: [
       {
@@ -138,6 +141,7 @@ export const getSteps = (): Array<
     title: "Quel parfum préférez-vous ?",
     type: "question",
     isMultiple: false,
+    subtitle: "VOs GOÛTs",
     shouldBeSkipped: (answers: Array<string>): boolean => false,
     answers: [
       {
@@ -167,6 +171,7 @@ export const getSteps = (): Array<
     title: "Quelles sont vos épices préférées ?",
     type: "question",
     isMultiple: false,
+    subtitle: "VOs GOÛTs",
     shouldBeSkipped: (answers: Array<string>): boolean => false,
     answers: [
       {
@@ -196,6 +201,7 @@ export const getSteps = (): Array<
     title: "En matière de vin, vous êtes plutôt ?",
     type: "question",
     isMultiple: false,
+    subtitle: "VOs GOÛTs",
     shouldBeSkipped: (answers: Array<string>): boolean => false,
     answers: [
       {
@@ -220,6 +226,7 @@ export const getSteps = (): Array<
     title: "Quel type de vin cherchez-vous ?",
     type: "question",
     isMultiple: false,
+    subtitle: "",
     shouldBeSkipped: (answers: Array<string>): boolean => false,
     answers: [
       {
@@ -239,6 +246,7 @@ export const getSteps = (): Array<
     title: "Avec quoi avez-vous prévu de le boire ?",
     type: "question",
     isMultiple: true,
+    subtitle: "",
     shouldBeSkipped: (answers: Array<string>): boolean => false,
     answers: [
       {
@@ -278,6 +286,7 @@ export const getSteps = (): Array<
     title: "Vous préférez avoir...",
     type: "question",
     isMultiple: false,
+    subtitle: "",
     shouldBeSkipped: (answers: Array<string>): boolean => false,
     answers: [
       {
@@ -297,6 +306,7 @@ export const getSteps = (): Array<
     title: "Quelle viande allez-vous consommer ?",
     type: "question",
     isMultiple: true,
+    subtitle: "",
     shouldBeSkipped: (answers: Array<string>): boolean =>
       !answers.includes(eatWithStepEnum.MEAT),
     answers: [
@@ -332,6 +342,7 @@ export const getSteps = (): Array<
     title: "Quel poisson allez-vous consommer ?",
     type: "question",
     isMultiple: true,
+    subtitle: "",
     shouldBeSkipped: (answers: Array<string>): boolean =>
       !answers.includes(eatWithStepEnum.SEAFOOD),
     answers: [
@@ -357,6 +368,7 @@ export const getSteps = (): Array<
     title: "Quel fromage allez-vous consommer ?",
     type: "question",
     isMultiple: true,
+    subtitle: "",
     shouldBeSkipped: (answers: Array<string>): boolean =>
       !answers.includes(eatWithStepEnum.CHEESE),
     answers: [
@@ -382,6 +394,7 @@ export const getSteps = (): Array<
     title: "Quel est votre budget ?",
     type: "question",
     isMultiple: false,
+    subtitle: "",
     shouldBeSkipped: (answers: Array<string>): boolean => false,
     answers: [
       {
@@ -416,6 +429,7 @@ export const getSteps = (): Array<
     title: "Vous avez une préférence pour…",
     type: "question",
     isMultiple: true,
+    subtitle: "",
     shouldBeSkipped: (answers: Array<string>): boolean => false,
     answers: [
       {

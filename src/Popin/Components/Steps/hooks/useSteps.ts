@@ -32,6 +32,7 @@ export default function useSteps() {
       const step = allSteps.find((s) => s.id === stepId);
       if (!step) continue;
       if (
+        step.type === "question" &&
         !step.answers?.some((a) => answers.includes(a.id)) &&
         !step.shouldBeSkipped(answers)
       ) {
@@ -45,10 +46,12 @@ export default function useSteps() {
   const goBack = async () => {
     let previousStepId = currentStepId;
     const reversedFlow = [...flow].reverse();
+
     for (const stepId of reversedFlow) {
       const step = allSteps.find((s) => s.id === stepId);
       if (!step) continue;
       if (
+        step.type === "question" &&
         step.answers?.some((a) => answers.includes(a.id)) &&
         !step.shouldBeSkipped(answers)
       ) {

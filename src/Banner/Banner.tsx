@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "../Components/Button/Button";
 import "./Banner.scss";
-import ResultCard from "../Popin/Components/Result/Result";
 import { useDispatch } from "react-redux";
 import { setPopinDisplayed } from "../store/App";
 import Image from "../Components/Image";

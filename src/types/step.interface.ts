@@ -21,14 +21,8 @@ import { stepsNameEnum } from "./stepsName.enum";
 export interface StepInterface {
   id: stepsNameEnum;
   title: string;
-  type: "question" | "transition";
+  subtitle: string;
   shouldBeSkipped: (answers: Array<string>) => boolean;
-  answers?: {
-    icon: string;
-    description: string;
-    descriptionForOther?: string;
-    id: answerId;
-  }[];
 }
 
 export type answerId =
@@ -53,10 +47,20 @@ export interface QuestionStepInterface extends StepInterface {
   titleForOther?: string;
   isMultiple: boolean;
   shouldBeSkipped: (answers: Array<string>) => boolean;
+  type: "question";
+  answers: Answer[];
 }
 
 export interface TransitionStepInterface extends StepInterface {
   description: string;
-  subtitle: string;
+  index: number;
   image: string;
+  type: "transition";
+}
+
+export interface Answer {
+  icon: string;
+  description: string;
+  descriptionForOther?: string;
+  id: answerId;
 }

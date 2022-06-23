@@ -3,6 +3,8 @@
 .headerContainer {
   display: flex;
   flex-direction: column;
+  position: fixed;
+  width: 100%;
   .headerContent {
     display: flex;
     flex-direction: row;

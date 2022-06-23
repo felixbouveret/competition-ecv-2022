@@ -27,9 +27,13 @@ export const appSlice = createSlice({
     setQuestionIndex: (state, { payload }) => {
       state.questionIndex = payload;
     },
+    setAnswers: (state, { payload }) => {
+      state.answers = payload;
+    },
   },
 });
 
-export const { setTotalQuestions, setQuestionIndex } = appSlice.actions;
+export const { setTotalQuestions, setQuestionIndex, setAnswers } =
+  appSlice.actions;
 
 export default appSlice.reducer;
