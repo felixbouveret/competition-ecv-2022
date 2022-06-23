@@ -1,7 +1,7 @@
 @import "../../../../../variables.scss";
 
 .answerContent {
-  border: 2px solid #e2e6f5;
+  border: 1px solid #e2e6f5;
   padding: 24px;
   border-radius: 4px;
   background-color: $white;
@@ -11,6 +11,14 @@
   align-items: center;
   cursor: pointer;
   gap: 12px;
+  box-shadow: 0 0 0 0 $purple;
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+
+  @media (min-width: 540px) {
+    flex-direction: row;
+    gap: 16px;
+    padding: 16px;
+  }
 
   .icon {
     width: 60px;
@@ -28,5 +36,6 @@
   }
 }
 .isActive {
-  border: 2px solid $purple;
+  border: 1px solid $purple;
+  box-shadow: 0 0 0 1px $purple;
 }
