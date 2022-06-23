@@ -2,6 +2,7 @@ import {
   TransitionStepInterface,
   QuestionStepInterface,
   LoaderStepInterface,
+  IntroductionStepInterface,
 } from "@/types/step.interface";
 import {
   budgetStepEnum,
