@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
+import { setProgressBarDisplayed } from "../../../../../store/App";
 import { setAnswers } from "../../../../../store/Steps";
 import { LoaderStepInterface } from "../../../../../types/step.interface";
-import useAnswers from "../../hooks/useAnswers";
 import StepHead from "../StepHead";
 import "./Loader.scss";
 
@@ -24,6 +24,7 @@ export default function Loader({
     answersToPush.push(transitionFlag);
     dispatch(setAnswers(answersToPush));
     setTimeout(() => {
+      dispatch(setProgressBarDisplayed(false));
       goNext(answersToPush);
     }, 1000);
   }, []);

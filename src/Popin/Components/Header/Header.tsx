@@ -4,9 +4,14 @@ import { useDispatch } from "react-redux";
 import { setPopinDisplayed } from "../../../store/App";
 import "./Header.scss";
 import Icon from "../../../Components/Icon";
+import { RootState } from "../../../store";
+import { useSelector } from "react-redux";
 
 export default function HeaderContainer({ isLight }: { isLight: boolean }) {
   const dispatch = useDispatch();
+  const { isProgressBarDisplayed } = useSelector(
+    (state: RootState) => state.app
+  );
 
   return (
     <>
@@ -25,7 +30,7 @@ export default function HeaderContainer({ isLight }: { isLight: boolean }) {
             <Icon name="cross" />
           </div>
         </div>
-        {isLight ? null : <ProgressBar />}
+        {isProgressBarDisplayed && <ProgressBar />}
       </div>
     </>
   );
