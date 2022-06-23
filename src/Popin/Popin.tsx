@@ -5,6 +5,7 @@ import HeaderContainer from "./Components/Header";
 import Steps from "./Components/Steps";
 import Video from "./Components/Video";
 import "./Popin.scss";
+import Result from "../Popin/Components/Result";
 
 export default function PopinContainer({ isVisible }: { isVisible: boolean }) {
   const { isIntroduction, currentStepType, isVideoDisplayed } = useSelector(

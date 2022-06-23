@@ -9,6 +9,7 @@
   z-index: 9999;
   background-color: $beige;
   overflow: auto;
+  overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: row-reverse;
