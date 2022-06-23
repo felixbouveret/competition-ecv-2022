@@ -1,26 +1,20 @@
 import React, { useState } from "react";
 import Icon from "../../../Components/Icon";
-import { ProductDetailsInterface } from "../../../types/product.interface";
+import { product } from "../../../data/productDetails";
 import { useDispatch } from "react-redux";
 import "./ProductDetails.scss";
 import Image from "../../../Components/Image";
 import ProfileChart from "../ProfileChart";
 import Result from "../Result";
-import { setIsProductDetailsDisplayed } from "../../../store/App";
+import { setProductId } from "../../../store/App";
 
-export default function ProductDetails({
-  productId,
-  isDisplayed,
-}: {
-  productId: ProductDetailsInterface;
-  isDisplayed: boolean;
-}) {
+export default function ProductDetails({ productId }: { productId: string }) {
   const [quantity, setQuantity] = useState<number>(1);
   const dispatch = useDispatch();
 
-  const productDetails = productId;
-  console.log("productDetails", productDetails);
-  if (isDisplayed)
+  const productDetails = product;
+
+  if (productId)
     return (
       <>
         <div className="backdrop"></div>
@@ -38,7 +32,7 @@ export default function ProductDetails({
           <div className="productDetails">
             <div
               className="closeDetails"
-              onClick={() => dispatch(setIsProductDetailsDisplayed(false))}
+              onClick={() => dispatch(setProductId(""))}
             >
               <Icon name="cross" color="#E2E6F5" />
             </div>

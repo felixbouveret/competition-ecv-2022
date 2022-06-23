@@ -1,6 +1,5 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { product } from "../data/productDetails";
 import { RootState } from "../store";
 import HeaderContainer from "./Components/Header";
 <<<<<<< HEAD
@@ -11,14 +10,13 @@ import ProductDetails from "./Components/ProductDetails";
 import "./Popin.scss";
 
 export default function PopinContainer({ isVisible }: { isVisible: boolean }) {
-  const isProductDetailsDisplayed = useSelector(
-    (state: RootState) => state.app.isProductDetailsDisplayed
-  );
+  const productId = useSelector((state: RootState) => state.app.productId);
 
   if (isVisible)
     return (
       <section className="popinContainer">
         <HeaderContainer isLight={false} />
+<<<<<<< HEAD
 <<<<<<< HEAD
         <Steps />
 =======
@@ -27,6 +25,9 @@ export default function PopinContainer({ isVisible }: { isVisible: boolean }) {
           isDisplayed={isProductDetailsDisplayed}
         />
 >>>>>>> 6e6f0db (add producDetails component)
+=======
+        <ProductDetails productId={productId} />
+>>>>>>> 0c8514f (change of the store for the display of the product detail)
       </section>
     );
   return null;
