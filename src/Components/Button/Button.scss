@@ -1,15 +1,17 @@
-@import "../../variables.scss";
+@import "../../style/variables.scss";
 
-button {
-  padding: 10px 16px;
-  font-size: 14px;
-  font-weight: 500;
-  border-radius: 8px;
-  border: none;
-  background-color: $purple;
-  color: white;
-}
-.light {
-  color: $purple;
-  background-color: $white;
+#bannerEcv {
+  button {
+    padding: 14px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    border: none;
+    background-color: $purple;
+    color: white;
+  }
+  .light {
+    color: $blue;
+    background-color: transparent;
+  }
 }

@@ -1,4 +1,4 @@
-@import "../variables.scss";
+@import "../style/variables.scss";
 
 .bannerContainer {
   background-color: $purple;
@@ -12,6 +12,7 @@
   font-weight: 400;
   max-width: 400px;
   margin: auto;
+
   img {
     height: 100%;
   }

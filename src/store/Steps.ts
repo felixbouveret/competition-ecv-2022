@@ -4,8 +4,9 @@ export const appSlice = createSlice({
   name: "steps",
 
   initialState: {
-    totalQuestions: 10,
-    questionIndex: 4,
+    totalQuestions: 1,
+    questionIndex: 1,
+    actualQuestion: {},
   },
 
   reducers: {
@@ -15,9 +16,13 @@ export const appSlice = createSlice({
     setQuestionIndex: (state, { payload }) => {
       state.questionIndex = payload;
     },
+    setActualQuestion: (state, { payload }) => {
+      state.actualQuestion = payload;
+    },
   },
 });
 
-export const { setTotalQuestions, setQuestionIndex } = appSlice.actions;
+export const { setTotalQuestions, setQuestionIndex, setActualQuestion } =
+  appSlice.actions;
 
 export default appSlice.reducer;

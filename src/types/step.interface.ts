@@ -1,11 +1,18 @@
 export interface StepInterface {
   id: string;
   title: string;
+  description?: string;
+  type: string;
+}
+
+export interface Answer {
+  icon: string;
   description: string;
-  type: "question" | "transition";
+  id: string;
 }
 
 export interface QuestionStepInterface extends StepInterface {
+  isMultiple: boolean;
   answers: {
     icon: string;
     description: string;
