@@ -44,6 +44,7 @@ export default function Result() {
         </div>
       </section>
       <section className="graph">
+        <h3 className="profile">Votre profil</h3>
         <h2 className="title">
           Vous êtes un <span>initié</span>
         </h2>
@@ -51,6 +52,7 @@ export default function Result() {
           Vous appréciez les saveurs grandes, audacieuses et complexes.
         </p>
         <div className="graphsContainer">
+          <div className="pref">Preferences | Mais aussi ...</div>
           <div className="graphs">
             <ProfileChart
               title="Les détails de ce vin"
