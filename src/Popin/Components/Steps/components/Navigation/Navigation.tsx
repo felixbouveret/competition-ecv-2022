@@ -28,7 +28,7 @@ export default function Navigation({
   return (
     <div className={isTransition ? "transition " : "" + className}>
       {backButton()}
-      <Button onClick={goNext} text={nextButtonWording()} />
+      <Button onClick={() => goNext()} text={nextButtonWording()} />
     </div>
   );
 }

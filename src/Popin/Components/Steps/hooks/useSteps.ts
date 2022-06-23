@@ -1,8 +1,5 @@
 import React from "react";
-import {
-  TransitionStepInterface,
-  QuestionStepInterface,
-} from "../../../../types/step.interface";
+import { answerId } from "../../../../types/step.interface";
 import { getSteps } from "../stepsList";
 import flow from "../flow.json";
 import { stepsNameEnum } from "../../../../types/stepsName.enum";
@@ -19,10 +16,7 @@ export default function useSteps() {
   const [currentStepId, setCurrentStepId] = React.useState<string>(
     stepsNameEnum.FOR_WHO_STEP
   );
-  const currentStep = allSteps.find(
-    (step: QuestionStepInterface | TransitionStepInterface): boolean =>
-      step.id === currentStepId
-  );
+  const currentStep = allSteps.find((step) => step.id === currentStepId);
 
   const updateProgress = (): void => {
     const currentStepIndex = flow.findIndex((id) => id === currentStepId);
@@ -37,22 +31,18 @@ export default function useSteps() {
     return stepIndex > 0;
   };
 
-  const goNext = async () => {
+  const goNext = async (customAnswers?: answerId[]) => {
     let nextStepId = currentStepId;
-    console.log(answers);
+    const answerArray = customAnswers || answers;
+    console.log(answerArray);
 
     for (const stepId of flow) {
       const step = allSteps.find((s) => s.id === stepId);
       if (!step) continue;
-      console.log({
-        id: step.id,
-        shouldBeSkipped: step.shouldBeSkipped(answers),
-        canGoNext: step.canGoNext(answers),
-      });
 
       if (
-        step.canGoNext(answers) === false &&
-        step.shouldBeSkipped(answers) === false
+        step.canGoNext(answerArray) === false &&
+        step.shouldBeSkipped(answerArray) === false
       ) {
         nextStepId = step.id;
         break;

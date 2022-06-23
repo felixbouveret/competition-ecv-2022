@@ -1,5 +1,4 @@
 import { Answer, answerId } from "../../../../../types/step.interface";
-import useAnswers from "../../hooks/useAnswers";
 import AnswerBlock from "../AnswerBlock";
 import "./AnswersList.scss";
 

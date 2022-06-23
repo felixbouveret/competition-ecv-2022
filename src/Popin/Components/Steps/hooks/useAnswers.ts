@@ -41,5 +41,5 @@ export default function useAnswers() {
     else addSingleAnswer(answerId, answerArray);
   };
 
-  return { handleAnswer, answers };
+  return { handleAnswer, answers, addSingleAnswer };
 }

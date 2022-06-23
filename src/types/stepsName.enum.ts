@@ -16,4 +16,5 @@ export enum stepsNameEnum {
   WINE_TYPE_STEP = "wine-type-step",
   TASTES_TRANSITION_STEP = "tastes-transition-step",
   NEEDS_TRANSITION_STEP = "needs-transition-step",
+  LOADER_STEP = "loader-step",
 }

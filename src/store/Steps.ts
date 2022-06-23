@@ -2,13 +2,13 @@ import { createSlice } from "@reduxjs/toolkit";
 import { answerId } from "../types/step.interface";
 
 // Define a type for the slice state
-interface CounterState {
+interface StepsState {
   progress: number;
   answers: answerId[];
 }
 
 // Define the initial state using that type
-const initialState: CounterState = {
+const initialState: StepsState = {
   answers: [],
   progress: 1,
 };
