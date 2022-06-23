@@ -1,0 +1,15 @@
+@import "../../../../../variables.scss";
+
+.answersList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 16px;
+  width: 100%;
+
+  .answerItem {
+    flex: 1;
+    min-width: 45%;
+    max-width: calc(50% - 8px);
+  }
+}

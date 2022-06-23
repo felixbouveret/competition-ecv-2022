@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "../Components/Button/Button";
 import "./Banner.scss";
-import ResultCard from "../Popin/Components/Result/Result";
 import { useDispatch } from "react-redux";
 import { setPopinDisplayed } from "../store/App";
 import Image from "../Components/Image";
@@ -15,7 +14,8 @@ export default function BannerContainer() {
         <p>Julie vous guide dans votre choix de vin.</p>
         <Button
           text="demander conseil"
-          isLight
+          isWhite
+          isSmall
           onClick={() => dispatch(setPopinDisplayed(true))}
         />
       </div>
