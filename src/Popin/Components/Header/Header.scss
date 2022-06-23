@@ -5,13 +5,17 @@
   flex-direction: column;
   position: fixed;
   width: 100%;
+
   .headerContent {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
     padding: 26px 20px 24px 20px;
 
     .circle {
+      grid-column: 3;
+      justify-self: end;
+
       display: flex;
       justify-content: center;
       align-items: center;
@@ -26,6 +30,9 @@
         width: 12px;
         align-self: center;
       }
+    }
+    .logo {
+      grid-column: 2;
     }
   }
 }

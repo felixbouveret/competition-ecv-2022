@@ -15,12 +15,9 @@ export default function HeaderContainer({ isLight }: { isLight: boolean }) {
         style={{ backgroundColor: isLight ? "" : "#fffbfa" }}
       >
         <div className="headerContent">
-          {isLight ? null : (
-            <div className="circle">
-              <Icon name="arrow-left" />
-            </div>
-          )}
-          <Icon name={isLight ? "logo-light" : "logo-purple"} />
+          <div className="logo">
+            <Icon name={isLight ? "logo-light" : "logo-purple"} />
+          </div>
           <div
             className="circle"
             onClick={() => dispatch(setPopinDisplayed(false))}

@@ -8,8 +8,11 @@ import flow from "../flow.json";
 import { stepsNameEnum } from "../../../../types/stepsName.enum";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../../store";
+import { useDispatch } from "react-redux";
+import { setProgress } from "../../../../store/Steps";
 
 export default function useSteps() {
+  const dispatch = useDispatch();
   const allSteps = getSteps();
 
   const { answers } = useSelector((state: RootState) => state.steps);
@@ -20,6 +23,14 @@ export default function useSteps() {
     (step: QuestionStepInterface | TransitionStepInterface): boolean =>
       step.id === currentStepId
   );
+
+  const updateProgress = (): void => {
+    const currentStepIndex = flow.findIndex((id) => id === currentStepId);
+    const totalSteps = flow.length;
+    const progress = ((currentStepIndex + 1) / totalSteps) * 100;
+
+    dispatch(setProgress(progress));
+  };
 
   const canGoBack = (): boolean => {
     const stepIndex = flow.findIndex((i) => i === currentStepId);
@@ -48,6 +59,7 @@ export default function useSteps() {
       }
     }
     setCurrentStepId(nextStepId);
+    updateProgress();
   };
 
   const goBack = async () => {
