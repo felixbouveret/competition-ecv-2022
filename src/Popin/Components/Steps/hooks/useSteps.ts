@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/store";
 import { useDispatch } from "react-redux";
 import { setProgress } from "@/store/Steps";
-import { setCurrentStepType } from "../../../../store/App";
+import { setCurrentStepType } from "@/store/App";
 
 export default function useSteps() {
   const dispatch = useDispatch();
