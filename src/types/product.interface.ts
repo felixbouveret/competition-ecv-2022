@@ -1,19 +1,31 @@
+import { ChartInterface } from "./chart.interface";
+
 export interface ProductInterface {
   title: string;
   shop: string;
   compatibility?: string;
   tags: string[];
-  price: number;
-  region?: string;
+  price: string;
   image: string;
-  advices?: {
+  thumbnail?: string;
+}
+
+export interface ProductDetailsInterface extends ProductInterface {
+  region: string;
+  advices: {
     title: string;
     description: string;
   }[];
-  details?: [];
-  infos?: {
+  details: ChartInterface;
+  infos: {
     title: string;
     icon: string;
     description: string;
+  }[];
+  delivery: {
+    title: string;
+    date: string;
+    description: string;
+    icon: string;
   }[];
 }

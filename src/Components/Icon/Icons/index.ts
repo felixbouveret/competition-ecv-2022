@@ -4,3 +4,5 @@ export { default as logoLight } from "./logoLight";
 export { default as logoPurple } from "./logoPurple";
 export { default as cartIcon } from "./cartIcon";
 export { default as heartIcon } from "./heartIcon";
+export { default as verifiedBadge } from "./verifiedBadge";
+export { default as shopLocation } from "./shopLocation";

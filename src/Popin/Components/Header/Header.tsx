@@ -27,7 +27,7 @@ export default function HeaderContainer({ isLight }: { isLight: boolean }) {
             className="circle"
             onClick={() => dispatch(setPopinDisplayed(false))}
           >
-            <Icon name="cross" />
+            <Icon name="cross" color="#7A1047" />
           </div>
         </div>
         {isProgressBarDisplayed && <ProgressBar />}

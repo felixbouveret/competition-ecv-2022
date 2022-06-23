@@ -1,0 +1,427 @@
+@import "../../../variables.scss";
+.backdrop {
+  display: none;
+}
+.productDetailsContainer {
+  font-family: "Montserrat", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: $beige;
+  overflow: auto;
+  .desktopImage {
+    display: none;
+  }
+  .closeDetails {
+    display: none;
+  }
+  .headerContent {
+    position: fixed;
+    width: 100%;
+    background-color: $beige;
+    display: flex;
+    justify-content: space-between;
+    padding: 26px 20px 24px 20px;
+    border-bottom: 1px solid #ffe4dc;
+    z-index: 99;
+  }
+  .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    background-color: $white;
+    box-shadow: 0px 1px 4px rgba(29, 33, 57, 0.08);
+    cursor: pointer;
+  }
+  .circleNone {
+    opacity: 0;
+  }
+  .productDetails {
+    padding: 20px 20px 30px 20px;
+    height: 100%;
+    margin-top: 83px;
+    .wineBottle {
+      img {
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        top: 20px;
+      }
+    }
+  }
+  .compatibility {
+    font-weight: 500;
+    font-size: 14px;
+    color: $green;
+  }
+  .title {
+    margin-top: 8px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    max-width: 220px;
+    letter-spacing: 0.012em;
+  }
+  .shop {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $blue;
+    margin-top: 8px;
+  }
+  .tags {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .tag {
+    background: rgba(122, 16, 71, 0.08);
+    border-radius: 3px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #b72a59;
+    padding: 2px 4px;
+  }
+  .price {
+    margin-top: 24px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.012em;
+    color: #0d0f26;
+  }
+  .ttc {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: $blue;
+    letter-spacing: 0.012em;
+    margin-top: 8px;
+  }
+
+  .adviceContainer {
+    margin-top: 20px;
+    .adviceTitleContainer {
+      display: flex;
+      svg {
+        align-self: center;
+      }
+    }
+  }
+  .adviceTitle {
+    margin-left: 8px;
+  }
+  .adviceDescription {
+    margin-top: 4px;
+  }
+  .advice {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.012em;
+    color: $blue;
+    margin-top: 4px;
+  }
+  .region {
+    max-width: 165px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.012em;
+    color: $blue;
+    margin-top: 4px;
+  }
+  .quantityContainer {
+    margin-top: 24px;
+
+    p {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 15px;
+      color: #0d0f26;
+    }
+  }
+  .quantitiesBtn {
+    width: 173px;
+    display: flex;
+    height: 40px;
+    margin-top: 12px;
+    margin-bottom: 25px;
+  }
+  .quantitySelect {
+    background: #f0f3fc;
+    color: #0d0f26;
+    width: 48px;
+    height: 100%;
+  }
+  .quantityInput {
+    width: 77px;
+    height: 40px;
+    border-top: 1px solid #646b8e;
+    border-bottom: 1px solid #646b8e;
+    border-right: none;
+    border-left: none;
+    text-align: center;
+    align-self: center;
+  }
+  .quantityMore {
+    border-radius: 0px 7px 7px 0px;
+    border: 1px solid #646b8e;
+    border-left: none;
+  }
+  .quantityLess {
+    border-radius: 7px 0px 0px 7px;
+    border: 1px solid #646b8e;
+    border-right: none;
+  }
+  button {
+    padding: 0;
+    font-size: 16px;
+  }
+  .addCart {
+    display: flex;
+    flex-direction: column;
+    margin-top: 22px;
+  }
+  .cart {
+    padding: 14px 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 45px;
+    align-items: center;
+
+    svg {
+      align-self: center;
+      margin-right: 10px;
+    }
+  }
+  .shopCart {
+    padding: 14px 0px;
+    display: flex;
+    justify-content: center;
+    background-color: $beige;
+    color: $purple;
+    border: 1px solid $purple;
+    margin-top: 8px;
+    height: 45px;
+    align-items: center;
+    svg {
+      align-self: center;
+      margin-right: 10px;
+    }
+  }
+  .profileChartContainer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: $white;
+    border: 1px solid #e2e6f5;
+    border-radius: 8px;
+
+    .profileChart {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      letter-spacing: 0.012em;
+      color: #0d0f26;
+
+      p {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0.012em;
+        color: $blue;
+        margin-top: 6px;
+        margin-bottom: 30px;
+        max-width: 245px;
+      }
+      .chartContainer {
+        margin-bottom: 34px;
+      }
+    }
+  }
+  .wineInfo {
+    margin-top: 40px;
+    .wineInfoTitleContainer {
+      display: flex;
+      flex-direction: row;
+      padding: 16px 0 6px 0;
+      svg {
+        margin-right: 10px;
+        align-self: center;
+      }
+    }
+    .infoBorderTop {
+      border-top: 1px solid #f0f3fc;
+    }
+    .wineInfoDescription {
+      padding-bottom: 16px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 0.012em;
+      color: $blue;
+    }
+  }
+  .wineSelection {
+    margin-top: 32px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.012em;
+    color: #0d0f26;
+  }
+  .wineSelectionDescription {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.012em;
+    color: $blue;
+    max-width: 295px;
+    margin-bottom: 16px;
+    margin-top: 8px;
+  }
+  .carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-right: -20px;
+
+    .resultCard {
+      margin-right: 10px;
+      flex: 0 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+  }
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  .deliveryContainer {
+    margin-top: 40px;
+
+    .deliveryTitle {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.012em;
+      color: #0d0f26;
+      margin-bottom: 8px;
+    }
+    .deliveryContent {
+      padding: 16px 0;
+    }
+    .deliveryBorderTop {
+      border-top: 1px solid #f0f3fc;
+    }
+    .deliveryTitleContainer {
+      display: flex;
+      flex-direction: row;
+      img {
+        width: 18px;
+        height: auto;
+        margin-right: 10px;
+      }
+    }
+    .deliveryTitleContent {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 0.012em;
+      color: $blue;
+      align-self: center;
+    }
+    .deliveryDate {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 0.012em;
+      color: $purple;
+      margin: 8px 0;
+    }
+    .deliveryDescription {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 0.012em;
+      color: $blue;
+    }
+  }
+}
+@media (min-width: 900px) {
+  .productDetailsContainer {
+    width: 708px;
+    height: 604px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    overflow: hidden;
+    border-radius: 8px;
+
+    .title {
+      max-width: 100%;
+    }
+    .headerContent {
+      display: none !important;
+    }
+    .closeDetails {
+      display: block;
+      position: absolute;
+      right: 22px;
+      top: 22px;
+      cursor: pointer;
+    }
+    .productDetails {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      margin: 0px;
+      overflow-y: scroll;
+      position: relative;
+    }
+    .productDetails::-webkit-scrollbar {
+      display: none;
+    }
+    .desktopImage {
+      display: block;
+      width: 293px;
+      background-color: rgba($purple, 0.05);
+    }
+    .advices {
+      display: flex;
+    }
+    .adviceContainer {
+      margin-right: 32px;
+    }
+  }
+  .wineBottle {
+    display: none;
+  }
+  .backdrop {
+    height: 100vh;
+    width: 100%;
+    background: #0d0f26;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    display: block;
+    left: 0;
+  }
+}
