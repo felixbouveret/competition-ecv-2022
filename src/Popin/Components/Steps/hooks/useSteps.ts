@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   TransitionStepInterface,
   QuestionStepInterface,
@@ -20,6 +20,11 @@ export default function useSteps() {
     (step: QuestionStepInterface | TransitionStepInterface): boolean =>
       step.id === currentStepId
   );
+
+  const canGoBack = (): boolean => {
+    const stepIndex = flow.findIndex((i) => i === currentStepId);
+    return stepIndex > 0;
+  };
 
   const goNext = async () => {
     let nextStepId = currentStepId;
@@ -58,5 +63,6 @@ export default function useSteps() {
     currentStep,
     goNext,
     goBack,
+    canGoBack,
   };
 }

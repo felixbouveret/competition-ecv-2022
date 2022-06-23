@@ -15,7 +15,8 @@ export default function BannerContainer() {
         <p>Julie vous guide dans votre choix de vin.</p>
         <Button
           text="demander conseil"
-          isLight
+          isWhite
+          isSmall
           onClick={() => dispatch(setPopinDisplayed(true))}
         />
       </div>

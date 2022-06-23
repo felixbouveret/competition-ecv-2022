@@ -1,15 +1,26 @@
 @import "../../variables.scss";
 
-button {
-  padding: 10px 16px;
+.button {
+  padding: 14px 24px;
   font-size: 14px;
   font-weight: 500;
   border-radius: 8px;
   border: none;
+  line-height: 17px;
   background-color: $purple;
   color: white;
-}
-.light {
-  color: $purple;
-  background-color: $white;
+
+  &.small {
+    padding: 10px 16px;
+  }
+
+  &.light {
+    color: #646b8e;
+    background-color: transparent;
+  }
+
+  &.white {
+    color: $purple;
+    background-color: $white;
+  }
 }
