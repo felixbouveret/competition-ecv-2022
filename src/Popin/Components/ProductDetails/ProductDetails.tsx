@@ -152,7 +152,7 @@ export default function ProductDetails() {
               <div className="carousel">
                 <ResultCard
                   title={"Comté AOP"}
-                  image={"/assets/img/comté.png"}
+                  image={"/assets/img/comte.png"}
                   shop={"Maison Conqueut"}
                   price={"5,73"}
                   tags={[]}

@@ -85,4 +85,24 @@
       display: none;
     }
   }
+  .circle {
+    position: absolute;
+    top: 26px;
+    z-index: 2;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    background-color: white;
+    box-shadow: 0px 1px 4px rgba(29, 33, 57, 0.08);
+    cursor: pointer;
+
+    img {
+      width: 12px;
+      align-self: center;
+    }
+  }
 }

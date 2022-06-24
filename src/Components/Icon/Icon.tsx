@@ -10,6 +10,7 @@ import {
   verifiedBadge,
   timeIcon,
   playIcon,
+  videoIcon,
 } from "./Icons/index";
 import mouth from "./Icons/mouth";
 import nose from "./Icons/nose";
@@ -44,6 +45,7 @@ export default function Icon({
     if (name === "mouth") return mouth;
     if (name === "time-icon") return timeIcon;
     if (name === "play-icon") return playIcon;
+    if (name === "video") return videoIcon;
     return () => null;
   };
   return getIcon()({ color, size });

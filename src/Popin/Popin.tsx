@@ -24,7 +24,7 @@ export default function PopinContainer({ isVisible }: { isVisible: boolean }) {
         <div className="steps">
           <Steps />
         </div>
-        {!noVideoStepType.includes(currentStepType) && !isVideoDisplayed && (
+        {!noVideoStepType.includes(currentStepType) && isVideoDisplayed && (
           <Video className="video" videoId="" />
         )}
       </section>

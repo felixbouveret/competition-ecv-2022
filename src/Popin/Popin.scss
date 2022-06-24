@@ -19,7 +19,12 @@
     max-width: 100%;
   }
   > .video {
-    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    height: 100%;
     @media screen and (min-width: 920px) {
       display: block;
       width: 40%;
