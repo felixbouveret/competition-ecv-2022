@@ -1,8 +1,5 @@
 import React from "react";
-import {
-  answerId,
-  QuestionStepInterface,
-} from "../../../../../types/step.interface";
+import { answerId, QuestionStepInterface } from "@/types/step.interface";
 import useAnswers from "../../hooks/useAnswers";
 import AnswersList from "../AnswersList";
 import Navigation from "../Navigation";

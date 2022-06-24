@@ -65,11 +65,11 @@ export enum mealTypeStepEnum {
 }
 
 export enum meatStepEnum {
-  BEEF_GRILLED = "beef-grilled-answer",
-  BEEF_SIMMERED = "beef-simmered-answer",
-  CHICKEN = "chicken-answer",
-  PREY = "prey-answer",
-  WHITE = "white-answer",
+  BEEF_GRILLED = "beef-meat-grilled-answer",
+  BEEF_SIMMERED = "beef-meat-simmered-answer",
+  CHICKEN = "chicken-meat-answer",
+  PREY = "prey-meat-answer",
+  WHITE = "white-meat-answer",
 }
 
 export enum fishStepEnum {

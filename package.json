@@ -1,10 +1,10 @@
 {
   "name": "@ecv-competition-2022/competition-2022",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "homepage": ".",
   "scripts": {
     "upload": "node scripts/uploadImages.js",
-    "start": "react-scripts start",
+    "start": "craco start",
     "build": "react-scripts build",
     "build:widget": "yarn upload && parcel build src/index.tsx --no-source-maps -d docs",
     "test": "react-scripts test",
@@ -29,6 +29,7 @@
     ]
   },
   "dependencies": {
+    "@craco/craco": "^6.4.3",
     "@ecv-competition-2022/competition-2022": "^0.1.2",
     "@reduxjs/toolkit": "^1.8.2",
     "@supabase/supabase-js": "^1.35.3",

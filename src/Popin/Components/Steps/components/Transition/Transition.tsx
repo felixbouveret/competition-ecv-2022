@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import { TransitionStepInterface } from "../../../../../types/step.interface";
-import { transitionSteps } from "../../../../../types/stepsAnswers.enum";
+import { TransitionStepInterface } from "@/types/step.interface";
+import { transitionSteps } from "@/types/stepsAnswers.enum";
 import useAnswers from "../../hooks/useAnswers";
 import Navigation from "../Navigation";
 import StepHead from "../StepHead";

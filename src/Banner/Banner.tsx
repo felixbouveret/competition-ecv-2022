@@ -1,9 +1,9 @@
 import React from "react";
-import Button from "../Components/Button/Button";
+import Button from "@/Components/Button/Button";
 import "./Banner.scss";
 import { useDispatch } from "react-redux";
-import { setPopinDisplayed } from "../store/App";
-import Image from "../Components/Image";
+import { setPopinDisplayed } from "@/store/App";
+import Image from "@/Components/Image";
 
 export default function BannerContainer() {
   const dispatch = useDispatch();

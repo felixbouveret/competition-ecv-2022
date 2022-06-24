@@ -8,7 +8,7 @@ import {
   Legend,
 } from "chart.js";
 import { Radar } from "react-chartjs-2";
-import { ChartInterface } from "../../../types/chart.interface";
+import { ChartInterface } from "@/types/chart.interface";
 
 import "./ProfileChart.scss";
 import useProfileChart from "./useProfileChart";

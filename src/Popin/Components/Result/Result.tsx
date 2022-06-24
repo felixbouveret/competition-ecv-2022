@@ -1,7 +1,7 @@
 import React from "react";
 import "./Result.scss";
-import Icon from "../../../Components/Icon";
-import { ProductInterface } from "../../../types/product.interface";
+import Icon from "@/Components/Icon";
+import { ProductInterface } from "@/types/product.interface";
 
 export default function ResultCard({
   title,

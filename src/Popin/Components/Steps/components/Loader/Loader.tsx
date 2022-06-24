@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { setProgressBarDisplayed } from "../../../../../store/App";
-import { setAnswers } from "../../../../../store/Steps";
-import { LoaderStepInterface } from "../../../../../types/step.interface";
+import { setProgressBarDisplayed } from "@/store/App";
+import { setAnswers } from "@/store/Steps";
+import { LoaderStepInterface } from "@/types/step.interface";
 import StepHead from "../StepHead";
 import "./Loader.scss";
 

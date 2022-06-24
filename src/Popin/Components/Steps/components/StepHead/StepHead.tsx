@@ -1,12 +1,12 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { RootState } from "../../../../../store";
+import { RootState } from "@/store";
 import {
   QuestionStepInterface,
   TransitionStepInterface,
   LoaderStepInterface,
-} from "../../../../../types/step.interface";
-import { forWhoStepEnum } from "../../../../../types/stepsAnswers.enum";
+} from "@/types/step.interface";
+import { forWhoStepEnum } from "@/types/stepsAnswers.enum";
 import "./StepHead.scss";
 
 export default function StepHead(

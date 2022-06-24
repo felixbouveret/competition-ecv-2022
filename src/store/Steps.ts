@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { answerId } from "../types/step.interface";
+import { answerId } from "@/types/step.interface";
 
 // Define a type for the slice state
 interface StepsState {
