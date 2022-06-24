@@ -1,140 +1,20 @@
-@import "@/variables.scss";
+.resultRoot {
+  @media screen and (min-width: 920px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100vh;
+    overflow: hidden;
 
-.result {
-  margin-top: 86px;
-  width: 100vw;
-  text-align: center;
-  @media screen and (min-width: 1280px) {
-    display: flex;
-    flex-direction: row-reverse;
-  }
-  .sign {
-    margin-top: 24px;
-    padding: 24px 20px 24px 20px;
-    color: $blue;
-    font-weight: 400;
-    font-size: 14px;
-    span {
-      color: $purple;
+    > .recommandations {
+      grid-column: 2 /4;
+      height: 100%;
+      overflow: auto;
+      padding: 82px 20px 80px;
     }
-  }
-  .log {
-    color: $blue;
-    font-weight: 400;
-    font-size: 14px;
-    padding: 0 40px 16px 40px;
-  }
-  .title {
-    font-size: 22px;
-    font-weight: 500;
-    padding: 0 20px 0px 20px;
-    span {
-      color: $purple;
+    > .graphs {
+      grid-column: 1 / 1;
+      grid-row: 1;
+      padding: 0 20px 0;
     }
-  }
-  .reco {
-    .cards {
-      margin: 50px 0;
-      width: min-content;
-      display: flex;
-      overflow-x: scroll;
-      margin: auto;
-      padding-left: 20px;
-      .resultCard {
-        height: 380px;
-        margin-right: 10px;
-      }
-    }
-    @media screen and (min-width: 1280px) {
-      width: 66.66%;
-      display: inline-flex;
-      flex-direction: column-reverse;
-      margin: auto;
-      .cards {
-        width: unset;
-        margin-bottom: 50px;
-      }
-    }
-  }
-
-  .graph {
-    margin-top: 50px;
-    margin-bottom: 60px;
-    .profile {
-      color: $purple;
-      font-weight: 500;
-      font-size: 11px;
-      margin-top: 50px;
-      display: none;
-    }
-    .pref {
-      margin-bottom: 25px;
-      display: none;
-    }
-    .graphs {
-      display: flex;
-      overflow-x: scroll;
-      margin: 0px 20px;
-    }
-    .profileChart {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 20px;
-      text-align: center;
-      letter-spacing: 0.012em;
-      color: #0d0f26;
-    }
-    @media screen and (min-width: 1280px) {
-      background-color: rgba($purple, 0.05);
-      width: 33.33%;
-      margin-top: -86px;
-      z-index: 2;
-      height: 100vh;
-      .title {
-        margin: 0;
-        padding-bottom: 0;
-      }
-      .profile,
-      .pref {
-        display: block;
-        #more {
-          margin-left: 16px;
-          color: $blue;
-        }
-        #pref {
-          margin-right: 16px;
-          color: $purple;
-        }
-      }
-      .graphs {
-        width: fit-content;
-      }
-      .profileChart {
-        margin-top: 32px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 20px;
-        text-align: center;
-        letter-spacing: 0.012em;
-        color: #0d0f26;
-      }
-    }
-  }
-
-  .graphsContainer {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-  .graphsContainer::-webkit-scrollbar {
-    display: none;
   }
 }

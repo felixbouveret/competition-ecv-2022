@@ -108,4 +108,5 @@ export enum transitionSteps {
   NEEDS_PASSED = "needs-transition-step",
   LOADER_PASSED = "loader-step",
   INTRODUCTION_PASSED = "introduction-step",
+  RESULT_STEP_PASSED = "result-step",
 }

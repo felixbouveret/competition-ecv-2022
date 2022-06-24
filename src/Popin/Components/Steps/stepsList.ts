@@ -3,6 +3,7 @@ import {
   QuestionStepInterface,
   LoaderStepInterface,
   IntroductionStepInterface,
+  ResultStepInterface,
 } from "@/types/step.interface";
 import {
   budgetStepEnum,
@@ -30,7 +31,17 @@ export const getSteps = (): Array<
   | TransitionStepInterface
   | LoaderStepInterface
   | IntroductionStepInterface
+  | ResultStepInterface
 > => [
+  {
+    id: stepsNameEnum.RESULT_STEP,
+    title: "",
+    type: "result",
+    subtitle: "",
+    shouldBeSkipped: (answers: Array<string>): boolean => false,
+    canGoNext: (answers: Array<string>): boolean =>
+      answers.includes(transitionSteps.RESULT_STEP_PASSED),
+  },
   {
     id: stepsNameEnum.LOADER_STEP,
     title: "Merci pour votre temps",

@@ -58,6 +58,18 @@
       }
     }
   }
+  &.isResult {
+    width: 100%;
+    background-color: #fffbfa;
+    border-bottom: 1px solid #ffe4dc;
+
+    @media (min-width: 920px) {
+      width: 66.66%;
+      .logo path {
+        fill: $purple;
+      }
+    }
+  }
 }
 
 @media (min-width: 920px) {

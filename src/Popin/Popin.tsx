@@ -10,7 +10,7 @@ export default function PopinContainer({ isVisible }: { isVisible: boolean }) {
   const { isIntroduction, currentStepType, isVideoDisplayed } = useSelector(
     (state: RootState) => state.app
   );
-  const noVideoStepType = ["transition", "loader"];
+  const noVideoStepType = ["transition", "loader", "result"];
 
   if (isVisible)
     return (
@@ -19,6 +19,7 @@ export default function PopinContainer({ isVisible }: { isVisible: boolean }) {
           isLight={isIntroduction}
           isVideoDisplayed={!noVideoStepType.includes(currentStepType)}
           isIntroduction={currentStepType === "introduction"}
+          isResult={currentStepType === "result"}
         />
         <div className="steps">
           <Steps />
