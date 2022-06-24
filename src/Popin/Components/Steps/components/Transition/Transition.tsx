@@ -5,6 +5,7 @@ import useAnswers from "../../hooks/useAnswers";
 import Navigation from "../Navigation";
 import StepHead from "../StepHead";
 import "./Transition.scss";
+import Image from "@/Components/Image";
 
 interface TransitionProps {
   goBack: () => void;
@@ -29,6 +30,7 @@ export default function Transition({
   return (
     <div className="transitionRoot">
       <StepHead {...transition} />
+      <Image src={transition.image} alt="" />
       <Navigation
         className="navigation"
         isTransition

@@ -69,7 +69,7 @@ export const getSteps = (): Array<
     type: "transition",
     description:
       "J’ai besoin d’en apprendre un peu plus sur vous afin de trouver un vin qui vous correspond.",
-    image: "",
+    image: "/animation_step-1.gif",
     subtitle: "Vos gouts",
     index: 1,
     shouldBeSkipped: (answers: Array<string>): boolean => false,
@@ -82,7 +82,7 @@ export const getSteps = (): Array<
     type: "transition",
     description:
       "Affinons vos recherches en fonction de ce que vous avez de prévu.",
-    image: "",
+    image: "/animation_step-2.gif",
     subtitle: "Vos besoins",
     index: 2,
     shouldBeSkipped: (answers: Array<string>): boolean => false,
