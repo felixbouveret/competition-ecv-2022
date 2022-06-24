@@ -1,6 +1,6 @@
 {
   "name": "@ecv-competition-2022/competition-2022",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "homepage": ".",
   "scripts": {
     "upload": "node scripts/uploadImages.js",
