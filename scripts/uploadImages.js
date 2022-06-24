@@ -1,5 +1,7 @@
 const { createClient } = require("@supabase/supabase-js");
+var path = require("path");
 const fs = require("fs");
+
 const testFolder =
   "/Users/felix/Documents/DEV/ECV/competition-2022/public/assets/img/";
 
@@ -10,13 +12,15 @@ const supabase = createClient(
 );
 
 fs.readdirSync(testFolder).forEach(async (file) => {
-  try {
-    const image = fs.readFileSync(`${testFolder}${file}`);
-    await supabase.storage.from("images").upload(file, image, {
-      cacheControl: "3600",
-      upsert: false,
-    });
-  } catch (error) {
-    console.log(error);
-  }
+  const image = fs.readFileSync(`${testFolder}${file}`);
+  const type = path.extname(`${testFolder}${file}`);
+  let mime = "image/svg+xml";
+  if (type === ".jpg") mime = "image/jpeg";
+  if (type === ".png") mime = "image/png";
+
+  const { error } = await supabase.storage.from("images").upload(file, image, {
+    upsert: false,
+    contentType: mime,
+  });
+  if (error) console.log(file, error);
 });
