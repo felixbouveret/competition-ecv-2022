@@ -1,0 +1,48 @@
+@import "@/variables.scss";
+
+.recommandationsRoot {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  > .sign {
+    margin-top: 24px;
+    font-size: 14px;
+    line-height: 135%;
+    text-align: center;
+    max-width: 335px;
+    span {
+      color: #7a1047;
+      text-decoration: underline;
+    }
+    @media screen and (min-width: 920px) {
+      order: 3;
+    }
+  }
+
+  > .content {
+    margin-top: 40px;
+    width: 100%;
+
+    .title {
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 27px;
+      text-align: center;
+    }
+    .cardsContainer {
+      margin-top: 32px;
+      display: flex;
+      justify-content: flex-start;
+      width: calc(100vw - 40px);
+      overflow: auto;
+      gap: 10px;
+      > div {
+        flex-shrink: 0;
+      }
+      @media screen and (min-width: 920px) {
+        width: auto;
+      }
+    }
+  }
+}

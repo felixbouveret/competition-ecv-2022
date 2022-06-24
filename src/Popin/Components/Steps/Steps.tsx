@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Result from "../Result";
 import Introduction from "./components/Introduction";
 import Loader from "./components/Loader";
 import Question from "./components/Question";
@@ -45,7 +46,10 @@ export default function UserProfileFlow() {
       );
     if (currentStep.type === "loader")
       return <Loader loader={currentStep} goNext={goNext} />;
+    if (currentStep.type === "result") return <Result result={currentStep} />;
     return null;
   };
-  return <div className="rootSteps">{stepComponent()}</div>;
+  return (
+    <div className={"rootSteps " + currentStep.type}>{stepComponent()}</div>
+  );
 }

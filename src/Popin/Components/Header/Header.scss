@@ -5,7 +5,7 @@
   flex-direction: column;
   position: fixed;
   width: 100%;
-
+  z-index: 1;
   .headerContent {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -53,6 +53,18 @@
 
     @media (min-width: 920px) {
       width: 60%;
+      .logo path {
+        fill: $purple;
+      }
+    }
+  }
+  &.isResult {
+    width: 100%;
+    background-color: #fffbfa;
+    border-bottom: 1px solid #ffe4dc;
+
+    @media (min-width: 920px) {
+      width: 66.66%;
       .logo path {
         fill: $purple;
       }

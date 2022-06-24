@@ -5,12 +5,15 @@ import { useDispatch } from "react-redux";
 import "./ProductDetails.scss";
 import Image from "../../../Components/Image";
 import ProfileChart from "../ProfileChart";
-import Result from "../Result";
 import { setProductId } from "../../../store/App";
+import ResultCard from "../ResultCard";
+import { useSelector } from "react-redux";
+import { RootState } from "@/store";
 
-export default function ProductDetails({ productId }: { productId: string }) {
+export default function ProductDetails() {
   const [quantity, setQuantity] = useState<number>(1);
   const dispatch = useDispatch();
+  const { productId } = useSelector((state: RootState) => state.app);
 
   const productDetails = product;
 
@@ -147,14 +150,14 @@ export default function ProductDetails({ productId }: { productId: string }) {
                 finale à votre dîner
               </p>
               <div className="carousel">
-                <Result
+                <ResultCard
                   title={"Comté AOP"}
                   image={"/assets/img/comté.png"}
                   shop={"Maison Conqueut"}
                   price={"5,73"}
                   tags={[]}
                 />
-                <Result
+                <ResultCard
                   title={"Tortellini fourées"}
                   image={"/assets/img/tortelliniFourees.png"}
                   shop={"Épiceries Otsuni"}

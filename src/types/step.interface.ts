@@ -67,6 +67,9 @@ export interface IntroductionStepInterface extends StepInterface {
   type: "introduction";
   description: string;
 }
+export interface ResultStepInterface extends StepInterface {
+  type: "result";
+}
 
 export interface Answer {
   icon: string;

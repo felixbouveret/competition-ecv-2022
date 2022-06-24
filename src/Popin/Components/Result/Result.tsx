@@ -1,48 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Result.scss";
-import Icon from "@/Components/Icon";
-import { ProductInterface } from "@/types/product.interface";
+import { ResultStepInterface } from "@/types/step.interface";
+import useAnswers from "../Steps/hooks/useAnswers";
+import Recommandations from "./components/Recommandations";
+import Graphs from "./components/Graphs";
 
-export default function ResultCard({
-  title,
-  shop,
-  compatibility,
-  tags,
-  price,
-  image,
-}: ProductInterface) {
+interface IntroductionProps {
+  result: ResultStepInterface;
+}
+export default function Result({ result }: IntroductionProps) {
+  const { handleAnswer } = useAnswers();
+
+  useEffect(() => {
+    // @ts-ignore:next-line
+    const resultFlag = result.id as transitionSteps;
+    handleAnswer(resultFlag, false, []);
+  }, []);
+
   return (
-    <div className="resultCard">
-      <img src={image} alt="" />
-      <div className="personalisation">
-        <div>
-          {compatibility && (
-            <p>
-              {compatibility}
-              "% de compatibilité"
-            </p>
-          )}
-        </div>
-
-        <div className="circle">
-          <Icon name="heart-icon" />
-        </div>
-      </div>
-      <section className="content">
-        <div className="description">
-          {tags.map((tag, i) => (
-            <p key={i}>{tag}</p>
-          ))}
-        </div>
-        <h4>{title}</h4>
-        <p className="winery">{shop}</p>
-        <div className="selling">
-          <p>{price} €</p>
-          <div className="circle">
-            <Icon name="cart-icon" />
-          </div>
-        </div>
-      </section>
+    <div className="resultRoot">
+      <Recommandations className="recommandations" />
+      <Graphs className="graphs" />
     </div>
   );
 }

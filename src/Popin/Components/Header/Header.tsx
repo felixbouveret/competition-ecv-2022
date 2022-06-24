@@ -12,10 +12,12 @@ export default function HeaderContainer({
   isLight,
   isVideoDisplayed,
   isIntroduction,
+  isResult,
 }: {
   isLight: boolean;
   isVideoDisplayed: boolean;
   isIntroduction: boolean;
+  isResult: boolean;
 }) {
   const dispatch = useDispatch();
   const { isProgressBarDisplayed } = useSelector(
@@ -26,6 +28,7 @@ export default function HeaderContainer({
     isLight,
     isVideoDisplayed,
     isIntroduction,
+    isResult,
   });
 
   return (

@@ -2,7 +2,6 @@ import React from "react";
 import { answerId } from "@/types/step.interface";
 import { getSteps } from "../stepsList";
 import flow from "../flow.json";
-import { stepsNameEnum } from "@/types/stepsName.enum";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store";
 import { useDispatch } from "react-redux";
