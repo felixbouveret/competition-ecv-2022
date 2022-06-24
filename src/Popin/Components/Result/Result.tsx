@@ -17,7 +17,7 @@ export default function Result() {
   return (
     <div className="result">
       <section className="reco">
-        <p className="log">
+        <p className="sign">
           Pour enregistrer vos recommandations, pensez à vous
           <span> connecter</span> ou vous <span>inscrire</span>.
         </p>
@@ -63,7 +63,8 @@ export default function Result() {
         </p>
         <div className="graphsContainer">
           <div className="pref" onClick={(e) => swipe(e)}>
-            <span id="pref">Preferences</span> |
+            <span id="pref">Preferences</span>
+            <span>|</span>
             <span id="more">Mais aussi ...</span>
           </div>
           <div className="graphs">
@@ -97,37 +98,6 @@ export default function Result() {
                 },
               ]}
               rgb="122,16,71"
-            />
-            <ProfileChart
-              title="Mais vous aimez aussi"
-              description="Si vous êtes à la recherche d’un change-ment pendant la saison estivale, un vin blanc sec devrait vous plaire."
-              datas={[
-                {
-                  label: "Puissant",
-                  value: 8,
-                },
-                {
-                  label: "Épicé",
-                  value: 3,
-                },
-                {
-                  label: "Doux",
-                  value: 4,
-                },
-                {
-                  label: "Complexe",
-                  value: 0,
-                },
-                {
-                  label: "Boisé",
-                  value: 3,
-                },
-                {
-                  label: "Fruité",
-                  value: 7,
-                },
-              ]}
-              rgb="255, 192, 58"
             />
           </div>
         </div>

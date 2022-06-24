@@ -8,8 +8,9 @@
     display: flex;
     flex-direction: row-reverse;
   }
-  .log {
-    padding: 0 20px;
+  .sign {
+    margin-top: 24px;
+    padding: 24px 20px 24px 20px;
     color: $blue;
     font-weight: 400;
     font-size: 14px;
@@ -17,11 +18,16 @@
       color: $purple;
     }
   }
+  .log {
+    color: $blue;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 0 40px 16px 40px;
+  }
   .title {
-    padding: 20px;
     font-size: 22px;
     font-weight: 500;
-    margin-top: 40px;
+    padding: 0 20px 0px 20px;
     span {
       color: $purple;
     }
@@ -53,7 +59,7 @@
 
   .graph {
     margin-top: 50px;
-    padding: 20px 0;
+    margin-bottom: 60px;
     .profile {
       color: $purple;
       font-weight: 500;
@@ -61,25 +67,25 @@
       margin-top: 50px;
       display: none;
     }
-    .log {
-      padding: 20px;
-      margin-bottom: 50px;
-    }
     .pref {
       margin-bottom: 25px;
       display: none;
     }
     .graphs {
-      width: min-content;
       display: flex;
       overflow-x: scroll;
-      padding-left: 20px;
-      margin: auto;
+      margin: 0px 20px;
     }
     .profileChart {
-      margin-right: 10px;
-      height: 415px;
-      max-width: 275px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      letter-spacing: 0.012em;
+      color: #0d0f26;
     }
     @media screen and (min-width: 1280px) {
       background-color: rgba($purple, 0.05);
@@ -94,17 +100,41 @@
       .profile,
       .pref {
         display: block;
+        #more {
+          margin-left: 16px;
+          color: $blue;
+        }
+        #pref {
+          margin-right: 16px;
+          color: $purple;
+        }
       }
       .graphs {
         width: fit-content;
       }
       .profileChart {
-        max-width: 350px;
+        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        letter-spacing: 0.012em;
+        color: #0d0f26;
       }
     }
   }
 
   .graphsContainer {
-    overflow-x: scroll;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .graphsContainer::-webkit-scrollbar {
+    display: none;
   }
 }
