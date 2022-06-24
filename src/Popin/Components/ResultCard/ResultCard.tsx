@@ -2,6 +2,8 @@ import React from "react";
 import "./ResultCard.scss";
 import Icon from "../../../Components/Icon";
 import { ProductInterface } from "../../../types/product.interface";
+import { useDispatch } from "react-redux";
+import { setProductId } from "@/store/App";
 
 export default function ResultCard({
   title,
@@ -11,6 +13,7 @@ export default function ResultCard({
   price,
   image,
 }: ProductInterface) {
+  const dispatch = useDispatch();
   return (
     <div className="resultCard">
       <img src={image} alt="" />
@@ -38,9 +41,12 @@ export default function ResultCard({
         <p className="winery">{shop}</p>
         <div className="selling">
           <p>{price} €</p>
-          <div className="circle">
+          <button
+            className="circle"
+            onClick={() => dispatch(setProductId("id"))}
+          >
             <Icon name="cart-icon" />
-          </div>
+          </button>
         </div>
       </section>
     </div>

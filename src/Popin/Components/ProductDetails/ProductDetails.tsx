@@ -7,10 +7,13 @@ import Image from "../../../Components/Image";
 import ProfileChart from "../ProfileChart";
 import { setProductId } from "../../../store/App";
 import ResultCard from "../ResultCard";
+import { useSelector } from "react-redux";
+import { RootState } from "@/store";
 
-export default function ProductDetails({ productId }: { productId: string }) {
+export default function ProductDetails() {
   const [quantity, setQuantity] = useState<number>(1);
   const dispatch = useDispatch();
+  const { productId } = useSelector((state: RootState) => state.app);
 
   const productDetails = product;
 

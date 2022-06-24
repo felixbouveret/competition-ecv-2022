@@ -1,6 +1,7 @@
 import React from "react";
 import "./Recommandations.scss";
 import ResultCard from "@/Popin/Components/ResultCard";
+import ProductDetails from "@/Popin/Components/ProductDetails";
 
 export default function Recommandations({ className }: { className?: string }) {
   return (
@@ -38,6 +39,7 @@ export default function Recommandations({ className }: { className?: string }) {
           />
         </div>
       </div>
+      <ProductDetails />
     </section>
   );
 }
